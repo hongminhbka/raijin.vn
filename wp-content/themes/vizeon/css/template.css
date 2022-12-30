@@ -2921,10 +2921,10 @@ ul.gva-nav-menu > li > a {
   display: inline-block;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1024px) {
   ul.gva-nav-menu > li > a {
-    padding-left: 7px;
-    padding-right: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 12px;
   }
 }
@@ -11096,7 +11096,6 @@ ul.nav-tabs > li.active > a {
 .woocommerce .grid-view .product-block {
   padding: 20px;
   border: 1px solid #E9EAEA;
-  margin-bottom: 0px;
 }
 
 .woocommerce .grid-view .product-block .product-meta .shop-loop-title,
@@ -11206,4 +11205,32 @@ ul.nav-tabs > li.active > a {
   top: 6px;
   right: 10px;
   position: absolute;
+}
+
+.woocommerce-page .question{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #2E3A5B;
+}
+
+.woocommerce-page .question-description{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2E3A5B;
+}
+
+.woocommerce-page .filter-theo-hang a{
+  height: 60px;
+  width: 262px;
+  border: 1px solid #596481;
+  color: #596481;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px 90px;
 }
