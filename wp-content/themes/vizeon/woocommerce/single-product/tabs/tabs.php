@@ -25,25 +25,8 @@ $_count = 0;
 if (!empty($tabs)) : ?>
 	<div style="background-color: #2E3A5B; padding: 40px 0px ">
 		<div class="container" style="padding: 40px;">
-			<div style="font-family: 'Montserrat';
-				font-style: normal;
-				font-weight: 600;
-				font-size: 32px;
-				color: white;
-				line-height: 40px;">
-				Bạn đang tìm sản phẩm cho xe gì
-			</div>
-			<div style="
-				font-family: 'Montserrat';
-				font-style: normal;
-				font-weight: 400;
-				font-size: 16px;
-				line-height: 24px;
-				color: white;
-				padding: 20px 0px
-				">
-				Raijin có đủ sản phẩm cho tất cả các dòng xe
-			</div>
+			<h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
+			<div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
 			<div class=" row" style="justify-content: space-between;">
 
 				<div class="col-lg-3 col-md-6  col-sm-12 mt-2">

@@ -76,84 +76,26 @@ $woo_display = vizeon_display_modes_value();
           <?php woocommerce_product_subcategories(); ?>
           <?php if (have_posts()) : ?>
             <div class="container">
-              <div style="
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 32px;
-                line-height: 40px;
-                color: #2E3A5B
-                ">
-                Bạn đang tìm sản phẩm cho xe gì
-              </div>
-              <div class="my-3" style="
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 24px;
-                color: #2E3A5B;
-                ">
-                Raijin có đủ sản phẩm cho tất cả các dòng xe
-              </div>
-              <div class="row my-2">
-                <div class="col-xs-1	col-sm-6	col-md-3	col-lg-3">
-                  <a href="/san-pham/honda">
-                    <button type="button" href="/honda" style=" width: 100%;
-                      height: 42px;
-                      border: 1px solid #596481;
-                      color: #596481;
-                      background-color: #ffffff;
-                      border-radius: 5px;" class="my-2">Honda
-                    </button>
-                  </a>
+              <h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
+              <div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
+              <div class="row filter-theo-hang">
+                <div class="col-xs-1 col-sm-6 col-md-3	col-lg-3">
+                  <a href="/san-pham/honda">Honda</a>
                 </div>
-                <div class="col-xs-1	col-sm-6	col-md-3	col-lg-3">
-                  <a href="/san-pham/yamaha">
-                    <button type="button" style="    width: 100%;
-                  height: 42px;
-                  border: 1px solid #596481;
-                  color: #596481;
-                  background-color: #ffffff;
-                  border-radius: 5px;" class="my-2">Yamaha</button>
-                  </a>
+                <div class="col-xs-1 col-sm-6	col-md-3 col-lg-3">
+                  <a href="/san-pham/yamaha">Yamaha</a>
                 </div>
-                <div class="col-xs-1	col-sm-6	col-md-3	col-lg-3">
-                  <a href="/san-pham/yamaha">
-                    <button type="button" style="    width: 100%;
-                    height: 42px;
-                    border: 1px solid #596481;
-                    color: #596481;
-                    background-color: #ffffff;
-                    border-radius: 5px;" class="my-2">Piaggio</button>
-                  </a>
+                <div class="col-xs-1 col-sm-6	col-md-3 col-lg-3">
+                  <a href="/san-pham/yamaha">Piaggio</a>
                 </div>
-                <div class="col-xs-1	col-sm-6	col-md-3	col-lg-3">
-                  <a href="/san-pham/khac">
-                    <button type="button" style="    width: 100%;
-                    height: 42px;
-                    border: 1px solid #596481;
-                    color: #596481;
-                    background-color: #ffffff;
-                    border-radius: 5px;" class="my-2">Xe hãng khác</button>
-                  </a>
+                <div class="col-xs-1 col-sm-6	col-md-3 col-lg-3">
+                  <a href="/san-pham/khac">Xe hãng khác</a>
                 </div>
               </div>
             </div>
             <div class="shop-loop-container">
               <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
-                <div class="woocommerce-filter clearfix">
-                  <?php
-                  /**
-                   * woocommerce_before_shop_loop hook
-                   *
-                   * @hooked woocommerce_result_count - 20
-                   * @hooked woocommerce_catalog_ordering - 30
-                   */
-                  do_action('woocommerce_before_shop_loop');
-                  ?>
-                </div>
-
+                
                 <?php do_action('vizeon_woocommerce_active_filter');  ?>
 
                 <?php woocommerce_product_loop_start(); ?>
@@ -233,18 +175,7 @@ $woo_display = vizeon_display_modes_value();
           <?php woocommerce_product_subcategories(); ?> -->
           <?php if (have_posts()) : ?>
             <div class="shop-loop-container">
-              <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
-                <!-- <div class="woocommerce-filter clearfix">
-                  <?php
-                  /**
-                   * woocommerce_before_shop_loop hook
-                   *
-                   * @hooked woocommerce_result_count - 20
-                   * @hooked woocommerce_catalog_ordering - 30
-                   */
-                  do_action('woocommerce_before_shop_loop');
-                  ?>
-                </div> -->
+              <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">                
 
                 <?php do_action('vizeon_woocommerce_active_filter');  ?>
 
