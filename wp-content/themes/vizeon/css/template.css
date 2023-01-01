@@ -7531,6 +7531,7 @@ ul.gva-my-account-menu > li > a:hover:after, ul.gva-my-account-menu > li > a:act
 
 .post .post-thumbnail {
   position: relative;
+  text-align: center;
 }
 
 .post .post-thumbnail img{
