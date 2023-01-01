@@ -1523,15 +1523,16 @@ table.variations a.reset_variations {
   margin-bottom: 30px;
 }
 
-.single-product .product-single-main .filter-product-detail {
-  padding: 40px 0px;
+.single-product .product-single-main .filter-detail-product {
+  margin: 40px 0px;
+  padding-bottom: 40px;
   background-color: #C40000;
 }
 
-.single-product .product-single-main .filter-product-detail .question,
-.single-product .product-single-main .filter-product-detail .question-description
-{
-  color:#FFFFFF;
+.single-product .product-single-main .filter-detail-product {
+  margin: 40px 0px;
+  padding-bottom: 40px;
+  background-color: #C40000;
 }
 
 .single-product .product-single-main .container .woocommerce-tabs-inner .tab-content .tab-pane {
