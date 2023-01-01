@@ -23,7 +23,7 @@ $tabs = apply_filters('woocommerce_product_tabs', array());
 $_count = 0;
 
 if (!empty($tabs)) : ?>
-	<section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+	<section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section filter-detail-product">
 		<div class="elementor-container elementor-column-gap-default">
 		<div class="elementor-row">
 			<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
@@ -35,16 +35,14 @@ if (!empty($tabs)) : ?>
 						<div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
 						<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
-							<div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
+							<div class="elementor-element elementor-widget">
 								<div class="elementor-widget-container">
-								<div class="gva-element-gva-heading-block gva-element">
-									<div class="align-left style-1 widget gsc-heading">
-									<div class="content-inner">
-										<div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
-										<div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
+									<div class="align-left">
+										<div class="content-inner">
+											<div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
+											<div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
+										</div>
 									</div>
-									</div>
-								</div>
 								</div>
 							</div>
 							</div>
@@ -53,10 +51,10 @@ if (!empty($tabs)) : ?>
 					</div>
 					</div>
 				</section>
-				<section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+				<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
 					<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-row">
-						<div class="elementor-element elementor-column elementor-inner-column">
+						<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
 						<div class="elementor-column-wrap elementor-element-populated">
 							<div class="elementor-widget-wrap">
 							<div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
