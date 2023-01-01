@@ -51,7 +51,6 @@
                                                           <span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'vizeon' ) ); ?></span>
                                                           <span class="line"></span>
                                                        <?php } ?>
-                                                       <?php vizeon_posted_on(); ?>
                                                     </div> 
                                                     <h2 class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title() ?></a></h2>
                                                     <?php echo vizeon_limit_words( 16, get_the_excerpt(), '' );?>

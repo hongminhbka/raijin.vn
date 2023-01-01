@@ -37,7 +37,7 @@
 		<div class="content-inner">
 
 			<?php if(!is_single()){ ?>
-	         <h2 class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title() ?></a></h2>             
+	         <p class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title() ?></a></p>             
 	      <?php } ?>	
 
 			<?php if(is_single()){
