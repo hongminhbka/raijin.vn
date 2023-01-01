@@ -31,7 +31,7 @@
       </div>   
       <div class="entry-content">
          <div class="content-inner"> 
-            <h2 class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title() ?></a></h2>
+            <p class="entry-title"><a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark"><?php the_title() ?></a></p>
             <div class="entry-description">
                <?php echo vizeon_limit_words( $excerpt_words, get_the_excerpt(), get_the_content() ); ?>
             </div>
