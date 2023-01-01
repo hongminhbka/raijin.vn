@@ -58,7 +58,7 @@ if(!function_exists('vizeon_woocommerce_breadcrumb')){
           <div class="breadcrumb-container-inner" <?php echo(count($styles_inner) > 0 ? 'style="' . implode(';', $styles_inner) . '"' : ''); ?>>
             <?php vizeon_general_breadcrumbs(); ?>
             <?php if($title && $show_page_title){  
-              echo '<h2 class="heading-title">' . esc_html( $title ) . '</h2>';
+              echo '<p class="heading-title">' . esc_html( $title ) . '</p>';
             } ?>
           </div>  
         </div>   
