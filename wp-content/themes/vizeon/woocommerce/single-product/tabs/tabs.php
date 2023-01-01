@@ -23,7 +23,7 @@ $tabs = apply_filters('woocommerce_product_tabs', array());
 $_count = 0;
 
 if (!empty($tabs)) : ?>
-	<div class="container-filter">
+	<div class="container filter">
 		<h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
 		<div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
 		<div class="row filter-theo-hang">

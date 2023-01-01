@@ -75,7 +75,7 @@ $woo_display = vizeon_display_modes_value();
           <?php do_action('woocommerce_archive_description'); ?>
           <?php woocommerce_product_subcategories(); ?>
           <?php if (have_posts()) : ?>
-            <div class="container-filter">
+            <div class="container filter">
               <h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
               <div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
               <div class="row filter-theo-hang">
