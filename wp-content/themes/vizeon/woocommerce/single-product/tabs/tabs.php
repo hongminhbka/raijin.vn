@@ -23,41 +23,21 @@ $tabs = apply_filters('woocommerce_product_tabs', array());
 $_count = 0;
 
 if (!empty($tabs)) : ?>
-	<div style="background-color: #2E3A5B; padding: 40px 0px ">
-		<div class="container" style="padding: 40px;">
-			<h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
-			<div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
-			<div class=" row" style="justify-content: space-between;">
-
-				<div class="col-lg-3 col-md-6  col-sm-12 mt-2">
-					<button type="button" class="btn btn-lg" style="background-color: white; width: 100% ; height:auto; color: '#2E3A5B'">
-						<span style="color: #2E3A5B">
-							Honda
-						</span>
-					</button>
-
-				</div>
-				<div class="col-lg-3 col-md-6  col-sm-12 mt-2">
-
-					<button type="button" class="btn btn-lg" style="background-color: white; width: 100% ; height:auto; color:'#2E3A5B'">
-						<span style="color: #2E3A5B">
-							Yamaha
-						</span></button>
-				</div>
-				<div class="col-lg-3 col-md-6  col-sm-12 mt-2">
-					<button type="button" class="btn btn-lg" style="background-color: white; width: 100% ; height:auto; color:'#2E3A5B'">
-						<span style="color: #2E3A5B">
-							Piagio
-						</span></button>
-				</div>
-				<div class="col-lg-3 col-md-6  col-sm-12 mt-2">
-
-					<button type="button" class="btn btn-lg" style="background-color: white; width: 100% ; height:auto; color:'#2E3A5B'">
-						<span style="color: #2E3A5B">
-							Xe hãng khác
-						</span>
-					</button>
-				</div>
+	<div class="container-filter">
+		<h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
+		<div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
+		<div class="row filter-theo-hang">
+			<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
+				<a href="/danh-muc-san-pham/honda/">Honda</a>
+			</div>
+			<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
+				<a href="/danh-muc-san-pham/yamaha">Yamaha</a>
+			</div>
+			<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
+				<a href="/danh-muc-san-pham/piaggio">Piaggio</a>
+			</div>
+			<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
+				<a href="/danh-muc-san-pham/san-pham-khac">Xe hãng khác</a>
 			</div>
 		</div>
 	</div>
