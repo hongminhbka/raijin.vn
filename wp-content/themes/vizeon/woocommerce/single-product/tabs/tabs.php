@@ -60,7 +60,7 @@ if (!empty($tabs)) : ?>
 							<div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
 								<div class="elementor-widget-container">
 								<div class="elementor-button-wrapper">
-									<a href="/danh-muc-san-pham/honda/" class="elementor-button-link elementor-button elementor-size-md full-width">
+									<a href="/danh-muc-san-pham/honda/" class="elementor-button-link elementor-button elementor-size-md">
 									<span class="elementor-button-content-wrapper">
 										<span class="elementor-button-text">Honda</span>
 									</span>
