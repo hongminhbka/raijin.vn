@@ -186,7 +186,7 @@ function vizeon_breadcrumb(){
           <div class="breadcrumb-container-inner" <?php echo(count($styles_inner) > 0 ? 'style="' . implode(';', $styles_inner) . '"' : ''); ?>>
             <?php vizeon_general_breadcrumbs(); ?>
             <?php if($title && ( $show_page_title || empty($show_page_title) ) ){ 
-              echo '<p class="heading-title">' . esc_html( $title ) . '</p>';
+              echo '<h1 class="heading-title">' . esc_html( $title ) . '</p>';
             } ?>
           </div>  
         </div>   
