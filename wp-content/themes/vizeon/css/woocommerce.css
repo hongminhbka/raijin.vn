@@ -1531,7 +1531,7 @@ table.variations a.reset_variations {
 
 .single-product .product-single-main .filter-detail-product {
   margin: 40px 0px;
-  padding-bottom: 40px;
+  padding: 40px 0px;
   background-color: #C40000;
 }
 
@@ -1551,6 +1551,10 @@ table.variations a.reset_variations {
   color: #596481;
   background-color: #ffffff;
   border-radius: 8px 8px 8px 8px;
+}
+
+.full-width{
+  width: 100%;
 }
 
 .single-product .product-single-main .container .woocommerce-tabs-inner .tab-content .tab-pane {
