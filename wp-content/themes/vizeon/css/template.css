@@ -10550,6 +10550,8 @@ body.page .content-page-inner h1.title {
 
 .custom-breadcrumb.text-light .heading-title {
   color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 body.home.blog .title-layout-standard .custom-breadcrumb .heading-title {
