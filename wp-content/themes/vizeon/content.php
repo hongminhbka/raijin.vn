@@ -58,7 +58,7 @@
 			?>
 		</div>
 		<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
-      <div class="read-more hidden"><a class="btn-inline" href="<?php echo esc_url( get_permalink() ) ?>"><?php echo esc_html__( 'Read more ', 'vizeon' ) ?></a></div>
+      <div class="read-more hidden"><a class="btn-inline" href="<?php echo esc_url( get_permalink() ) ?>">Chi tiết</a></div>
       
 	</div><!-- .entry-content -->	
 
