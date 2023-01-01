@@ -65,16 +65,9 @@ if (!empty($tabs)) : ?>
 		<div class="woocommerce-tabs-inner clear fix container">
 			<div class="tab-content col-xs-12 container">
 				<?php foreach (array_reverse($tabs) as $key => $tab) : ?>
-					<?php $text = $key != 'description'   ? "Thông số kỹ thuật" : 'Nội dung' ?>
-					<div style="font-family: 'Montserrat';
-						font-style: normal;
-						font-weight: 500;
-						font-size: 20px;
-						color: #2E3A5B;
-						padding: 10px 0px;
-						line-height: 28px;">
-						<?php echo $text ?>
-					</div>
+					<?php if ($key != 'description') : ?>
+						<div class="title">Thông số kỹ thuật</div>
+					<?php endif; ?>
 					<div class="tab-pane<?php echo esc_attr(' active'); ?>" id="tab-<?php echo esc_attr($key); ?>">
 						<?php call_user_func($tab['callback'], $key, $tab) ?>
 					</div>
