@@ -23,26 +23,117 @@ $tabs = apply_filters('woocommerce_product_tabs', array());
 $_count = 0;
 
 if (!empty($tabs)) : ?>
-	<div class="filter-product-detail">
-		<div class="container">
-			<h2 class="question">Bạn đang tìm sản phẩm cho xe gì</h2>
-			<div class="question-description">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
-			<div class="row filter-theo-hang">
-				<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
-					<a href="/danh-muc-san-pham/honda/">Honda</a>
-				</div>
-				<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
-					<a href="/danh-muc-san-pham/yamaha">Yamaha</a>
-				</div>
-				<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
-					<a href="/danh-muc-san-pham/piaggio">Piaggio</a>
-				</div>
-				<div class="col-xs-1 col-sm-6 col-md-3 col-lg-3">
-					<a href="/danh-muc-san-pham/san-pham-khac">Xe hãng khác</a>
+	<section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+		<div class="elementor-container elementor-column-gap-default">
+		<div class="elementor-row">
+			<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+			<div class="elementor-column-wrap elementor-element-populated">
+				<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+					<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-row">
+						<div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
+						<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
+								<div class="elementor-widget-container">
+								<div class="gva-element-gva-heading-block gva-element">
+									<div class="align-left style-1 widget gsc-heading">
+									<div class="content-inner">
+										<div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
+										<div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
+									</div>
+									</div>
+								</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</section>
+				<section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+					<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-row">
+						<div class="elementor-element elementor-column elementor-inner-column">
+						<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+								<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a href="/danh-muc-san-pham/honda/" class="elementor-button-link elementor-button elementor-size-md full-width">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Honda</span>
+									</span>
+									</a>
+								</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+						<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+						<div class="elementor-column-wrap  elementor-element-populated">
+							<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+								<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a href="/danh-muc-san-pham/yamaha/" class="elementor-button-link elementor-button elementor-size-md">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Yamaha</span>
+									</span>
+									</a>
+								</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+						<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+						<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+								<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a href="/danh-muc-san-pham/piaggio/"
+									class="elementor-button-link elementor-button elementor-size-md">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Piaggio</span>
+									</span>
+									</a>
+								</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+						<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+						<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+								<div class="elementor-widget-container">
+								<div class="elementor-button-wrapper">
+									<a href="/danh-muc-san-pham/san-pham-khac/" class="elementor-button-link elementor-button elementor-size-md">
+									<span class="elementor-button-content-wrapper">
+										<span class="elementor-button-text">Xe hãng khác</span>
+									</span>
+									</a>
+								</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+				</section>
 				</div>
 			</div>
+			</div>
 		</div>
-	</div>
+		</div>
+	</section>
 	<div class="container">
 		<div class="woocommerce-tabs-inner clear fix container">
 			<div class="tab-content col-xs-12 container">
