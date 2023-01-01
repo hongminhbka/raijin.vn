@@ -1535,6 +1535,24 @@ table.variations a.reset_variations {
   background-color: #C40000;
 }
 
+.single-product .product-single-main .filter-detail-product .content-inner{
+  color:#ffffff;
+}
+
+.single-product .product-single-main .filter-detail-product .content-inner .title{
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.single-product .product-single-main .filter-detail-product .elementor-button-wrapper .elementor-button-link{
+  fill: #596481;
+  color: #596481;
+  background-color: #ffffff;
+  border-radius: 8px 8px 8px 8px;
+}
+
 .single-product .product-single-main .container .woocommerce-tabs-inner .tab-content .tab-pane {
   max-width: 960px;
 }
