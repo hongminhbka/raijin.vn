@@ -325,14 +325,6 @@ $woo_display = vizeon_display_modes_value();
         </div>
       <?php endif ?>
     </div>
-    <div style="
-      background-color: #222628;
-    position: absolute;
-    width: 100%;
-    height: 375px;
-    left: 0px;
-    top: 50%;">
-    </div>
     <div class="mt-3 mb-3" style="
         font-family: 'Montserrat';
         font-style: normal;
