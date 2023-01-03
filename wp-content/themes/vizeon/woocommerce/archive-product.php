@@ -425,43 +425,6 @@ $woo_display = vizeon_display_modes_value();
       <?php endif ?>
     </div>
   </div>
-  <div style="background-image: url(/wp-content/uploads/2015/12/bg_sp_2.svg); height: 850px ; width: 100vw ;padding: 10% 25% 20% 7%;">
-    <div style="background-color: #ffffff ; padding: 16px 25px;" class="pa-3">
-      <div style="
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 40px;
-        color: #2E3A5B;
-        ">
-        Consectetur adipisicing elit sed Consectetur adipisicing elit sed
-      </div>
-      <div class="mt-1 mb-2" style="
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 40px;
-        color: #2E3A5B;
-        ">
-        Consectetur adipisicing elit sed Consectetur adipisicing elit sed
-      </div>
-      <div style="
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 20px;
-        color: #2E3A5B;
-      ">
-        Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim incididunt ut labore etConsectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim incididunt ut labore et
-        Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim incididunt ut labore et
-        Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim incididunt ut labore etConsectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim incididunt ut labore et
-        Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim incididunt ut labore et
-      </div>
-    </div>
-  </div>
 
   <?php
   /**
