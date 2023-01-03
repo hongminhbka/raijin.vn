@@ -47,6 +47,18 @@ $sidebar_config = vizeon_sidebar_global($sidebar_layout_config, $left_sidebar, $
 extract($sidebar_config);
 
 $woo_display = vizeon_display_modes_value();
+
+// Only run on shop archive pages, not single products or other pages
+if ( is_shop() || is_product_category() || is_product_tag() ) {
+
+  $args = array(
+          'post_type' => 'product',          
+          'product_cat' => 'expert',
+          'orderby' => 'name',
+          'order' => 'ASC',
+          'paged' => get_query_var( 'paged' ),
+      );
+  $products = new WP_Query( $args );
 ?>
 
 <section id="wp-main-content" class="clearfix main-page">
@@ -72,154 +84,26 @@ $woo_display = vizeon_display_modes_value();
 
           <?php endif; ?>
 
-          <?php do_action('woocommerce_archive_description'); ?>
-          <?php woocommerce_product_subcategories(); ?>
-          <?php if (have_posts()) : ?>
-            <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
-              <div class="elementor-container elementor-column-gap-default">
-                <div class="elementor-row">
-                  <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
-                    <div class="elementor-column-wrap elementor-element-populated">
-                      <div class="elementor-widget-wrap">
-                        <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                              <div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
-                                      <div class="elementor-widget-container">
-                                        <div class="gva-element-gva-heading-block gva-element">
-                                          <div class="align-left style-1 widget gsc-heading">
-                                            <div class="content-inner">
-                                              <div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
-                                              <div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                        <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
-                          <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-row">
-                              <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                      <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                          <a href="/danh-muc-san-pham/honda/" class="elementor-button-link elementor-button elementor-size-md full-width">
-                                            <span class="elementor-button-content-wrapper">
-                                              <span class="elementor-button-text">Honda</span>
-                                            </span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                <div class="elementor-column-wrap  elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                      <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                          <a href="/danh-muc-san-pham/yamaha/" class="elementor-button-link elementor-button elementor-size-md">
-                                            <span class="elementor-button-content-wrapper">
-                                              <span class="elementor-button-text">Yamaha</span>
-                                            </span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                      <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                          <a href="/danh-muc-san-pham/piaggio/"
-                                            class="elementor-button-link elementor-button elementor-size-md">
-                                            <span class="elementor-button-content-wrapper">
-                                              <span class="elementor-button-text">Piaggio</span>
-                                            </span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                      <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                          <a href="/danh-muc-san-pham/san-pham-khac/" class="elementor-button-link elementor-button elementor-size-md">
-                                            <span class="elementor-button-content-wrapper">
-                                              <span class="elementor-button-text">Xe hãng khác</span>
-                                            </span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </section>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+          <?php do_action('woocommerce_archive_description'); ?>          
+          <?php
+            // Run the loop
+           if ( $products->have_posts() ) :
+            do_action( 'woocommerce_before_shop_loop' );
+            woocommerce_product_loop_start();
+            woocommerce_product_subcategories();
 
-            <h2 class="elementor-heading-title elementor-size-default">Ắc quy Lithium Standard</h2>
-            <div class="shop-loop-container">
-              <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
-                
-                <?php do_action('vizeon_woocommerce_active_filter');  ?>
+            while ( $products->have_posts() ) : $products->the_post();
+              do_action( 'woocommerce_shop_loop' );
+              wc_get_template_part( 'content', 'product' );
+            endwhile;
 
-                <?php woocommerce_product_loop_start(); ?>
-
-                <?php while (have_posts()) : the_post(); ?>
-
-                  <?php wc_get_template_part('content', 'product'); ?>
-
-                <?php endwhile; // end of the loop. 
-                ?>
-
-                <?php woocommerce_product_loop_end(); ?>
-
-                <?php
-                /**
-                 * woocommerce_after_shop_loop hook
-                 *
-                 * @hooked woocommerce_pagination - 10
-                 */
-                do_action('woocommerce_after_shop_loop');
-                ?>
-              </div>
-            </div>
-          <?php elseif (!woocommerce_product_subcategories(array('before' => woocommerce_product_loop_start(false), 'after' => woocommerce_product_loop_end(false)))) : ?>
-
-            <?php wc_get_template('loop/no-products-found.php'); ?>
-
-          <?php endif; ?>
-
+            woocommerce_product_loop_end();
+            do_action( 'woocommerce_after_shop_loop' );
+            wp_reset_postdata();
+          elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) :
+            do_action( 'woocommerce_no_products_found' );
+          endif;
+          ?>
         </div>
 
       </div>
