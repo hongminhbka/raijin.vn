@@ -11141,10 +11141,13 @@ ul.nav-tabs > li.active > a {
   padding: 5px;
 }
 
-.woocommerce .grid-view .product-block .product-meta .shop-button:hover{
-  color: #ffffff;
+.woocommerce .grid-view .product-block .product-meta .shop-button:hover{  
   background-color: #C40000;
   border-color: #C40000;
+}
+
+.woocommerce .grid-view .product-block .product-meta .shop-button a:hover{
+  color: #ffffff;  
 }
 
 .home-page .woocommerce .grid-view .product-block {
