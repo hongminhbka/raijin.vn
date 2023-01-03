@@ -51,14 +51,14 @@ function vizeon_style_breadcrumb(){
 
   //Breadcrumb category and tag products
   if(vizeon_woocommerce_activated() && (is_product_tag() || is_product_category() || is_shop() || is_product()) ){
-    $breadcrumb_padding_top = vizeon_get_option('woo_breadcrumb_padding_top', '275');
+    $breadcrumb_padding_top = vizeon_get_option('woo_breadcrumb_padding_top', '185');
     $breadcrumb_padding_bottom = vizeon_get_option('woo_breadcrumb_padding_bottom', '100');
     $breadcrumb_show_title = vizeon_get_option('woo_breadcrumb_show_title', '1');
     $breadcrumb_bg_color = vizeon_get_option('woo_breadcrumb_background_color', '1');;
     $breadcrumb_bg_color_opacity = vizeon_get_option('woo_breadcrumb_background_opacity', '1');
     $breadcrumb_image = vizeon_get_option('woo_breadcrumb_image', array('id'=> 0));
     $breadcrumb_text_style = vizeon_get_option('woo_breadcrumb_text_stype', 'text-light');
-    $breadcrumb_text_align = vizeon_get_option('woo_breadcrumb_text_align', 'text-center');
+    $breadcrumb_text_align = vizeon_get_option('woo_breadcrumb_text_align', '');
     if(isset($breadcrumb_image['id']) && $breadcrumb_image['id']){
       $breadcrumb_image = $breadcrumb_image['id'];
     }else{
@@ -90,7 +90,7 @@ function vizeon_style_breadcrumb(){
   if(is_home()) { // Home Index
     $breadcrumb_show_title = true;
     $title = esc_html__( 'Latest posts', 'vizeon' );
-    $breadcrumb_padding_top = '275';
+    $breadcrumb_padding_top = '185';
     $breadcrumb_padding_bottom = '100';
     $breadcrumb_text_align = 'text-center';
     $breadcrumb_text_style = 'text-light';
