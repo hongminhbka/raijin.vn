@@ -8,7 +8,7 @@
    $icon_image = '';
 
    $this->add_render_attribute( 'block', 'class', [ $settings['style'], 'widget gsc-call-to-action' ] );
-   $header_tag = 'h2';
+   $header_tag = 'p';
 
    $this->add_render_attribute( 'title_text', 'class', 'title' );
    $this->add_render_attribute( 'description_text', 'class', 'desc' );
