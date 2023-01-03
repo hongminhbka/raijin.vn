@@ -186,6 +186,8 @@ $woo_display = vizeon_display_modes_value();
                 </div>
               </div>
             </section>
+
+            <h2 class="elementor-heading-title elementor-size-default">Ắc quy Lithium Standard</h2>
             <div class="shop-loop-container">
               <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
                 
