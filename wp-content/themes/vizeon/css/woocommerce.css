@@ -2418,6 +2418,7 @@ table.cart img {
   margin-bottom: 5px;
   margin-top: 15px;
   text-transform: capitalize;
+  height: 50px;
 }
 
 .shop-loop-title a:hover {

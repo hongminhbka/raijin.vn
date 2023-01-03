@@ -11131,9 +11131,20 @@ ul.nav-tabs > li.active > a {
 
 .woocommerce .grid-view .product-block .product-meta .shop-button{
   text-align: center;
-  border: 1px solid #596481; 
-  border-radius: 3px;
+  border: 1px solid #596481;   
+  text-align: center;
   color: #596481;
+  border-radius: 8px;
+  width: 167px;
+  height: 40px;
+  margin: auto;
+  padding: 5px;
+}
+
+.woocommerce .grid-view .product-block .product-meta .shop-button:hover{
+  color: #ffffff;
+  background-color: #C40000;
+  border-color: #C40000;
 }
 
 .home-page .woocommerce .grid-view .product-block {
