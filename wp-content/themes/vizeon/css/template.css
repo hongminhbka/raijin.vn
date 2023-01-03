@@ -11139,6 +11139,10 @@ ul.nav-tabs > li.active > a {
   height: 40px;
   margin: auto;
   padding: 5px;
+  webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
 }
 
 .woocommerce .grid-view .product-block .product-meta .shop-button:hover{  
