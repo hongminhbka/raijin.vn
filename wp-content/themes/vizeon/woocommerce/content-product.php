@@ -114,7 +114,7 @@ $classes[] = 'product-block product';
       ?>
       <div class="product-meta">
          <div class="clearfix"></div>
-         <h3 class="shop-loop-title"><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></h3>
+         <p class="shop-loop-title"><a href="<?php esc_url(the_permalink()); ?>"><?php the_title(); ?></a></p>
 
          <?php if (is_woocommerce() && $woo_display == 'list') { ?>
             <div class="shop-loop-description hidden">
