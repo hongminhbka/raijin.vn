@@ -5871,9 +5871,12 @@ ul.gva-my-account-menu > li > a:hover:after, ul.gva-my-account-menu > li > a:act
 }
 
 .gsc-heading .title {
-  font-size: 56px;
+  font-size: 32px;
   position: relative;
   margin: 0;
+  font-weight: 600;
+  line-height: 40px;
+  color: #2E3A5B;
 }
 
 .gsc-heading .title strong {
@@ -5935,6 +5938,8 @@ ul.gva-my-account-menu > li > a:hover:after, ul.gva-my-account-menu > li > a:act
 .gsc-heading.align-left .title-desc {
   float: left;
   text-align: justify;
+  font-weight: 400;
+  color: #2E3A5B;
 }
 
 .gsc-heading.align-left .title-icon {
