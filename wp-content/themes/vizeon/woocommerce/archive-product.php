@@ -189,7 +189,7 @@ $woo_display = vizeon_display_modes_value();
           <?php woocommerce_product_subcategories(); ?>
           <?php if (have_posts()) : ?>                                      
 
-            <?php do_action('show_products_per_category'); ?>
+            <?php show_products_per_category(); ?>
             
           <?php elseif (!woocommerce_product_subcategories(array('before' => woocommerce_product_loop_start(false), 'after' => woocommerce_product_loop_end(false)))) : ?>
 
