@@ -47,18 +47,6 @@ $sidebar_config = vizeon_sidebar_global($sidebar_layout_config, $left_sidebar, $
 extract($sidebar_config);
 
 $woo_display = vizeon_display_modes_value();
-
-// Only run on shop archive pages, not single products or other pages
-if ( is_shop() || is_product_category() || is_product_tag() ) {
-  $args = array(
-          'post_type' => 'product',          
-          'product_cat' => 'expert',
-          'orderby' => 'name',
-          'order' => 'ASC',
-          'paged' => get_query_var( 'paged' ),
-      );
-  $products = new WP_Query($args);
-}
 ?>
 
 <section id="wp-main-content" class="clearfix main-page">
@@ -199,7 +187,7 @@ if ( is_shop() || is_product_category() || is_product_tag() ) {
           </section>
 
           <?php woocommerce_product_subcategories(); ?>
-          <?php if ($products->have_posts()) : ?>           
+          <?php if (have_posts()) : ?>           
             <h2 class="elementor-heading-title elementor-size-default">Ắc quy Lithium Standard</h2>
             <div class="shop-loop-container">
               <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
@@ -208,9 +196,9 @@ if ( is_shop() || is_product_category() || is_product_tag() ) {
 
                 <?php woocommerce_product_loop_start(); ?>
 
-                <?php while ($products->have_posts()) : the_post(); ?>
+                <?php while (have_posts()) : the_post(); ?>
 
-                  <?php wc_get_template_part('content', 'product'); ?>
+                  <?php // wc_get_template_part('content', 'product'); ?>
 
                 <?php endwhile; // end of the loop. 
                 ?>
