@@ -71,9 +71,7 @@ $woo_display = vizeon_display_modes_value();
             <h1 class="page-title hidden"><?php woocommerce_page_title(); ?></h1>
 
           <?php endif; ?>
-
-          <?php do_action('woocommerce_archive_description'); ?>
-          <!-- custome filter product -->
+          
           <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
             <div class="elementor-container elementor-column-gap-default">
               <div class="elementor-row">
@@ -186,13 +184,12 @@ $woo_display = vizeon_display_modes_value();
             </div>
           </section>
 
+          <?php do_action('woocommerce_archive_description'); ?>
+
           <?php woocommerce_product_subcategories(); ?>
-          <?php if (have_posts()) : ?> 
-            <?php do_action( 'woocommerce_before_shop_loop' ); ?>             
+          <?php if (have_posts()) : ?>                                      
 
-            <?php show_products_per_category(); ?>
-
-            <?php do_action('woocommerce_after_shop_loop'); ?>
+            <?php do_action('show_products_per_category'); ?>
             
           <?php elseif (!woocommerce_product_subcategories(array('before' => woocommerce_product_loop_start(false), 'after' => woocommerce_product_loop_end(false)))) : ?>
 
