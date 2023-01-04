@@ -187,35 +187,13 @@ $woo_display = vizeon_display_modes_value();
           </section>
 
           <?php woocommerce_product_subcategories(); ?>
-          <?php if (have_posts()) : ?>           
-            <h2 class="elementor-heading-title elementor-size-default">Ắc quy Lithium Standard</h2>
-            <div class="shop-loop-container">
-              <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
-                
-                <?php do_action('vizeon_woocommerce_active_filter');  ?>
+          <?php if (have_posts()) : ?> 
+            <?php do_action( 'woocommerce_before_shop_loop' ); ?>             
 
-                <?php woocommerce_product_loop_start(); ?>
+            <?php show_products_per_category(); ?>
 
-                <?php while (have_posts()) : the_post(); ?>
-
-                  <?php  bbloomer_show_4_products_per_category(); ?>
-
-                <?php endwhile; // end of the loop. 
-                ?>
-
-                <?php woocommerce_product_loop_end(); ?>
-
-                <?php
-                /**
-                 * woocommerce_after_shop_loop hook
-                 *
-                 * @hooked woocommerce_pagination - 10
-                 */
-                do_action('woocommerce_after_shop_loop');
-                ?>
-                <?php wp_reset_postdata();?>
-              </div>
-            </div>
+            <?php do_action('woocommerce_after_shop_loop'); ?>
+            
           <?php elseif (!woocommerce_product_subcategories(array('before' => woocommerce_product_loop_start(false), 'after' => woocommerce_product_loop_end(false)))) : ?>
 
             <?php wc_get_template('loop/no-products-found.php'); ?>
