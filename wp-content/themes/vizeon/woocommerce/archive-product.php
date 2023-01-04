@@ -70,31 +70,31 @@ $woo_display = vizeon_display_modes_value();
 
             <h1 class="page-title hidden"><?php woocommerce_page_title(); ?></h1>
 
-          <?php endif; ?>
-          
-          <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
-            <div class="elementor-container elementor-column-gap-default">
-              <div class="elementor-row">
-                <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
-                  <div class="elementor-column-wrap elementor-element-populated">
-                    <div class="elementor-widget-wrap">
-                      <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
-                        <div class="elementor-container elementor-column-gap-default">
-                          <div class="elementor-row">
-                            <div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
-                              <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
-                                    <div class="elementor-widget-container">
-                                      <div class="gva-element-gva-heading-block gva-element">
-                                        <div class="align-left style-1 widget gsc-heading">
-                                          <div class="content-inner">
-                                            <div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
-                                            <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-                                              <div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>                                                                                          
-                                            <?php else: ?>
-                                              <?php do_action('woocommerce_archive_description'); ?>
-                                            <?php endif; ?>
+          <?php endif; ?>                                        
+
+          <?php if (have_posts()) : ?>                                      
+            <?php if (is_shop()) : ?>
+              <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+                <div class="elementor-container elementor-column-gap-default">
+                  <div class="elementor-row">
+                    <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+                      <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                          <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                            <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-row">
+                                <div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
+                                        <div class="elementor-widget-container">
+                                          <div class="gva-element-gva-heading-block gva-element">
+                                            <div class="align-left style-1 widget gsc-heading">
+                                              <div class="content-inner">
+                                                <div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
+                                                <div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>                                                 
+                                              </div>
+                                            </div>
                                           </div>
                                         </div>
                                       </div>
@@ -103,95 +103,118 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </section>
+                          <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                            <div class="elementor-container elementor-column-gap-default">
+                              <div class="elementor-row">
+                                <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                        <div class="elementor-widget-container">
+                                          <div class="elementor-button-wrapper">
+                                            <a href="/danh-muc-san-pham/honda/" class="elementor-button-link elementor-button elementor-size-md full-width">
+                                              <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Honda</span>
+                                              </span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                  <div class="elementor-column-wrap  elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                        <div class="elementor-widget-container">
+                                          <div class="elementor-button-wrapper">
+                                            <a href="/danh-muc-san-pham/yamaha/" class="elementor-button-link elementor-button elementor-size-md">
+                                              <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Yamaha</span>
+                                              </span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                        <div class="elementor-widget-container">
+                                          <div class="elementor-button-wrapper">
+                                            <a href="/danh-muc-san-pham/piaggio/"
+                                              class="elementor-button-link elementor-button elementor-size-md">
+                                              <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Piaggio</span>
+                                              </span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                  <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                      <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                        <div class="elementor-widget-container">
+                                          <div class="elementor-button-wrapper">
+                                            <a href="/danh-muc-san-pham/san-pham-khac/" class="elementor-button-link elementor-button elementor-size-md">
+                                              <span class="elementor-button-content-wrapper">
+                                                <span class="elementor-button-text">Xe hãng khác</span>
+                                              </span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
                         </div>
-                      </section>
-                      <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
-                        <div class="elementor-container elementor-column-gap-default">
-                          <div class="elementor-row">
-                            <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                              <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                    <div class="elementor-widget-container">
-                                      <div class="elementor-button-wrapper">
-                                        <a href="/danh-muc-san-pham/honda/" class="elementor-button-link elementor-button elementor-size-md full-width">
-                                          <span class="elementor-button-content-wrapper">
-                                            <span class="elementor-button-text">Honda</span>
-                                          </span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                              <div class="elementor-column-wrap  elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                    <div class="elementor-widget-container">
-                                      <div class="elementor-button-wrapper">
-                                        <a href="/danh-muc-san-pham/yamaha/" class="elementor-button-link elementor-button elementor-size-md">
-                                          <span class="elementor-button-content-wrapper">
-                                            <span class="elementor-button-text">Yamaha</span>
-                                          </span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                              <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                    <div class="elementor-widget-container">
-                                      <div class="elementor-button-wrapper">
-                                        <a href="/danh-muc-san-pham/piaggio/"
-                                          class="elementor-button-link elementor-button elementor-size-md">
-                                          <span class="elementor-button-content-wrapper">
-                                            <span class="elementor-button-text">Piaggio</span>
-                                          </span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                              <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                    <div class="elementor-widget-container">
-                                      <div class="elementor-button-wrapper">
-                                        <a href="/danh-muc-san-pham/san-pham-khac/" class="elementor-button-link elementor-button elementor-size-md">
-                                          <span class="elementor-button-content-wrapper">
-                                            <span class="elementor-button-text">Xe hãng khác</span>
-                                          </span>
-                                        </a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+                      </div>
                     </div>
                   </div>
                 </div>
+              </section>
+              <?php show_products_per_category(); ?>
+            <?php else: ?>
+              <?php do_action('woocommerce_archive_description'); ?>
+              <div class="shop-loop-container">
+                <div class="gvawooaf-before-products layout-<?php echo esc_attr($woo_display) ?>">
+                  
+                  <?php do_action('vizeon_woocommerce_active_filter');  ?>
+
+                  <?php woocommerce_product_loop_start(); ?>
+
+                  <?php while (have_posts()) : the_post(); ?>
+
+                    <?php wc_get_template_part('content', 'product'); ?>
+
+                  <?php endwhile; // end of the loop. 
+                  ?>
+
+                  <?php woocommerce_product_loop_end(); ?>
+
+                  <?php
+                  /**
+                   * woocommerce_after_shop_loop hook
+                   *
+                   * @hooked woocommerce_pagination - 10
+                   */
+                  do_action('woocommerce_after_shop_loop');
+                  ?>
+                </div>
               </div>
-            </div>
-          </section>          
-
-          <?php woocommerce_product_subcategories(); ?>
-          <?php if (have_posts()) : ?>                                      
-
-            <?php show_products_per_category(); ?>
+            <?php endif; ?>            
             
           <?php elseif (!woocommerce_product_subcategories(array('before' => woocommerce_product_loop_start(false), 'after' => woocommerce_product_loop_end(false)))) : ?>
 
@@ -200,7 +223,6 @@ $woo_display = vizeon_display_modes_value();
           <?php endif; ?>
 
         </div>
-
       </div>
 
       <!-- Left sidebar -->
