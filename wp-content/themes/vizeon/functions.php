@@ -301,7 +301,7 @@ function show_products_per_category() {
  */
 function custom_pre_get_posts( $query ) {
   if( $query->is_main_query() && !$query->is_feed() && !is_admin() && is_category()) {
-    $query->set( 'paged', str_replace( '/', '', get_query_var( 'page' ) ) );  }  
+    $query->set( 'paged', str_replace( '/', '', get_query_var( 'paged' ) ) );  }  
   }
 
 add_action('pre_get_posts','custom_pre_get_posts');
