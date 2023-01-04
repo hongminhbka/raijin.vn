@@ -198,7 +198,7 @@ $woo_display = vizeon_display_modes_value();
 
                 <?php while (have_posts()) : the_post(); ?>
 
-                  <?php // wc_get_template_part('content', 'product'); ?>
+                  <?php  bbloomer_show_4_products_per_category(); ?>
 
                 <?php endwhile; // end of the loop. 
                 ?>
