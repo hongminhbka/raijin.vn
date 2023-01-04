@@ -225,6 +225,7 @@ if ( is_shop() || is_product_category() || is_product_tag() ) {
                  */
                 do_action('woocommerce_after_shop_loop');
                 ?>
+                <?php wp_reset_postdata();?>
               </div>
             </div>
           <?php elseif (!woocommerce_product_subcategories(array('before' => woocommerce_product_loop_start(false), 'after' => woocommerce_product_loop_end(false)))) : ?>
