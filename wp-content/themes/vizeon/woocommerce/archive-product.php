@@ -47,6 +47,8 @@ $sidebar_config = vizeon_sidebar_global($sidebar_layout_config, $left_sidebar, $
 extract($sidebar_config);
 
 $woo_display = vizeon_display_modes_value();
+
+
 ?>
 
 <section id="wp-main-content" class="clearfix main-page">

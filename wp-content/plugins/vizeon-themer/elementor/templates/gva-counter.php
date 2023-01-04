@@ -11,7 +11,7 @@
    $has_icon = ! ( empty( $icon ) && empty( $icon_image ) );
 
    $style = $settings['style'];
-   $description_text = $settings['description_text'];
+   $description_text = isset($settings['description_text']) ? $settings['description_text'] : '';
    $header_tag = 'h2';
    if(!empty($settings['title_size'])) $header_tag = $settings['title_size'];
 

@@ -474,12 +474,12 @@ class GVAElement_Posts extends GVAElement_Base{
             }
         }
         $ids = str_replace(' ', '', $ids);
-        if( strlen($ids) > 0 ){
-          $ids = explode(',', $ids);
-          if( is_array($ids) && count($ids) > 0 ){
+        if( is_string($ids) && strlen($ids) > 0 ){
+          $ids = explode(',', $ids);          
+        }
+        if(is_array($ids) && count($ids) > 0){
             $query_args['post__in'] = $ids;
             $query_args['orderby'] = 'post__in';
-          }
         }
 
         if(is_front_page()){
