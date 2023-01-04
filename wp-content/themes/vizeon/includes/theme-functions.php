@@ -81,7 +81,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
       
       }elseif ( is_search() || get_query_var('s') ) {
 
-        $breadcrumb .= ($before) . 'Search results for "' . get_search_query() . '"' . $after;
+        $breadcrumb .= ($before) . 'Kết quả tìm kiếm "' . get_search_query() . '"' . $after;
         $page_title = get_search_query();
 
       } elseif (is_single() && !is_attachment()) {
@@ -137,7 +137,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
 
       }  elseif ( is_tag() ) {
 
-        $breadcrumb .= ($before) . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+        $breadcrumb .= ($before) . 'Thẻ "' . single_tag_title('', false) . '"' . $after;
         $page_title = single_tag_title('', false);
 
       } elseif ( is_author() ) {
@@ -145,22 +145,14 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         global $author;
         $userdata = get_userdata($author);
         if($userdata){
-          $breadcrumb .= ($before) . 'Articles posted by ' . $userdata->display_name . $after;
+          $breadcrumb .= ($before) . 'Đăng bởi ' . $userdata->display_name . $after;
           $page_title = $userdata->display_name;
         } 
 
       } elseif ( is_404() ) {
 
-        $breadcrumb .= ($before) . 'Error 404' . $after;
-        $page_title = 'Error 404';
-
-      }
-
-      if ( get_query_var('paged') ) {
-
-        if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) $breadcrumb .= ' (';
-        $breadcrumb .= $before . esc_html__('Page','vizeon') . ' ' . get_query_var('paged') . $after;
-        if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author() ) $breadcrumb .= ')';
+        $breadcrumb .= ($before) . 'Lỗi 404' . $after;
+        $page_title = 'Không tìm thấy nội dung';
 
       }
 
