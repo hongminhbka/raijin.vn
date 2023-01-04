@@ -276,3 +276,22 @@ function vizeon_init_scripts(){
 }
 add_action('wp_enqueue_scripts', 'vizeon_init_scripts', 99);
 
+
+add_action( 'woocommerce_no_products_found', 'bbloomer_show_4_products_per_category' );
+ 
+function bbloomer_show_4_products_per_category() {
+   $args = array(
+      'parent' => 0,
+      'hide_empty' => true,
+      'taxonomy' => 'product_cat',
+      'fields' => 'slugs',
+   );
+   $categories = get_categories( $args );
+   foreach ( $categories as $category_slug ) {
+      $term_object = get_term_by( 'slug', $category_slug , 'product_cat' );
+      echo '<hr><h2>' . $term_object->name . '</h2>';
+      echo do_shortcode( '[products limit="4" columns="4" category="' . $category_slug . '"]' );
+      echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">View all ' . $term_object->name . ' products &rarr;</a>';
+   }
+}
+
