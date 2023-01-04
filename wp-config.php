@@ -79,6 +79,7 @@ $table_prefix  = 'wp_';
  */
 define('WP_DEBUG', false);
 
+define('WP_POST_REVISIONS', 3);
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
@@ -91,5 +92,3 @@ require_once(ABSPATH . 'wp-settings.php');
 /** Off update. */
 define( 'automatic_updater_disabled', true );
 
-
-define('WP_POST_REVISIONS', 3);
