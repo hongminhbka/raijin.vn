@@ -346,15 +346,21 @@ abstract class GVAElement_Base extends Elementor\Widget_Base {
         $output .= '<div class="pager">';
           $output .= '<div class="paginations">';
             if( $paged >1 && !is_home()){
-              $output .= '<a class="prev_page" href="'. previous_posts(false) .'"><i class="gv-icon-164"></i></a>';
+              $output .= '<a rel="prev" class="prev_page" href="'. previous_posts(false) .'"><i class="gv-icon-164"></i></a>';
             }
             for( $i=1; $i <= $total; $i++ ){
               if ( $i == $current ){
-                $output .= '<a href="'. get_pagenum_link($i) .'" class="page-item active">'. $i .'</a>';
+                $output .= '<a rel="canonical" href="'. get_pagenum_link($i) .'" class="page-item active">'. $i .'</a>';
                 $dots = true;
               } else {
                 if ( $show_all || ( $i <= $end_size || ( $current && $i >= $current - $mid_size && $i <= $current + $mid_size ) || $i > $total - $end_size ) ){
-                  $output .= '<a href="'. get_pagenum_link($i) .'" class="page-item">'. $i .'</a>';
+                  if($i>$current){
+                    $output .= '<a rel="next" href="'. get_pagenum_link($i) .'" class="page-item">'. $i .'</a>';
+                  }
+                  else{
+                    $output .= '<a rel="prev" href="'. get_pagenum_link($i) .'" class="page-item">'. $i .'</a>';
+                  }
+                  
                   $dots = true;
                 } elseif ( $dots && ! $show_all ) {
                   $output .= '<span class="page-item">... </span>';
@@ -363,7 +369,7 @@ abstract class GVAElement_Base extends Elementor\Widget_Base {
               }
             }
             if( $paged < $total && !is_home()){
-              $output .= '<a class="next_page" href="'. next_posts(0,false) .'"><i class="gv-icon-165"></i></a>';
+              $output .= '<a rel="next" class="next_page" href="'. next_posts(0,false) .'"><i class="gv-icon-165"></i></a>';
             }
           $output .= '</div>';
             
