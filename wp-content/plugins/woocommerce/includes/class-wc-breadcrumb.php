@@ -363,7 +363,7 @@ class WC_Breadcrumb {
 	protected function search_trail() {
 		if ( is_search() ) {
 			/* translators: %s: search term */
-			$this->add_crumb( sprintf( __( 'Search results for &ldquo;%s&rdquo;', 'woocommerce' ), get_search_query() ), remove_query_arg( 'paged' ) );
+			$this->add_crumb( sprintf( __( 'Kết quả tìm kiếm theo &ldquo;%s&rdquo;', 'woocommerce' ), get_search_query() ), remove_query_arg( 'paged' ) );
 		}
 	}
 
@@ -373,7 +373,7 @@ class WC_Breadcrumb {
 	protected function paged_trail() {
 		if ( get_query_var( 'paged' ) && 'subcategories' !== woocommerce_get_loop_display_mode() ) {
 			/* translators: %d: page number */
-			$this->add_crumb( sprintf( __( 'Page %d', 'woocommerce' ), get_query_var( 'paged' ) ) );
+			$this->add_crumb( sprintf( __( 'Trang %d', 'woocommerce' ), get_query_var( 'paged' ) ) );
 		}
 	}
 }
