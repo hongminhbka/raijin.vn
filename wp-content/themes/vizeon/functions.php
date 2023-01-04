@@ -299,16 +299,6 @@ function show_products_per_category() {
  *
  * Fix pagging post
  */
-function set_pagination_base () {
-
-  global $wp_rewrite;
-
-  $wp_rewrite->pagination_base = 'p';
-
-}
-
-add_action( 'init', 'set_pagination_base' );
-
 function custom_pre_get_posts( $query ) {
   if( $query->is_main_query() && !$query->is_feed() && !is_admin() && is_category()) {
     $query->set( 'paged', str_replace( '/', '', get_query_var( 'page' ) ) );  }  
