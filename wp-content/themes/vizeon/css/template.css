@@ -11179,6 +11179,10 @@ ul.nav-tabs > li.active > a {
   color: #fff;
   width: unset;
 }
+.home-page .elementor-widget-button .elementor-button:hover{
+  -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
+}
 
 .home-page .woocommerce .grid-view .product-block .product-meta .shop-loop-title,
 .home-page .woocommerce .grid-view .product-block .product-meta .shop-loop-after-title{
