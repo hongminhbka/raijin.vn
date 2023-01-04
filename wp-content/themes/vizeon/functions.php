@@ -289,9 +289,9 @@ function show_products_per_category() {
    $categories = get_categories( $args );
    foreach ( $categories as $category_slug ) {
       $term_object = get_term_by( 'slug', $category_slug , 'product_cat' );
-      echo '<h2 class="elementor-heading-title elementor-size-default">' . $term_object->name . '</h2>';
-      echo do_shortcode( '[products limit="4" columns="4" category="' . $category_slug . '"]' );
-      echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">View all ' . $term_object->name . ' products &rarr;</a>';
+      echo '<h2 class="elementor-heading-title elementor-size-default">' . $term_object->description . '</h2>';
+      echo do_shortcode( '[products limit="3" columns="3" category="' . $category_slug . '"]' );
+      echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' &rarr;</a>';
    }
 }
 

@@ -90,7 +90,11 @@ $woo_display = vizeon_display_modes_value();
                                         <div class="align-left style-1 widget gsc-heading">
                                           <div class="content-inner">
                                             <div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
-                                            <div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>
+                                            <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
+                                              <div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>                                                                                          
+                                            <?php else: ?>
+                                              <?php do_action('woocommerce_archive_description'); ?>
+                                            <?php endif; ?>
                                           </div>
                                         </div>
                                       </div>
@@ -182,9 +186,7 @@ $woo_display = vizeon_display_modes_value();
                 </div>
               </div>
             </div>
-          </section>
-
-          <?php do_action('woocommerce_archive_description'); ?>
+          </section>          
 
           <?php woocommerce_product_subcategories(); ?>
           <?php if (have_posts()) : ?>                                      
