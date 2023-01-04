@@ -133,7 +133,7 @@ if(!function_exists('vizeon_pagination')){
                         }
                         for( $i=1; $i <= $total; $i++ ){
                             if ( $i == $current ){
-                                $output .= '<a href="'. get_pagenum_link($i) .'" class="page-item active">'. $i .'</a>';
+                                $output .= '<a rel="canonical" href="'. get_pagenum_link($i) .'" class="page-item active">'. $i .'</a>';
                                 $dots = true;
                             } else {
                                 if ( $show_all || ( $i <= $end_size || ( $current && $i >= $current - $mid_size && $i <= $current + $mid_size ) || $i > $total - $end_size ) ){
