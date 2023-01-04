@@ -11166,8 +11166,18 @@ ul.nav-tabs > li.active > a {
 
 .home-page .woocommerce .grid-view .product-block .product-meta .shop-button{
   text-align: left;
-  border: none; 
+  border: none;
   border-radius: unset;
+  margin: unset;
+  background: none;
+}
+ 
+.home-page .elementor-widget-button .elementor-button{
+  background: #C40000;
+  border-radius: unset;
+  border: unset;
+  color: #fff;
+  width: unset;
 }
 
 .home-page .woocommerce .grid-view .product-block .product-meta .shop-loop-title,
