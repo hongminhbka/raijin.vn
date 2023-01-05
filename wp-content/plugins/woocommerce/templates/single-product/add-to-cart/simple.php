@@ -25,7 +25,8 @@ if (!$product->is_purchasable()) {
 }
 
 $product_attributes = $product->get_attributes();
-$shopee, $lazada = '';
+$shopee = '';
+$lazada = '';
 
 foreach($product_attributes as $attribute){	
 	switch ($attribute['name']) {
