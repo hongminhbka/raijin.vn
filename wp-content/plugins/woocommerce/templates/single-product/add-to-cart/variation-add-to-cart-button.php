@@ -26,7 +26,7 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
 
-	<button type="submit" class="single_add_to_cart_button button alt">Thêm giỏ hàng 4</button>
+	<button type="submit" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

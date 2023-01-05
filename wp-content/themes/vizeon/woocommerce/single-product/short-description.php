@@ -17,9 +17,9 @@ if (!$post->post_excerpt) return;
 <div itemprop="description">
 	<?php echo apply_filters('woocommerce_short_description', $post->post_excerpt) ?>
 	<div class="d-flex align-center">
-		<div class="font-weight-normal mr-2">Chia sẻ : </div>		
+		<div class="font-weight-normal mr-2">Chia sẻ: </div>		
 		<div style="background-color: transparent; margin-left: 15px; cursor: pointer">
-			<a href="<?php echo $post->get_permalink ?>" data-elementor-open-lightbox="" target="_blank" onclick="copyLink(this);return false;">
+			<a href="<?php echo $post->get_permalink ?>" data-elementor-open-lightbox="" onclick="copyLink(this);">
 				<img width="24" height="24" src="/wp-content/themes/vizeon/images/icon-copy.svg" alt="Sao chép liên kết sản phẩm">
 			</a>
 			<script>

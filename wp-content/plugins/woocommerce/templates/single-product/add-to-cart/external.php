@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 <form class="cart" action="<?php echo esc_url( $product_url ); ?>" method="get">
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 	<div class="d-block">
-		<button type="submit" class="single_add_to_cart_button button alt">Thêm giỏ hàng 1</button>
+		<button type="submit" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
 	</div>
 	<?php wc_query_string_form_fields( $product_url ); ?>
 

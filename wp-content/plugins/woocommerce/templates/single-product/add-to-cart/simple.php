@@ -46,6 +46,10 @@ if ($product->is_in_stock()) : ?>
 		?>
 		<div class="d-block">
 			<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
+			<a class="single_add_to_cart_button button alt" style="background-color: #fd5622;">
+				<img width="88" height="28" src="/wp-content/themes/vizeon/images/shopee.svg" class="attachment-large size-large" alt="Đặt hàng trực tiếp trên Shopee">Mua tại Shopee
+			</a>
+			<a class="single_add_to_cart_button button alt" style="margin-left: 5px;background-image: linear-gradient(#0100bd, #0d1079);">Mua tại Lazada</a>
 		</div>
 
 

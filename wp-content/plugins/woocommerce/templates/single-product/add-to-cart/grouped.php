@@ -102,7 +102,7 @@ do_action('woocommerce_before_add_to_cart_form'); ?>
 		<?php do_action('woocommerce_before_add_to_cart_button'); ?>
 
 		<div class="d-block">
-			<button type="submit" class="single_add_to_cart_button button alt">Thêm giỏ hàng 2</button>
+			<button type="submit" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
 		</div>
 
 		<?php do_action('woocommerce_after_add_to_cart_button'); ?>
