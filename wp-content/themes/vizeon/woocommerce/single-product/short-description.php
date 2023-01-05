@@ -19,12 +19,13 @@ if (!$post->post_excerpt) return;
 	<div class="d-flex align-center">
 		<div class="font-weight-normal mr-2">Chia sẻ : </div>		
 		<div style="background-color: transparent; margin-left: 15px; cursor: pointer">
-			<a href="<?php echo $post->get_permalink ?>" data-elementor-open-lightbox="" target="_blank" onclick="copyLink(this)">
+			<a href="<?php echo $post->get_permalink ?>" data-elementor-open-lightbox="" target="_blank" onclick="copyLink(this);return false;">
 				<img width="24" height="24" src="/wp-content/themes/vizeon/images/icon-copy.svg" alt="Sao chép liên kết sản phẩm">
 			</a>
 			<script>
 				function copyLink(this) {					
-					navigator.clipboard.writeText(this.getAttribute("href"));					
+					navigator.clipboard.writeText(this.getAttribute("href"));
+					return false;					
 				}	
 			</script>
 		</div>
