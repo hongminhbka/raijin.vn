@@ -24,6 +24,22 @@ if (!$product->is_purchasable()) {
 	return;
 }
 
+$product_attributes = $product->get_attributes();
+$shopee, $lazada = '';
+
+foreach($product_attributes as $attributes){	
+	switch ($attribute['name']) {
+		case 'Shopee':
+		  $shopee = $attribute['value'];
+		  break;
+		case 'Lazada':
+		  $lazada = $attribute['value'];
+		  break;		
+		default:
+		  
+	  }
+}
+
 echo wc_get_stock_html($product); // WPCS: XSS ok.
 
 if ($product->is_in_stock()) : ?>
@@ -46,13 +62,12 @@ if ($product->is_in_stock()) : ?>
 		?>
 		<div class="d-block">
 			<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
-			<a class="single_add_to_cart_button button alt" style="background-color: #fd5622;">
-				<img width="88" height="28" src="/wp-content/themes/vizeon/images/shopee.svg" class="attachment-large size-large" alt="Đặt hàng trực tiếp trên Shopee">Mua tại Shopee
-			</a>
-			<a class="single_add_to_cart_button button alt" style="margin-left: 5px;background-image: linear-gradient(#0100bd, #0d1079);">Mua tại Lazada</a>
+			<?php if(isset($shopee) && ($shopee!= '')):?>
+				<a class="single_add_to_cart_button button alt" style="background-color: #fd5622;" href="<?php echo $shopee ?>">Mua tại Shopee</a>
+			<?php elseif(isset($lazada) && ($lazada!= '')):?>
+				<a class="single_add_to_cart_button button alt" style="margin-left: 5px;background-image: linear-gradient(#0100bd, #0d1079);" href="<?php echo $lazada ?>">Mua tại Lazada</a>
+			<?php endif; ?>				
 		</div>
-
-
 		<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 	</form>
 
