@@ -16,8 +16,6 @@ global $product;
 
 ?>
 
-<?php if ( $heading ): ?>
-	<h2 class="tab-title">Thông số kỹ thuật</h2>
-<?php endif; ?>
+<h2 class="tab-title">Thông số kỹ thuật</h2>
 
 <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
