@@ -60,18 +60,7 @@ if ($products->have_posts()) : ?>
 		</div>
 
 	</div>
-	<div class="container py-5">
-		<div style="
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 600;
-		font-size: 32px;
-		line-height: 40px;
-		color: #2E3A5B
-		">Bài viết liên quan</div>
-		<div>BLOCG</div>
-	</div>
-
+	
 <?php endif;
 
 wp_reset_postdata();
