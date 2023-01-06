@@ -24,11 +24,13 @@ if (!$product_attributes) {
 	return;
 }
 ?>
-<table class="table table-striped" style="border-style: none !important">
+<table class="table table-striped table-none-border">
 	<?php foreach ($product_attributes as $product_attribute_key => $product_attribute) : ?>
-		<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr($product_attribute_key); ?>">
-			<th class="woocommerce-product-attributes-item__label" style="border-style: none !important"><?php echo wp_kses_post($product_attribute['label']); ?></th>
-			<td class="woocommerce-product-attributes-item__value" style="border-style: none !important"><?php echo wp_kses_post($product_attribute['value']); ?></td>
-		</tr>
+		<?php if($product_attribute_key != 'Shopee' && $product_attribute_key != 'Lazada' && str_contains($product_attribute_key, 'Câu hỏi')) :?>
+			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr($product_attribute_key); ?>">
+				<td class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post($product_attribute['label']); ?></td>
+				<td class="woocommerce-product-attributes-item__value"><?php echo wp_kses_post($product_attribute['value']); ?></td>
+			</tr>
+		<?php endif;?>
 	<?php endforeach; ?>
 </table>
