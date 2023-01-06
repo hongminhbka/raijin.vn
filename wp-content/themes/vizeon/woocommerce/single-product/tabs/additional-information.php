@@ -14,11 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
-$heading = apply_filters( 'woocommerce_product_additional_information_heading', esc_html__( 'Additional Information', 'vizeon' ) );
 ?>
 
 <?php if ( $heading ): ?>
-	<h2 class="tab-title hidden"><?php echo esc_html($heading); ?></h2>
+	<h2 class="tab-title">Thông số kỹ thuật</h2>
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_product_additional_information', $product ); ?>
