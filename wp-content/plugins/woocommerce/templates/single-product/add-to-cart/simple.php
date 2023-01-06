@@ -29,12 +29,16 @@ $shopee = '';
 $lazada = '';
 
 foreach($product_attributes as $attribute){	
-	if($attribute['name'] == 'Shopee'){
-		$shopee = $attribute['value'];
-	}
-	else if($attribute['name'] == 'Shopee'){
-		$lazada = $attribute['value'];
-	}
+	switch ($attribute['name']) {
+		case 'Shopee':
+		  $shopee = $attribute['value'];
+		  break;
+		case 'Lazada':
+		  $lazada = $attribute['value'];
+		  break;		
+		default:
+		  break;
+	  }
 }
 
 echo wc_get_stock_html($product); // WPCS: XSS ok.
@@ -61,7 +65,8 @@ if ($product->is_in_stock()) : ?>
 			<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
 			<?php if(isset($shopee) && $shopee!= ''):?>
 				<a class="single_add_to_cart_button button alt" style="background-color: #fd5622;" href="<?php echo $shopee ?>">Mua tại Shopee</a>
-			<?php elseif(isset($lazada) && $lazada!= ''):?>
+			<?php endif; ?>
+			<?php if(isset($lazada) && $lazada!= ''):?>
 				<a class="single_add_to_cart_button button alt" style="margin-left: 5px;background-image: linear-gradient(#0100bd, #0d1079);" href="<?php echo $lazada ?>">Mua tại Lazada</a>
 			<?php endif; ?>				
 		</div>
