@@ -26,7 +26,7 @@ if (!$product_attributes) {
 ?>
 <table class="table table-striped table-none-border">
 	<?php foreach ($product_attributes as $product_attribute_key => $product_attribute) : ?>
-		<?php if($product_attribute_key != 'Shopee' && $product_attribute_key != 'Lazada' && str_contains($product_attribute_key, 'Câu hỏi')) :?>
+		<?php if($product_attribute_key != 'Shopee' && $product_attribute_key != 'Lazada' && strpos($product_attribute_key, 'Câu hỏi')!=false) :?>
 			<tr class="woocommerce-product-attributes-item woocommerce-product-attributes-item--<?php echo esc_attr($product_attribute_key); ?>">
 				<td class="woocommerce-product-attributes-item__label"><?php echo wp_kses_post($product_attribute['label']); ?></td>
 				<td class="woocommerce-product-attributes-item__value"><?php echo wp_kses_post($product_attribute['value']); ?></td>
