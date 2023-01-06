@@ -29,16 +29,15 @@ $shopee = '';
 $lazada = '';
 
 foreach($product_attributes as $attribute){	
-	switch ($attribute['name']) {
-		case 'Shopee':
-		  $shopee = $attribute['value'];
-		  break;
-		case 'Lazada':
-		  $lazada = $attribute['value'];
-		  break;		
-		default:
-		  break;
-	  }
+	if($attribute['name'] == 'Shopee'){
+		$shopee = $attribute['value'];
+	}
+	else if($attribute['name'] == 'Shopee')(
+		$lazada = $attribute['value'];
+	)
+	else{
+		// do something
+	}
 }
 
 echo wc_get_stock_html($product); // WPCS: XSS ok.
