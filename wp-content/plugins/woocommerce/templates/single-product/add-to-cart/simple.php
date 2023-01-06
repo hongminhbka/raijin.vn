@@ -32,11 +32,8 @@ foreach($product_attributes as $attribute){
 	if($attribute['name'] == 'Shopee'){
 		$shopee = $attribute['value'];
 	}
-	else if($attribute['name'] == 'Shopee')(
+	else if($attribute['name'] == 'Shopee'){
 		$lazada = $attribute['value'];
-	)
-	else{
-		// do something
 	}
 }
 
