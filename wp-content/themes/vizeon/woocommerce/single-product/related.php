@@ -29,6 +29,7 @@ foreach ($attributes as $key => $attribute) {
 			}
 		}
 		else if($name=='Bài viết liên quan'){
+			$attribute['value'] = str_replace(" ","",$attribute['value']);
 			$value = explode("|", $attribute['value']);
 			foreach($value as $index => $postId){
 				if(is_numeric($postId)){
