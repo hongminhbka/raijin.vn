@@ -342,7 +342,7 @@ $woocommerce_loop['columns'] = $columns;
 	</section>
 <?php endif;?>
 
-<?php if($post) :?>
+<?php if($posts) :?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-questions">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
