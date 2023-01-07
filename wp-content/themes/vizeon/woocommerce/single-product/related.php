@@ -39,7 +39,7 @@ foreach ($attributes as $key => $attribute) {
 	}
 }
 
-$argPostRelated = $args = array(
+$argPostRelated = array(
     'post__in' => $postRelatedIDs
 );
 
@@ -342,6 +342,7 @@ $woocommerce_loop['columns'] = $columns;
 <?php endif;?>
 
 <?php if($posts) :?>
+	<?php echo (count($posts))?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-questions">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
