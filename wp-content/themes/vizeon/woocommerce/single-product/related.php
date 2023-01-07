@@ -16,7 +16,7 @@ $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
 $questions = [];
 $postRelatedIDs = [];
-$postRelated=[];
+
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
 		$name = $attribute->get_name();
@@ -29,15 +29,13 @@ foreach ($attributes as $key => $attribute) {
 			}
 		}
 		else if($name=='Bài viết liên quan'){
-			echo $attribute['value'];
-			$postRelated = explode("|", $attribute['value']);
+			$value = explode("|", $attribute['value']);
+			foreach($value as $index => $postId){
+				if(is_numeric($postId)){
+					array_push($postRelatedIDs, $postId);
+				}
+			}
 		}
-	}
-}
-echo $postRelated;
-foreach($postRelated as $key => $postID){
-	if(is_numeric($postID)){
-		array_push($postRelatedIDs, $postID);
 	}
 }
 
