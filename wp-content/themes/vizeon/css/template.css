@@ -11124,6 +11124,16 @@ ul.nav-tabs > li.active > a {
   background-color: #F4F4F4;
 }
 
+.woocommerce .product-related{
+  padding: 40px 0 80px;
+  background-image: url('/wp-content/themes/vizeon/images/backgroud-product-related.jpg');
+  background-color: rgba(0,0,0,0.5);
+}
+
+.woocommerce .product-related .product-listing{
+  background-color: #ffffff;
+}
+
 .woocommerce .grid-view .product-block .product-meta .shop-loop-title,
 .woocommerce .grid-view .product-block .product-meta .shop-loop-after-title{
   text-align: center;

@@ -284,34 +284,34 @@ $woocommerce_loop['columns'] = $columns;
 <?php
 if ($products->have_posts()) : ?>
 	
-	<div class="widget related products " style="background-image:url('/wp-content/uploads/2015/12/bg_product_details_splq.jpg');
-		position: relative;padding: 100px 0px;
-	">
-		<div class="container">
-			<div style="font-family: 'Montserrat';
-			font-style: normal;
-			font-weight: 600;
-			font-size: 32px;
-			line-height: 40px;
-			position:absolute;
-			top: 20px;
-			left: 15%;
-			color:#2E3A5B" class="widget-title"><?php echo esc_html(vizeon_get_option('related_heading_text', 'Related Products')) ?></div>
-		</div>
-		<div style="background-color: #ffffff !important; margin: 0px 15%;   padding: 30px 10px;">
-			<div class="products carousel-view count-row-1 container justify-space-between">
-				<div class="init-carousel-owl-theme owl-carousel" data-items="<?php echo esc_attr($show); ?>" data-nav="true">
-					<?php while ($products->have_posts()) : $products->the_post(); ?>
-
-						<?php wc_get_template_part('content', 'product'); ?>
-
-					<?php endwhile; // end of the loop. 
-					?>
+	<section class="elementor-element elementor-section-full_width product-related elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-row">
+				<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+					<div class="elementor-column-wrap  elementor-element-populated">
+						<div class="elementor-widget-wrap">
+							<section class="elementor-element product-listing elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+								<div class="elementor-container elementor-column-gap-default">
+									<h2 class="elementor-heading-title elementor-size-default">Sản phẩm khác</h2>		
+									<div class="elementor-row">
+										<div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
+											<div class="elementor-column-wrap elementor-element-populated">
+												<div class="elementor-widget-wrap">
+													<?php while ($products->have_posts()) : $products->the_post(); ?>
+														<?php wc_get_template_part('content', 'product'); ?>
+													<?php endwhile;?>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-
-	</div>
+	</section>
 
 <?php endif;
 
