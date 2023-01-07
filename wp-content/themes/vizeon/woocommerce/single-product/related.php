@@ -21,11 +21,11 @@ foreach ($attributes as $key => $attribute) {
 		echo $name;
 		//echo "<br>";
 		if(strpos($name, 'Câu hỏi')!==false){
-			$value = explode("|", $attribute_data['value']);
+			$value = explode("|", $attribute['value']);
 			if(count($value)==2){
-				$attribute_data->question = $value[0];
-				$attribute_data->answer = $value[1];
-				array_push($questions, $attribute_data);
+				$attribute->question = $value[0];
+				$attribute->answer = $value[1];
+				array_push($questions, $attribute);
 			}
 		}
 	}
