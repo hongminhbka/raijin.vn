@@ -296,13 +296,24 @@ if ($products->have_posts()) : ?>
 										<div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
 											<div class="elementor-column-wrap elementor-element-populated">
 												<div class="elementor-widget-wrap">
-													<h2 class="elementor-heading-title elementor-size-default">Sản phẩm khác</h2>
-													<div class="woocommerce columns-3 ">
-														<div class="products_wrapper grid-view">
-   															<div class="products lg-block-grid-3 md-block-grid-2 sm-block-grid-2">
-															   <?php while ($products->have_posts()) : $products->the_post(); ?>
-																	<?php wc_get_template_part('content', 'product'); ?>
-																<?php endwhile;?>
+													<div class="elementor-element elementor-widget elementor-widget-heading">
+														<div class="elementor-widget-container">
+															<p class="elementor-heading-title elementor-size-default">
+																<span class="ez-toc-section"></span>Sản phẩm khác
+																<span class="ez-toc-section-end"></span>
+															</p>
+														</div>
+													</div>
+													<div class="elementor-element elementor-widget elementor-widget-text-editor">
+														<div class="elementor-widget-container">
+															<div class="woocommerce columns-3 ">
+																<div class="products_wrapper grid-view">
+																	<div class="products lg-block-grid-3 md-block-grid-2 sm-block-grid-2">
+																	<?php while ($products->have_posts()) : $products->the_post(); ?>
+																			<?php wc_get_template_part('content', 'product'); ?>
+																		<?php endwhile;?>
+																	</div>
+																</div>
 															</div>
 														</div>
 													</div>
