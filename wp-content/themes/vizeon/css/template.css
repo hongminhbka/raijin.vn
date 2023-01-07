@@ -11130,7 +11130,11 @@ ul.nav-tabs > li.active > a {
   background-color: rgba(0,0,0,0.5);
 }
 
-.woocommerce .product-related .product-listing{
+.woocommerce .product-related .product-listing .elementor-heading-title{
+  color: #ffffff;
+}
+
+.woocommerce .product-related .product-listing .product-block{
   background-color: #ffffff;
 }
 
