@@ -16,9 +16,10 @@ $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
 $questions = [];
 foreach ($attributes as $key => $attribute) {
+	echo explode(",", $attribute['value'];
     if(strpos($attribute['label'], 'Câu hỏi')!==false){
 		$value = explode(",", $attribute['value']);
-		if(is_array($value) && count($value)==2){
+		if(count($value)==2){
 			$attribute->question = $value[0];
 			$attribute->answer = $value[1];
 			array_push($questions, $attribute);
