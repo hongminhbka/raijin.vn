@@ -361,7 +361,7 @@ $woocommerce_loop['columns'] = $columns;
 												<?php echo '<div class="item-columns margin-bottom-30">';?> 
                   									<?php set_query_var( 'thumbnail_size', 'medium' );?>
 													<?php set_query_var( 'layout', 'grid' );?>
-                  									<?php get_template_part( 'templates/content/item', get_post_format() );?>
+                  									<?php get_template_part( 'templates/content/item', 'post-style-1' );?>
                 								<?php echo '</div>';?>
 											<?php endwhile;?>
 										</div>
