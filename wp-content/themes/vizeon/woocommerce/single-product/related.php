@@ -18,8 +18,6 @@ $questions = [];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
 		$name = $attribute->get_name();
-		echo $name;
-		//echo "<br>";
 		if(strpos($name, 'Câu hỏi')!==false){
 			$value = explode("|", $attribute['value']);
 			if(count($value)==2){
@@ -252,14 +250,13 @@ $woocommerce_loop['columns'] = $columns;
 											<div class="elementor-toggle-item">
 												<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title elementor-active"
 													data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
-													<span class="elementor-toggle-icon elementor-toggle-icon-right"
-														aria-hidden="true">
+													<span class="elementor-toggle-icon elementor-toggle-icon-right">
 														<span class="elementor-toggle-icon-closed"><i
 																class="fas fa-plus"></i></span>
 														<span class="elementor-toggle-icon-opened"><i
 																class="elementor-toggle-icon-opened fas fa-window-minimize"></i></span>
 													</span>
-													<p><?php echo esc_attr($question_key); echo esc_attr($question->question) ?></p>
+													<p><?php echo esc_attr($question_key . '. '); echo esc_attr($question->question) ?></p>
 												</div>
 												<div id="elementor-tab-content-<?php echo esc_attr($question_key); ?>"
 													class="elementor-tab-content elementor-clearfix elementor-active"
