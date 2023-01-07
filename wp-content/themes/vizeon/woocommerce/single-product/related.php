@@ -14,6 +14,18 @@ global $product, $woocommerce_loop;
 $posts_per_page = 5;
 $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
+$questions = [];
+foreach ($attributes as $key => $attribute) {
+    if(strpos($attribute['label'], 'Câu hỏi')!==false){
+		$value = explode(",", $attribute['value']);
+		if(is_array($value) && count($value)==2){
+			$attribute->question = $value[0];
+			$attribute->answer = $value[1];
+			array_push($questions, $attribute);
+		}
+	}
+}
+
 if (sizeof($related) == 0) return;
 
 $args = apply_filters('woocommerce_related_products_args', array(
@@ -216,7 +228,7 @@ $woocommerce_loop['columns'] = $columns;
 	</div>
 </section>
 
-<?php if ($attributes):?>
+<?php if ($questions):?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
@@ -231,45 +243,29 @@ $woocommerce_loop['columns'] = $columns;
 							<div class="elementor-element elementor-widget elementor-widget-toggle">
 								<div class="elementor-widget-container">
 									<div class="elementor-toggle" role="tablist">
-										<div class="elementor-toggle-item">
-											<div id="elementor-tab-title-1591" class="elementor-tab-title elementor-active"
-												data-tab="1" role="tab" aria-controls="elementor-tab-content-1591">
-												<span class="elementor-toggle-icon elementor-toggle-icon-right"
-													aria-hidden="true">
-													<span class="elementor-toggle-icon-closed"><i
-															class="fas fa-plus"></i></span>
-													<span class="elementor-toggle-icon-opened"><i
-															class="elementor-toggle-icon-opened fas fa-window-minimize"></i></span>
-												</span>
-												<a href="">Toggle #1</a>
-											</div>
-											<div id="elementor-tab-content-1591"
-												class="elementor-tab-content elementor-clearfix elementor-active"
-												data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1591"
-												style="display: block;">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-													luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-											</div>
-										</div>
-										<div class="elementor-toggle-item">
-											<div id="elementor-tab-title-1592" class="elementor-tab-title" data-tab="2"
-												role="tab" aria-controls="elementor-tab-content-1592">
-												<span class="elementor-toggle-icon elementor-toggle-icon-right"
-													aria-hidden="true">
-													<span class="elementor-toggle-icon-closed"><i
-															class="fas fa-plus"></i></span>
-													<span class="elementor-toggle-icon-opened"><i
-															class="elementor-toggle-icon-opened fas fa-window-minimize"></i></span>
-												</span>
-												<a href="">Toggle #2</a>
-											</div>
-											<div id="elementor-tab-content-1592"
-												class="elementor-tab-content elementor-clearfix" data-tab="2"
-												role="tabpanel" aria-labelledby="elementor-tab-title-1592">
-												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-													luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-											</div>
-										</div>
+										<?php foreach ($questions as $question_key => $question) : ?>
+											<?php if(strpos($product_attribute['label'], 'Câu hỏi')!==false) :?>
+												<div class="elementor-toggle-item">
+													<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title elementor-active"
+														data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
+														<span class="elementor-toggle-icon elementor-toggle-icon-right"
+															aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i
+																	class="fas fa-plus"></i></span>
+															<span class="elementor-toggle-icon-opened"><i
+																	class="elementor-toggle-icon-opened fas fa-window-minimize"></i></span>
+														</span>
+														<p><?php echo esc_attr($question_key); echo esc_attr($question->question) ?></p>
+													</div>
+													<div id="elementor-tab-content-<?php echo esc_attr($question_key); ?>"
+														class="elementor-tab-content elementor-clearfix elementor-active"
+														data-tab="<?php echo esc_attr($question_key); ?>" role="tabpanel" aria-labelledby="elementor-tab-title-<?php echo esc_attr($question_key); ?>"
+														style="display: block;">
+														<p><?php echo esc_attr($question->answer);?></p>
+													</div>
+												</div>
+											<?php endif;?>
+										<?php endforeach; ?>
 									</div>
 								</div>
 							</div>
