@@ -18,6 +18,7 @@ $questions = [];
 foreach ($attributes as $key => $attribute) {
     if(strpos($attribute['label'], 'Câu hỏi')!==false){
 		$value = explode("|", $attribute['value']);
+		echo $value;
 		if(count($value)==2){
 			$attribute->question = $value[0];
 			$attribute->answer = $value[1];
