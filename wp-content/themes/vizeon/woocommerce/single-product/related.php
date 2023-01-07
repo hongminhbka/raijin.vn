@@ -342,7 +342,7 @@ $woocommerce_loop['columns'] = $columns;
 <?php endif;?>
 
 <?php if($posts) :?>
-	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-questions">
+	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-post-related">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
 				<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
@@ -359,7 +359,7 @@ $woocommerce_loop['columns'] = $columns;
 										<div class="lg-block-grid-3 md-block-grid-3 sm-block-grid-2 xs-block-grid-1">
 											<?php while ($posts->have_posts()) : $posts->the_post(); ?>
 												<?php echo '<div class="item-columns margin-bottom-30">';?>
-                  									<?php get_template_part( 'templates/content/item', 'post-style-1' );?>
+                  									<?php get_template_part( 'templates/content/item', 'post-style-2' );?>
                 								<?php echo '</div>';?>
 											<?php endwhile;?>
 										</div>
