@@ -38,12 +38,12 @@ foreach ($attributes as $key => $attribute) {
 		}
 	}
 }
-
-$argPostRelated = array(
-    'post__in' => $postRelatedIDs
-);
-
-$posts = new WP_Query($argPostRelated);
+if(count($postRelatedIDs) > 0){
+	$argPostRelated = array(
+		'post__in' => $postRelatedIDs
+	);
+	$posts = new WP_Query($argPostRelated);
+}
 
 if (sizeof($related) == 0) return;
 
@@ -342,7 +342,6 @@ $woocommerce_loop['columns'] = $columns;
 <?php endif;?>
 
 <?php if($posts) :?>
-	<?php echo (count($postRelatedIDs));?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-post-related">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
