@@ -15,6 +15,8 @@ $posts_per_page = 5;
 $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
 $questions = [];
+$postRelated = [];
+$postRelatedIDs = [];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
 		$name = $attribute->get_name();
@@ -26,8 +28,23 @@ foreach ($attributes as $key => $attribute) {
 				array_push($questions, $attribute);
 			}
 		}
+		else if($name=='Bài viết liên quan'){
+			$postRelated = explode("|", $attribute['value']);
+		}
 	}
 }
+
+foreach($postRelated as $key => $postID){
+	if(is_numeric($postID)){
+		array_push($postRelatedIDs, $postID);
+	}
+}
+
+$argPostRelated = $args = array(
+    'post__in' => $postRelatedIDs
+);
+
+$posts = new WP_Query($argPostRelated);
 
 if (sizeof($related) == 0) return;
 
@@ -275,12 +292,9 @@ $woocommerce_loop['columns'] = $columns;
 			</div>
 		</div>
 	</section>	
-}
 <?php endif;?>
 
-<?php
-if ($products->have_posts()) : ?>
-	
+<?php if ($products->have_posts()) : ?>
 	<section class="elementor-element elementor-section-full_width product-related elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
@@ -306,7 +320,7 @@ if ($products->have_posts()) : ?>
 															<div class="woocommerce columns-3 ">
 																<div class="products_wrapper grid-view">
 																	<div class="products lg-block-grid-3 md-block-grid-2 sm-block-grid-2">
-																	<?php while ($products->have_posts()) : $products->the_post(); ?>
+																		<?php while ($products->have_posts()) : $products->the_post(); ?>
 																			<?php wc_get_template_part('content', 'product'); ?>
 																		<?php endwhile;?>
 																	</div>
@@ -326,7 +340,37 @@ if ($products->have_posts()) : ?>
 			</div>
 		</div>
 	</section>
+<?php endif;?>
 
+<?php if($post) :?>
+	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-questions">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-row">
+				<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+					<div class="elementor-column-wrap elementor-element-populated">
+						<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-widget elementor-widget-heading">
+								<div class="elementor-widget-container">
+									<p class="elementor-heading-title elementor-size-default">Bài viết liên quan</p>
+								</div>
+							</div>
+							<div class="gva-element-gva-posts gva-element">  
+								<div class="gva-posts-grid clearfix gva-posts">
+									<div class="gva-content-items"> 
+										<div class="lg-block-grid-3 md-block-grid-3 sm-block-grid-2 xs-block-grid-1">
+											<?php while ($posts->have_posts()) : $posts->the_post(); ?>
+												<?php wc_get_template_part('content', 'post'); ?>
+											<?php endwhile;?>
+										
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 <?php endif;
-
 wp_reset_postdata();
