@@ -36,7 +36,6 @@
                <?php echo vizeon_limit_words( $excerpt_words, get_the_excerpt(), get_the_content() ); ?>
             </div>
          </div>
-         <div class="read-more"><a class="btn-inline" href="<?php echo esc_url( get_permalink() ) ?>">Chi tiết</a></div>
       </div>
    </article>   
 </div>
