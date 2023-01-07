@@ -342,6 +342,7 @@ $woocommerce_loop['columns'] = $columns;
 <?php endif;?>
 
 <?php if($posts) :?>
+	<?php echo (count($postRelatedIDs));?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-post-related">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
