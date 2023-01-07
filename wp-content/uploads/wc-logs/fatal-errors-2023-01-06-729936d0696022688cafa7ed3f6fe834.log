@@ -1,0 +1,24 @@
+2023-01-06T15:53:22+00:00 CRITICAL syntax error, unexpected ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/simple.php on line 36
+
+2023-01-06T16:18:11+00:00 CRITICAL Uncaught Error: Call to undefined function str_contains() in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/templates/single-product/product-attributes.php:29
+Stack trace:
+#0 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include()
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3379): wc_get_template('single-product/...', Array)
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): wc_display_product_attributes(Object(WC_Product_Simple))
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/tabs/additional-information.php(21): do_action('woocommerce_pro...', Object(WC_Product_Simple))
+#6 /home/skymap_wp/raijin.howizbiz.c in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/templates/single-product/product-attributes.php on line 29
+
+2023-01-06T16:19:06+00:00 CRITICAL Uncaught Error: Call to undefined function str_contains() in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/templates/single-product/product-attributes.php:29
+Stack trace:
+#0 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/includes/wc-core-functions.php(249): include()
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/includes/wc-template-functions.php(3379): wc_get_template('single-product/...', Array)
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): wc_display_product_attributes(Object(WC_Product_Simple))
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/tabs/additional-information.php(21): do_action('woocommerce_pro...', Object(WC_Product_Simple))
+#6 /home/skymap_wp/raijin.howizbiz.c in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/templates/single-product/product-attributes.php on line 29
+
+2023-01-06T16:29:00+00:00 CRITICAL syntax error, unexpected ':' in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/woocommerce/templates/single-product/product-attributes.php on line 29
+

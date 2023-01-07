@@ -1,0 +1,73 @@
+2023-01-07T00:21:43+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 17
+
+2023-01-07T00:51:07+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 19
+
+2023-01-07T00:51:47+00:00 CRITICAL syntax error, unexpected ';', expecting ',' or ')' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 19
+
+2023-01-07T01:03:29+00:00 CRITICAL Object of class WC_Product_Attribute could not be converted to string in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 19
+
+2023-01-07T02:48:01+00:00 CRITICAL Uncaught Error: Call to a member function is_editable_by_current_user() on boolean in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php:305
+Stack trace:
+#0 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request('')
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-admin/admin-ajax.php(173): do_action('wp_ajax_element...')
+#6 {main}
+  thrown in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php on line 305
+
+2023-01-07T02:48:08+00:00 CRITICAL Uncaught Error: Call to a member function is_editable_by_current_user() on boolean in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php:305
+Stack trace:
+#0 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request('')
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-admin/admin-ajax.php(173): do_action('wp_ajax_element...')
+#6 {main}
+  thrown in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php on line 305
+
+2023-01-07T02:48:10+00:00 CRITICAL Uncaught Error: Call to a member function is_editable_by_current_user() on boolean in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php:305
+Stack trace:
+#0 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request('')
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-admin/admin-ajax.php(173): do_action('wp_ajax_element...')
+#6 {main}
+  thrown in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php on line 305
+
+2023-01-07T02:48:11+00:00 CRITICAL Uncaught Error: Call to a member function is_editable_by_current_user() on boolean in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php:305
+Stack trace:
+#0 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request('')
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-admin/admin-ajax.php(173): do_action('wp_ajax_element...')
+#6 {main}
+  thrown in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php on line 305
+
+2023-01-07T02:48:14+00:00 CRITICAL Uncaught Error: Call to a member function is_editable_by_current_user() on boolean in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php:305
+Stack trace:
+#0 [internal function]: Elementor\Widgets_Manager->ajax_render_widget(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#1 /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
+#2 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(286): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request('')
+#3 /home/skymap_wp/raijin.howizbiz.com/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#4 /home/skymap_wp/raijin.howizbiz.com/wp-includes/plugin.php(465): WP_Hook->do_action(Array)
+#5 /home/skymap_wp/raijin.howizbiz.com/wp-admin/admin-ajax.php(173): do_action('wp_ajax_element...')
+#6 {main}
+  thrown in /home/skymap_wp/raijin.howizbiz.com/wp-content/plugins/elementor/includes/managers/widgets.php on line 305
+
+2023-01-07T03:30:09+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 251
+
+2023-01-07T03:30:55+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 251
+
+2023-01-07T03:30:58+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 251
+
+2023-01-07T03:31:28+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 251
+
+2023-01-07T03:33:03+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 251
+

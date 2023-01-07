@@ -15,7 +15,6 @@ $posts_per_page = 5;
 $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
 $questions = [];
-$postRelated = [];
 $postRelatedIDs = [];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
@@ -33,7 +32,7 @@ foreach ($attributes as $key => $attribute) {
 		}
 	}
 }
-
+echo $postRelated;
 foreach($postRelated as $key => $postID){
 	if(is_numeric($postID)){
 		array_push($postRelatedIDs, $postID);
