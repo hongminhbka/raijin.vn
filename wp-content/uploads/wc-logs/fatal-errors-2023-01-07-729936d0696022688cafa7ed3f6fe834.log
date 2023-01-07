@@ -71,3 +71,5 @@ Stack trace:
 
 2023-01-07T03:33:03+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 251
 
+2023-01-07T07:53:37+00:00 CRITICAL Object of class WC_Product_Attribute could not be converted to string in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/single-product/related.php on line 20
+
