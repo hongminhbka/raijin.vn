@@ -283,7 +283,7 @@ $woocommerce_loop['columns'] = $columns;
 														style="display: block;">
 														<p><?php echo esc_attr($question->answer);?></p>
 													</div>
-												<?php elseif() :?>
+												<?php else :?>
 													<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title"
 														data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
 														<span class="elementor-toggle-icon elementor-toggle-icon-right">
@@ -312,12 +312,7 @@ $woocommerce_loop['columns'] = $columns;
 				</div>
 			</div>
 		</div>
-	</section>
-	<script>
-		function open(){
-			console.log();
-		}
-	</script>	
+	</section>	
 <?php endif;?>
 
 <?php if ($products->have_posts()) : ?>
