@@ -18,7 +18,7 @@ $questions = [];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
 		$name = $attribute->get_name();
-		//echo $attribute_data;
+		echo $name;
 		//echo "<br>";
 		if(strpos($name, 'Câu hỏi')!==false){
 			$value = explode("|", $attribute_data['value']);
