@@ -290,7 +290,12 @@ $woocommerce_loop['columns'] = $columns;
 				</div>
 			</div>
 		</div>
-	</section>	
+	</section>
+	<script>
+		function open(){
+			console.log();
+		}
+	</script>	
 <?php endif;?>
 
 <?php if ($products->have_posts()) : ?>
