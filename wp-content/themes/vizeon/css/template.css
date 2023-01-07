@@ -11130,6 +11130,10 @@ ul.nav-tabs > li.active > a {
   background-color: rgba(0,0,0,0.5);
 }
 
+.woocommerce .product-questions{
+  padding: 80px 0 40px;
+}
+
 .woocommerce .product-related .product-listing .elementor-heading-title{
   color: #ffffff;
 }
