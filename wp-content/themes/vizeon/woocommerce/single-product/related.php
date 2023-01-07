@@ -360,7 +360,8 @@ $woocommerce_loop['columns'] = $columns;
 											<?php while ($posts->have_posts()) : $posts->the_post(); ?>
 												<?php echo '<div class="item-columns margin-bottom-30">';?> 
                   									<?php set_query_var( 'thumbnail_size', 'medium' );?>
-                  									<?php get_template_part( '../../templates/content', get_post_format() );?>
+													<?php set_query_var( 'layout', 'grid' );?>
+                  									<?php get_template_part( 'templates/content/item', get_post_format() );?>
                 								<?php echo '</div>';?>
 											<?php endwhile;?>
 										</div>
