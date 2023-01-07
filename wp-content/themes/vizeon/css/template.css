@@ -11079,7 +11079,7 @@ ul.nav-tabs > li.active > a {
     padding: 5px 35px !important;
     border: 1px solid #E9EAEA;
   }
-  .product-guaranteed{
+  .woocommerce .product-guaranteed{
     padding: 80px 0 50px;
     background-color: #F4F4F4;
   }
