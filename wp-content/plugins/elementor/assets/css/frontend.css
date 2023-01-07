@@ -2709,8 +2709,10 @@ body.elementor-page .elementor-widget-menu-anchor {
         display: block; }
   .elementor-toggle .elementor-tab-content {
     padding: 15px;
-    border-bottom: 1px solid #D4D4D4;
-    display: none; }
+    border: 1px solid #DBE0E6;
+    display: none;
+    margin: 15px 0 15px;
+    border-radius: 4px; }
 
 @media (max-width: 767px) {
   .elementor-toggle .elementor-tab-title {
