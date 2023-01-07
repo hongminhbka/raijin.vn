@@ -291,15 +291,21 @@ if ($products->have_posts()) : ?>
 					<div class="elementor-column-wrap  elementor-element-populated">
 						<div class="elementor-widget-wrap">
 							<section class="elementor-element product-listing elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
-								<div class="elementor-container elementor-column-gap-default">
-									<h2 class="elementor-heading-title elementor-size-default">Sản phẩm khác</h2>		
+								<div class="elementor-container elementor-column-gap-default">		
 									<div class="elementor-row">
 										<div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
 											<div class="elementor-column-wrap elementor-element-populated">
 												<div class="elementor-widget-wrap">
-													<?php while ($products->have_posts()) : $products->the_post(); ?>
-														<?php wc_get_template_part('content', 'product'); ?>
-													<?php endwhile;?>
+													<h2 class="elementor-heading-title elementor-size-default">Sản phẩm khác</h2>
+													<div class="woocommerce columns-3 ">
+														<div class="products_wrapper grid-view">
+   															<div class="products lg-block-grid-3 md-block-grid-2 sm-block-grid-2">
+															   <?php while ($products->have_posts()) : $products->the_post(); ?>
+																	<?php wc_get_template_part('content', 'product'); ?>
+																<?php endwhile;?>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
