@@ -16,6 +16,7 @@ $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
 $questions = [];
 $postRelatedIDs = [];
+$postRelated=[];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
 		$name = $attribute->get_name();
