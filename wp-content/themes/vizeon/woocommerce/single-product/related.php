@@ -18,8 +18,8 @@ $questions = [];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
 		$attribute_data = $attribute->get_data();
-		echo $attribute_data;
-		echo "<br>";
+		//echo $attribute_data;
+		//echo "<br>";
 		if(strpos($attribute_data['label'], 'Câu hỏi')!==false){
 			$value = explode("|", $attribute_data['value']);
 			if(count($value)==2){
