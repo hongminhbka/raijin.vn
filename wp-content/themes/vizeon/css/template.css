@@ -11128,14 +11128,11 @@ ul.nav-tabs > li.active > a {
   padding: 40px 0 50px;
   background-image: url('/wp-content/themes/vizeon/images/backgroud-product-related.jpg');
   background-color: rgba(0,0,0,0.5);
+  margin-bottom: 80px
 }
 
 .woocommerce .product-questions{
   padding: 80px 0 40px;
-}
-
-.woocommerce .product-post-related{
-  padding-top: 40px;
 }
 
 .woocommerce .product-post-related .post-style-product-related .entry-content{
