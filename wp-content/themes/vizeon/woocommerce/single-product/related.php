@@ -16,17 +16,17 @@ $related = wc_get_related_products($product->get_id(), $posts_per_page);
 $attributes = $product->get_attributes();
 $questions = [];
 foreach ($attributes as $key => $attribute) {
-	echo $attribute['label'];
-	echo "<br>";
-	echo $attribute['value'];
-	echo "<br>";
-    if(strpos($attribute['label'], 'Câu hỏi')!==false){
-		$value = explode("|", $attribute['value']);
-		echo $value;
-		if(count($value)==2){
-			$attribute->question = $value[0];
-			$attribute->answer = $value[1];
-			array_push($questions, $attribute);
+	if ( is_object($attribute) ) {
+		$attribute_data = $attribute->get_data();
+		echo $attribute_data;
+		echo "<br>";
+		if(strpos($attribute_data['label'], 'Câu hỏi')!==false){
+			$value = explode("|", $attribute_data['value']);
+			if(count($value)==2){
+				$attribute_data->question = $value[0];
+				$attribute_data->answer = $value[1];
+				array_push($questions, $attribute_data);
+			}
 		}
 	}
 }
