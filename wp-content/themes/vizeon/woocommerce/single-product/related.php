@@ -216,6 +216,72 @@ $woocommerce_loop['columns'] = $columns;
 	</div>
 </section>
 
+<?php if ($product_attributes):?>
+	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+		<div class="elementor-container elementor-column-gap-default">
+			<div class="elementor-row">
+				<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+					<div class="elementor-column-wrap elementor-element-populated">
+						<div class="elementor-widget-wrap">
+							<div class="elementor-element elementor-widget elementor-widget-heading">
+								<div class="elementor-widget-container">
+									<p class="elementor-heading-title elementor-size-default">Câu hỏi thường gặp</p>
+								</div>
+							</div>
+							<div class="elementor-element elementor-widget elementor-widget-toggle">
+								<div class="elementor-widget-container">
+									<div class="elementor-toggle" role="tablist">
+										<div class="elementor-toggle-item">
+											<div id="elementor-tab-title-1591" class="elementor-tab-title elementor-active"
+												data-tab="1" role="tab" aria-controls="elementor-tab-content-1591">
+												<span class="elementor-toggle-icon elementor-toggle-icon-right"
+													aria-hidden="true">
+													<span class="elementor-toggle-icon-closed"><i
+															class="fas fa-plus"></i></span>
+													<span class="elementor-toggle-icon-opened"><i
+															class="elementor-toggle-icon-opened fas fa-window-minimize"></i></span>
+												</span>
+												<a href="">Toggle #1</a>
+											</div>
+											<div id="elementor-tab-content-1591"
+												class="elementor-tab-content elementor-clearfix elementor-active"
+												data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1591"
+												style="display: block;">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+													luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+											</div>
+										</div>
+										<div class="elementor-toggle-item">
+											<div id="elementor-tab-title-1592" class="elementor-tab-title" data-tab="2"
+												role="tab" aria-controls="elementor-tab-content-1592">
+												<span class="elementor-toggle-icon elementor-toggle-icon-right"
+													aria-hidden="true">
+													<span class="elementor-toggle-icon-closed"><i
+															class="fas fa-plus"></i></span>
+													<span class="elementor-toggle-icon-opened"><i
+															class="elementor-toggle-icon-opened fas fa-window-minimize"></i></span>
+												</span>
+												<a href="">Toggle #2</a>
+											</div>
+											<div id="elementor-tab-content-1592"
+												class="elementor-tab-content elementor-clearfix" data-tab="2"
+												role="tabpanel" aria-labelledby="elementor-tab-title-1592">
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+													luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>	
+}
+<?php endif;?>
+
 <?php
 if ($products->have_posts()) : ?>
 	
