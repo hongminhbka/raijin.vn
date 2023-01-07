@@ -48,7 +48,7 @@ $products = new WP_Query($args);
 $woocommerce_loop['columns'] = $columns;
 ?>
 
-<section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+<section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-guaranteed">
 	<div class="elementor-container elementor-column-gap-default">
 		<div class="elementor-row">
 			<div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
