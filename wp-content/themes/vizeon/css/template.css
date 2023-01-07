@@ -11125,7 +11125,7 @@ ul.nav-tabs > li.active > a {
 }
 
 .woocommerce .product-related{
-  padding: 40px 0 80px;
+  padding: 40px 0 50px;
   background-image: url('/wp-content/themes/vizeon/images/backgroud-product-related.jpg');
   background-color: rgba(0,0,0,0.5);
 }
