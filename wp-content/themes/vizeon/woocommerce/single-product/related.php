@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 global $product, $woocommerce_loop;
 $posts_per_page = 5;
 $related = wc_get_related_products($product->get_id(), $posts_per_page);
-
+$attributes = $product->get_attributes()
 if (sizeof($related) == 0) return;
 
 $args = apply_filters('woocommerce_related_products_args', array(
@@ -216,7 +216,7 @@ $woocommerce_loop['columns'] = $columns;
 	</div>
 </section>
 
-<?php if ($product_attributes):?>
+<?php if ($attributes):?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
