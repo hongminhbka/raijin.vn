@@ -2713,6 +2713,9 @@ body.elementor-page .elementor-widget-menu-anchor {
     display: none;
     margin: 15px 0 15px;
     border-radius: 4px; }
+  .elementor-toggle .elementor-tab-title p{
+    margin: auto;
+  }
 
 @media (max-width: 767px) {
   .elementor-toggle .elementor-tab-title {
