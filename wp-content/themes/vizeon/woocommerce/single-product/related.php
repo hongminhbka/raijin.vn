@@ -248,7 +248,7 @@ $woocommerce_loop['columns'] = $columns;
 									<div class="elementor-toggle" role="tablist">
 										<?php foreach ($questions as $question_key => $question) : ?>
 											<div class="elementor-toggle-item">
-												<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title<?php if($question_key==0) {echo ' elementor-active'}?>"
+												<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title<?php if($question_key==0) {echo ' elementor-active'};?>"
 													data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
 													<span class="elementor-toggle-icon elementor-toggle-icon-right">
 														<span class="elementor-toggle-icon-closed"><i
