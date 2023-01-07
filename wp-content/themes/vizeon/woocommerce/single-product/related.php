@@ -17,10 +17,10 @@ $attributes = $product->get_attributes();
 $questions = [];
 foreach ($attributes as $key => $attribute) {
 	if ( is_object($attribute) ) {
-		$attribute_data = $attribute->get_data();
+		$name = $attribute->get_name();
 		//echo $attribute_data;
 		//echo "<br>";
-		if(strpos($attribute_data['label'], 'Câu hỏi')!==false){
+		if(strpos($name, 'Câu hỏi')!==false){
 			$value = explode("|", $attribute_data['value']);
 			if(count($value)==2){
 				$attribute_data->question = $value[0];
