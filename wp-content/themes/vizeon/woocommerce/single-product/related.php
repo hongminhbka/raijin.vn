@@ -342,7 +342,6 @@ $woocommerce_loop['columns'] = $columns;
 <?php endif;?>
 
 <?php if($posts) :?>
-	<?php echo (count($postRelatedIDs))?>
 	<section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section product-questions">
 		<div class="elementor-container elementor-column-gap-default">
 			<div class="elementor-row">
@@ -359,9 +358,11 @@ $woocommerce_loop['columns'] = $columns;
 									<div class="gva-content-items"> 
 										<div class="lg-block-grid-3 md-block-grid-3 sm-block-grid-2 xs-block-grid-1">
 											<?php while ($posts->have_posts()) : $posts->the_post(); ?>
-												<?php wc_get_template_part('content', 'post'); ?>
+												<?php echo '<div class="item-columns margin-bottom-30">';?> 
+                  									<?php set_query_var( 'thumbnail_size', 'full' );?>
+                  									<?php get_template_part( 'content', 'post' );?>
+                								<?php echo '</div>';?>
 											<?php endwhile;?>
-										
 										</div>
 									</div>
 								</div>
