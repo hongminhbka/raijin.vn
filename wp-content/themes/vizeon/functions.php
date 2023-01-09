@@ -331,3 +331,14 @@ function wp_render_post_columns($column_name,$id){
   
 add_action('manage_posts_custom_column','wp_render_post_columns', 10, 2);
 
+
+if( !function_exists( 'plugin_prefix_unregister_post_type' ) ) {
+	function plugin_prefix_unregister_post_type(){    	
+      unregister_post_type( 'event' );
+      unregister_post_type( 'service' );
+      unregister_post_type( 'team' );
+      unregister_post_type( 'gallery' );
+	}
+}
+add_action('init','plugin_prefix_unregister_post_type');
+
