@@ -311,5 +311,23 @@ function help_custom_request($query_string ) {
            if( ''!=$query_string['page'] ) {
                if( isset( $query_string['name'] ) ) { unset( $query_string['name'] ); } } } return $query_string; 
 }
+
 add_filter('request', 'help_custom_request');
+
+function wp_add_post_ids_to_columns($columns){
+  $columns['wp_post_ids'] = 'ID';
+  return $columns;
+}
+
+add_filter('manage_post_posts_columns','wp_add_post_ids_to_columns');
+  
+function wp_render_post_columns($column_name,$id){
+  switch( $column_name ){
+    case 'wp_post_ids':
+      echo $id;
+      break;
+    }
+}
+  
+add_action('manage_posts_custom_column','wp_render_post_columns', 10, 2);
 
