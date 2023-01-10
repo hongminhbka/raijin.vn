@@ -324,34 +324,34 @@ function show_products_per_category() {
                         <div class="elementor-container elementor-column-gap-default">
                           <div class="elementor-row">';
                             foreach ( $categories as $key => $category_slug ) {
+                              $term_object = get_term_by( 'slug', $category_slug , 'product_cat' );
                               echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                <div class="elementor-column-wrap elementor-element-populated">
-                                  <div class="elementor-widget-wrap">
-                                    <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                      <div class="elementor-widget-container">
-                                        <div class="elementor-button-wrapper">
-                                          <a href="#'. $category_slug .'" class="elementor-button-link elementor-button elementor-size-md full-width" title="'.$term_object->description.'">
-                                            <span class="elementor-button-content-wrapper">
-                                              <span class="elementor-button-text">'.$term_object->name.'</span>
-                                            </span>
-                                          </a>
+                                      <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                          <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                            <div class="elementor-widget-container">
+                                              <div class="elementor-button-wrapper">
+                                                <a href="#'. $category_slug .'" class="elementor-button-link elementor-button elementor-size-md full-width" title="'.$term_object->description.'">
+                                                  <span class="elementor-button-content-wrapper">
+                                                    <span class="elementor-button-text">'.$term_object->name.'</span>
+                                                  </span>
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>';                              
+                                    </div>';                              
                             }
+                    echo '</div>';
                   echo '</div>';
-                echo '</div>';
-              echo '</section>';
+                echo '</section>';
+              echo '</div>';
             echo '</div>';
           echo '</div>';
         echo '</div>';
       echo '</div>';
-    echo '</div>';
-  echo '</div>';
-echo '</section>';
+  echo '</section>';
 
 
    foreach ( $categories as $key => $category_slug ) {
