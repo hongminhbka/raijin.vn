@@ -289,12 +289,77 @@ function show_products_per_category() {
       'order' => 'ASC',
    );
    $categories = get_categories( $args );
+
+   echo   '<section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="elementor-row">
+                <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+                  <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                      <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                        <div class="elementor-container elementor-column-gap-default">
+                          <div class="elementor-row">
+                            <div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
+                                    <div class="elementor-widget-container">
+                                      <div class="gva-element-gva-heading-block gva-element">
+                                        <div class="align-left style-1 widget gsc-heading">
+                                          <div class="content-inner">
+                                            <div class="title">Bạn đang tìm sản phẩm cho xe gì</div>
+                                            <div class="title-desc">Raijin có đủ sản phẩm cho tất cả các dòng xe</div>                                                 
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                        <div class="elementor-container elementor-column-gap-default">
+                          <div class="elementor-row">';
+                            foreach ( $categories as $key => $category_slug ) {
+                              echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                  <div class="elementor-widget-wrap">
+                                    <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                      <div class="elementor-widget-container">
+                                        <div class="elementor-button-wrapper">
+                                          <a href="#'. $category_slug .'" class="elementor-button-link elementor-button elementor-size-md full-width" title="'.$term_object->description.'">
+                                            <span class="elementor-button-content-wrapper">
+                                              <span class="elementor-button-text">'.$term_object->name.'</span>
+                                            </span>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>';                              
+                            }
+                  echo '</div>';
+                echo '</div>';
+              echo '</section>';
+            echo '</div>';
+          echo '</div>';
+        echo '</div>';
+      echo '</div>';
+    echo '</div>';
+  echo '</div>';
+echo '</section>';
+
+
    foreach ( $categories as $key => $category_slug ) {
       $term_object = get_term_by( 'slug', $category_slug , 'product_cat' );
       if($key > 0){
         echo '<hr class="break-line">';
       }
-      echo '<h2 class="elementor-heading-title elementor-size-default">' . $term_object->name . '</h2>';
+      echo '<h2 class="elementor-heading-title elementor-size-default" id="'. $category_slug .'">' . $term_object->name . '</h2>';
       echo do_shortcode( '[products limit="3" columns="3" category="' . $category_slug . '"]' );
       echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' khác &rarr;</a>';
    }
