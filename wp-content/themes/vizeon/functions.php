@@ -296,7 +296,7 @@ function show_products_per_category() {
       }
       echo '<h2 class="elementor-heading-title elementor-size-default">' . $term_object->name . '</h2>';
       echo do_shortcode( '[products limit="3" columns="3" category="' . $category_slug . '"]' );
-      echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' &rarr;</a>';
+      echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' &rarr; khác</a>';
    }
 }
 
