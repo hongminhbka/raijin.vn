@@ -289,9 +289,12 @@ function show_products_per_category() {
       'order' => 'ASC',
    );
    $categories = get_categories( $args );
-   foreach ( $categories as $category_slug ) {
+   foreach ( $categories as $key => $category_slug ) {
       $term_object = get_term_by( 'slug', $category_slug , 'product_cat' );
-      echo '<h2 class="elementor-heading-title elementor-size-default">' . $term_object->description . '</h2>';
+      if($key > 0){
+        echo '<hr class="break-line">';
+      }
+      echo '<h2 class="elementor-heading-title elementor-size-default">' . $term_object->name . '</h2>';
       echo do_shortcode( '[products limit="6" columns="3" category="' . $category_slug . '"]' );
       echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' &rarr;</a>';
    }
