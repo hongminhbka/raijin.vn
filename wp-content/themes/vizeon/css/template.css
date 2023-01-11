@@ -11332,5 +11332,7 @@ ul.nav-tabs > li.active > a {
   margin-bottom: 50px;
 }
 .product-filter .elementor-widget-button .elementor-button{
-  min-height: 100px;
+  min-height: 65px;
+  padding: 15px 10px;
+  font-weight: 600;
 }
