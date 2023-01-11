@@ -64,13 +64,7 @@ $woo_display = vizeon_display_modes_value();
     <div class="main-page-content row">
       <div class="content-page <?php echo esc_attr($main_content_config['class']); ?>">
 
-        <div id="wp-content" class="wp-content">
-
-          <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
-
-            <h1 class="page-title hidden"><?php woocommerce_page_title(); ?></h1>
-
-          <?php endif; ?>                                        
+        <div id="wp-content" class="wp-content">                                        
 
           <?php if (have_posts()) : ?>                                      
             <?php if (is_shop()) : ?>              
