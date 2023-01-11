@@ -320,7 +320,7 @@ function show_products_per_category() {
                           </div>
                         </div>
                       </section>
-                      <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                      <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
                         <div class="elementor-container elementor-column-gap-default">
                           <div class="elementor-row">';
                             foreach ( $categories as $key => $category_slug ) {
