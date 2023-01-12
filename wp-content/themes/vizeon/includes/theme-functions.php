@@ -116,15 +116,9 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $breadcrumb .= ($before) . get_the_title() . $after;
         $page_title = get_the_title();
 
-      } elseif ( is_page() && !$post->post_parent ) {
-        if(is_shop()){
-          $page_title = 'Sản phẩm';
-          $breadcrumb .= ($before) . $page_title . $after;
-        }
-        else{
-          $breadcrumb .= ($before) . get_the_title() . $after;
-          $page_title = get_the_title();
-        }        
+      } elseif ( is_page() && !$post->post_parent ) {        
+        $breadcrumb .= ($before) . get_the_title() . $after;
+        $page_title = get_the_title();       
       } elseif ( is_page() && $post->post_parent ) {
           $parent_id  = $post->post_parent;
           $breadcrumbs = array();
@@ -156,6 +150,10 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $breadcrumb .= ($before) . 'Lỗi 404' . $after;
         $page_title = 'Không tìm thấy nội dung';
 
+      }
+      elseif(is_shop()){
+        $page_title = 'Sản phẩm';
+        $breadcrumb .= ($before) . $page_title . $after;
       }
 
       $breadcrumb .= '</ol>';
