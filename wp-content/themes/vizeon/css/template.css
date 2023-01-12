@@ -11097,6 +11097,9 @@ ul.nav-tabs > li.active > a {
     max-height: 200px;
     width: auto;
   }
+  .woocommerce .product-related{
+    background-image: none;
+  }
 }
 
 .woocommerce .grid-view .product-block{
@@ -11123,7 +11126,11 @@ ul.nav-tabs > li.active > a {
   padding: 40px 0 50px;
   background-image: url('/wp-content/themes/vizeon/images/backgroud-product-related.jpg');
   background-color: rgba(0,0,0,0.5);
-  margin-bottom: 80px
+  margin-bottom: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .woocommerce .product-questions{
