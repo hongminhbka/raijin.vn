@@ -122,18 +122,22 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $page_title = get_the_title();
 
       } elseif ( is_page() && $post->post_parent ) {
-
-        $parent_id  = $post->post_parent;
-        $breadcrumbs = array();
-        while ($parent_id) {
-          $page = get_page($parent_id);
-          $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
-          $parent_id  = $page->post_parent;
+        if(if( is_shop()){
+          $breadcrumb = ($before) . 'Sản phẩm' . $after;
         }
-        $breadcrumbs = array_reverse($breadcrumbs);
-        foreach ($breadcrumbs as $crumb) $breadcrumb .= ($crumb) . ' ' . $delimiter . ' ';
-        $breadcrumb .= ($before) . get_the_title() . $after;
-        $page_title = get_the_title();
+        else{
+          $parent_id  = $post->post_parent;
+          $breadcrumbs = array();
+          while ($parent_id) {
+            $page = get_page($parent_id);
+            $breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
+            $parent_id  = $page->post_parent;
+          }
+          $breadcrumbs = array_reverse($breadcrumbs);
+          foreach ($breadcrumbs as $crumb) $breadcrumb .= ($crumb) . ' ' . $delimiter . ' ';
+          $breadcrumb .= ($before) . get_the_title() . $after;          
+        }    
+        $page_title = get_the_title();    
 
       }  elseif ( is_tag() ) {
 
