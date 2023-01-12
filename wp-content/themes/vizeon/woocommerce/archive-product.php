@@ -107,7 +107,7 @@ $woo_display = vizeon_display_modes_value();
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
                                   <?php                                    
-                                    $hondaCategory =  get_the_terms( 80,'product_cat');
+                                    $hondaCategory =  get_the_terms( 80,'product_cat');print_r($hondaCategory);
                                     $yamahaCategory =  get_the_terms( 931,'product_cat');
                                     $piaggioCategory =  get_the_terms( 932,'product_cat');
                                     $childrentOfHonda = [];
