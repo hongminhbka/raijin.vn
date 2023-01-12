@@ -2973,10 +2973,6 @@ ul.gva-nav-menu > li:hover > a:after, ul.gva-nav-menu > li:active > a:after, ul.
   bottom: 10px;
 }
 
-ul.gva-nav-menu > li > .submenu-inner {
-  border: 1px solid #dee2e6;
-}
-
 ul.gva-nav-menu > li .submenu-inner {
   -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
