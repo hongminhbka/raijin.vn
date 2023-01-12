@@ -438,7 +438,7 @@ function wh_taxonomy_edit_meta_field($term) {
             <input type="number" name="order" id="order" value="' . esc_attr($order) . '">
             <p class="description">Nhập thứ tự sắp xếp</p>
         </td>
-    </tr>'
+    </tr>';
 }
 
 add_action('edited_product_cat', 'wh_save_taxonomy_custom_meta', 10, 1);
