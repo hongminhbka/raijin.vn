@@ -11098,7 +11098,10 @@ ul.nav-tabs > li.active > a {
     width: auto;
   }
   .woocommerce .product-related{
-    background-image: none;
+    background-image: none !important;
+    padding: 15px !important;
+    background-color: #2E3A5B !important;
+    text-align: center;
   }
 }
 
@@ -11107,7 +11110,7 @@ ul.nav-tabs > li.active > a {
   border: 1px solid #E9EAEA;
 }
 .woocommerce .grid-view .product-block:hover{    
-  border: 2px solid #C40000;
+  border: 2px solid #F4F5F6;
   -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
   box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
 }
