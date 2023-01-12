@@ -64,7 +64,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $page_title = 'Sản phẩm';
         $breadcrumb .= ($before) . $page_title . $after;
       } elseif( is_product_category() ) {
-        $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
+        $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
         $breadcrumb = '<li><a href="' . $shop_page_url . '"> Sản phẩm </a> ' . $delimiter . '</li> ';
         $breadcrumb .= $before . 'Danh mục sản phẩm' . $after;
       } elseif (is_day()) {
