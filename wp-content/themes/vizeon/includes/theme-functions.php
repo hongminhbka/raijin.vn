@@ -127,11 +127,6 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         }        
 
       } elseif ( is_page() && $post->post_parent ) {
-        if(is_shop()){
-          $page_title = 'Sản phẩm';
-          $breadcrumb = ($before) . $page_title . $after;
-        }
-        else{
           $parent_id  = $post->post_parent;
           $breadcrumbs = array();
           while ($parent_id) {
@@ -142,8 +137,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
           $breadcrumbs = array_reverse($breadcrumbs);
           foreach ($breadcrumbs as $crumb) $breadcrumb .= ($crumb) . ' ' . $delimiter . ' ';
           $breadcrumb .= ($before) . get_the_title() . $after;          
-          $page_title = get_the_title();
-        }                
+          $page_title = get_the_title();                
       }  elseif ( is_tag() ) {
 
         $breadcrumb .= ($before) . 'Thẻ "' . single_tag_title('', false) . '"' . $after;
