@@ -116,8 +116,7 @@ $woo_display = vizeon_display_modes_value();
                                     );
                                 
                                     foreach ( get_terms( $args_query ) as $key => $term ) {
-                                      if( $key < 3 ) {
-                                        echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                      echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
                                               <div class="elementor-column-wrap elementor-element-populated">
                                                 <div class="elementor-widget-wrap">
                                                   <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
@@ -134,8 +133,7 @@ $woo_display = vizeon_display_modes_value();
                                                   </div>
                                                 </div>
                                               </div>
-                                            </div>';                                          
-                                      }                                      
+                                            </div>';                                      
                                     }  
                                   ?>                                  
                                   <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
