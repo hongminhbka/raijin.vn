@@ -126,7 +126,7 @@ $woo_display = vizeon_display_modes_value();
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
                                                         <button class="dropbtn">'.$hondaCategory->name.'</button>
-                                                        <div class="dropdown-content">'
+                                                        <div class="dropdown-content">';
                                                           foreach ( get_terms( $args_query ) as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">$term</a>';
                                                           }                                                                                                                    
@@ -154,7 +154,7 @@ $woo_display = vizeon_display_modes_value();
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
                                                         <button class="dropbtn">'.$childrentOfYamaha->name.'</button>
-                                                        <div class="dropdown-content">'
+                                                        <div class="dropdown-content">';
                                                           foreach ( get_terms( $args_query ) as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">$term</a>';
                                                           }                                                                                                                    
@@ -183,7 +183,7 @@ $woo_display = vizeon_display_modes_value();
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
                                                         <button class="dropbtn">'.$childrentOfPiaggio->name.'</button>
-                                                        <div class="dropdown-content">'
+                                                        <div class="dropdown-content">';
                                                           foreach ( get_terms( $args_query ) as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">$term</a>';
                                                           }                                                                                                                    
