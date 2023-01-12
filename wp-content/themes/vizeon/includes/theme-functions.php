@@ -123,7 +123,8 @@ if(!function_exists('vizeon_general_breadcrumbs')){
 
       } elseif ( is_page() && $post->post_parent ) {
         if(is_shop()){
-          $breadcrumb = ($before) . 'Sản phẩm' . $after;
+          $page_title = 'Sản phẩm';
+          $breadcrumb = ($before) . $page_title . $after;
         }
         else{
           $parent_id  = $post->post_parent;
