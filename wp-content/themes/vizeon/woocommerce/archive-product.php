@@ -72,6 +72,7 @@ $woo_display = vizeon_display_modes_value();
             <?php else: ?>
               <!-- hien thi trang danh muc xe may -->
               <?php if (is_product_category('ac-quy-lithium-xe-may') ): ?>
+                
                 <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
                   <div class="elementor-container elementor-column-gap-default">
                     <div class="elementor-row">
@@ -105,61 +106,38 @@ $woo_display = vizeon_display_modes_value();
                             <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
-                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                      <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                          <div class="elementor-widget-container">
-                                            <div class="elementor-button-wrapper">
-                                              <a href="#ac-quy-lithium-xe-may"
-                                                class="elementor-button-link elementor-button elementor-size-md full-width" title="Ắc quy Lithium dành cho xe máy">
-                                                <span class="elementor-button-content-wrapper">
-                                                  <span class="elementor-button-text">HONDA</span>
-                                                </span>
-                                              </a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                      <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                          <div class="elementor-widget-container">
-                                            <div class="elementor-button-wrapper">
-                                              <a href="#ac-quy-lithium-xe-may-dien"
-                                                class="elementor-button-link elementor-button elementor-size-md full-width" title="">
-                                                <span class="elementor-button-content-wrapper">
-                                                  <span class="elementor-button-text">YAMAHA</span>
-                                                </span>
-                                              </a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                      <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                          <div class="elementor-widget-container">
-                                            <div class="elementor-button-wrapper">
-                                              <a href="#ac-quy-lithium-xe-phan-khoi-lon"
-                                                class="elementor-button-link elementor-button elementor-size-md full-width"
-                                                title="Ắc quy Lithium dành cho xe máy phân khối lớn">
-                                                <span class="elementor-button-content-wrapper">
-                                                  <span class="elementor-button-text">PIAGGIO</span>
-                                                </span>
-                                              </a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <?php
+                                    $main_term = get_queried_object();
+
+                                    $args_query = array(
+                                        'taxonomy' => 'product_cat', 
+                                        'hide_empty' => false, 
+                                        'child_of' => 'ac-quy-lithium-xe-may'
+                                    );
+                                
+                                    foreach ( get_terms( $args_query ) as $key => $term ) {
+                                      if( $term->slug != 'ac-quy-lithium-xe-may' && $key < 3 ) {
+                                        echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                              <div class="elementor-column-wrap elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                                    <div class="elementor-widget-container">
+                                                      <div class="elementor-button-wrapper">
+                                                        <a href="'. get_term_link( $term->term_id, 'product_cat' ) .'"
+                                                          class="elementor-button-link elementor-button elementor-size-md full-width" title="'.$term->description'">
+                                                          <span class="elementor-button-content-wrapper">
+                                                            <span class="elementor-button-text">'.$term->name.'</span>
+                                                          </span>
+                                                        </a>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>';                                          
+                                      }                                      
+                                    }  
+                                  ?>                                  
                                   <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
