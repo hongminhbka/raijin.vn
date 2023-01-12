@@ -112,7 +112,7 @@ $woo_display = vizeon_display_modes_value();
                                     $args_query = array(
                                         'taxonomy' => 'product_cat', 
                                         'hide_empty' => false, 
-                                        'child_of' => 'ac-quy-lithium-xe-may'
+                                        'child_of' => '80'
                                     );
                                 
                                     foreach ( get_terms( $args_query ) as $key => $term ) {
