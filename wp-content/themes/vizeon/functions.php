@@ -412,3 +412,68 @@ if( !function_exists( 'plugin_prefix_unregister_post_type' ) ) {
 }
 add_action('init','plugin_prefix_unregister_post_type');
 
+// Add custom order
+add_action('product_cat_add_form_fields', 'wh_taxonomy_add_new_meta_field', 10, 1);
+add_action('product_cat_edit_form_fields', 'wh_taxonomy_edit_meta_field', 10, 1);
+//Product Cat Create page
+function wh_taxonomy_add_new_meta_field() {
+    
+    echo '<div class="form-field">
+        <label for="order">Thứ tự</label>
+        <input type="number" name="order" id="order" value="1" min="1">
+        <p class="description">Nhập thứ tự sắp xếp</p>
+    </div>';
+}
+//Product Cat Edit page
+function wh_taxonomy_edit_meta_field($term) {
+    //getting term ID
+    $term_id = $term->term_id;
+
+    // retrieve the existing value(s) for this meta field.
+    $order = get_term_meta($term_id, 'order', true);
+    
+    echo '<tr class="form-field">
+        <th scope="row" valign="top"><label for="wh_meta_title">Thứ tự</label></th>
+        <td>
+            <input type="number" name="order" id="order" value="' . esc_attr($order) . '">
+            <p class="description">Nhập thứ tự sắp xếp</p>
+        </td>
+    </tr>'
+}
+
+add_action('edited_product_cat', 'wh_save_taxonomy_custom_meta', 10, 1);
+add_action('create_product_cat', 'wh_save_taxonomy_custom_meta', 10, 1);
+// Save extra taxonomy fields callback function.
+function wh_save_taxonomy_custom_meta($term_id) {
+    $order = filter_input(INPUT_POST, 'order');   
+    update_term_meta($term_id, 'order', $order);    
+}
+
+add_filter( 'manage_edit-product_cat_columns', 'wh_customFieldsListTitle' ); //Register Function
+add_action( 'manage_product_cat_custom_column', 'wh_customFieldsListDisplay' , 10, 3); //Populating the Columns
+/**
+ * Meta Title and Description column added to category admin screen.
+ *
+ * @param mixed $columns
+ * @return array
+ */
+function wh_customFieldsListTitle( $columns ) {
+    $columns['pro_meta_order'] = 'Sắp xếp';    
+    return $columns;
+}
+/**
+ * Meta Title and Description column value added to product category admin screen.
+ *
+ * @param string $columns
+ * @param string $column
+ * @param int $id term ID
+ *
+ * @return string
+ */
+function wh_customFieldsListDisplay( $columns, $column, $id ) {
+    if ( 'pro_meta_order' == $column ) {
+        $columns = esc_html( get_term_meta($id, 'order', true) );
+    }    
+    return $columns;
+}
+
