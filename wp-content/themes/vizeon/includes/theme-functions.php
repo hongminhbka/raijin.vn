@@ -50,16 +50,19 @@ if(!function_exists('vizeon_general_breadcrumbs')){
       $homeLink = home_url();
       $breadcrumb .= '<li><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . '</li> ';
 
-      if (is_category()) {
-        
-        global $wp_query;
-        $cat_obj = $wp_query->get_queried_object();
-        $thisCat = $cat_obj->term_id;
-        $thisCat = get_category($thisCat);
-        $parentCat = get_category($thisCat->parent);
-        if ($thisCat->parent != 0) $breadcrumb .= (get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-        $breadcrumb .= $before . single_cat_title('', false) . $after;
-        $page_title = single_cat_title('', false );
+      if (is_category()) {                
+        if( is_product_category() ) {
+          $breadcrumb .= $before . 'Danh mục sản phẩm' . $after;
+        } else {
+          global $wp_query;
+          $cat_obj = $wp_query->get_queried_object();
+          $thisCat = $cat_obj->term_id;
+          $thisCat = get_category($thisCat);
+          $parentCat = get_category($thisCat->parent);
+          if ($thisCat->parent != 0) $breadcrumb .= (get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
+          $breadcrumb .= $before . single_cat_title('', false) . $after;
+          $page_title = single_cat_title('', false );
+        }
      
       } elseif (is_day()) {
         
