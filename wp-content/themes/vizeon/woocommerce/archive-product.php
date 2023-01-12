@@ -117,7 +117,7 @@ $woo_display = vizeon_display_modes_value();
                                     );
                                 
                                     foreach ( get_terms( $args_query ) as $key => $term ) {
-                                      if(in_array($term->name, ['HONDA', 'YAMAHA', 'PIAGGIO']){
+                                      if(in_array($term->name, ['HONDA', 'YAMAHA', 'PIAGGIO'])){
                                         echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
                                               <div class="elementor-column-wrap elementor-element-populated">
                                                 <div class="elementor-widget-wrap">
