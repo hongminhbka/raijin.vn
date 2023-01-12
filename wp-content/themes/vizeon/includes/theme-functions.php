@@ -117,9 +117,14 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $page_title = get_the_title();
 
       } elseif ( is_page() && !$post->post_parent ) {
-        
-        $breadcrumb .= ($before) . get_the_title() . $after;
-        $page_title = get_the_title();
+        if(is_shop()){
+          $page_title = 'Sản phẩm';
+          $breadcrumb. = ($before) . $page_title . $after;
+        }
+        else{
+          $breadcrumb .= ($before) . get_the_title() . $after;
+          $page_title = get_the_title();
+        }        
 
       } elseif ( is_page() && $post->post_parent ) {
         if(is_shop()){
@@ -137,9 +142,8 @@ if(!function_exists('vizeon_general_breadcrumbs')){
           $breadcrumbs = array_reverse($breadcrumbs);
           foreach ($breadcrumbs as $crumb) $breadcrumb .= ($crumb) . ' ' . $delimiter . ' ';
           $breadcrumb .= ($before) . get_the_title() . $after;          
-        }    
-        $page_title = get_the_title();    
-
+          $page_title = get_the_title();
+        }                
       }  elseif ( is_tag() ) {
 
         $breadcrumb .= ($before) . 'Thẻ "' . single_tag_title('', false) . '"' . $after;
