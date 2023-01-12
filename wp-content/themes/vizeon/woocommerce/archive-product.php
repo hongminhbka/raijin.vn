@@ -102,6 +102,85 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </section>
+                            <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
+                              <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                      <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                          <div class="elementor-widget-container">
+                                            <div class="elementor-button-wrapper">
+                                              <a href="#ac-quy-lithium-xe-may"
+                                                class="elementor-button-link elementor-button elementor-size-md full-width" title="Ắc quy Lithium dành cho xe máy">
+                                                <span class="elementor-button-content-wrapper">
+                                                  <span class="elementor-button-text">HONDA</span>
+                                                </span>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                      <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                          <div class="elementor-widget-container">
+                                            <div class="elementor-button-wrapper">
+                                              <a href="#ac-quy-lithium-xe-may-dien"
+                                                class="elementor-button-link elementor-button elementor-size-md full-width" title="">
+                                                <span class="elementor-button-content-wrapper">
+                                                  <span class="elementor-button-text">YAMAHA</span>
+                                                </span>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                      <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                          <div class="elementor-widget-container">
+                                            <div class="elementor-button-wrapper">
+                                              <a href="#ac-quy-lithium-xe-phan-khoi-lon"
+                                                class="elementor-button-link elementor-button elementor-size-md full-width"
+                                                title="Ắc quy Lithium dành cho xe máy phân khối lớn">
+                                                <span class="elementor-button-content-wrapper">
+                                                  <span class="elementor-button-text">PIAGGIO</span>
+                                                </span>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                      <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                          <div class="elementor-widget-container">
+                                            <div class="elementor-button-wrapper">
+                                              <a href="#ac-quy-o-to" class="elementor-button-link elementor-button elementor-size-md full-width"
+                                                title="Ắc quy Lithium dành cho Ô tô">
+                                                <span class="elementor-button-content-wrapper">
+                                                  <span class="elementor-button-text">XE HÃNG KHÁC</span>
+                                                </span>
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
                           </div>
                         </div>
                       </div>
