@@ -51,7 +51,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
       $breadcrumb .= '<li><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . '</li> ';
 
       if (is_category()) {                
-        if( is_product_category() ) {
+        if( true ) {
           $breadcrumb .= $before . 'Danh mục sản phẩm' . $after;
         } else {
           global $wp_query;
