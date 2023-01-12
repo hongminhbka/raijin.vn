@@ -59,7 +59,12 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         if ($thisCat->parent != 0) $breadcrumb .= (get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
         $breadcrumb .= $before . single_cat_title('', false) . $after;
         $page_title = single_cat_title('', false );
-     
+      
+      } elseif(is_shop()){
+        $page_title = 'Sản phẩm';
+        $breadcrumb .= ($before) . $page_title . $after;
+      } elseif( is_product_category() ) {
+        $breadcrumb .= $before . 'Danh mục sản phẩm' . $after;
       } elseif (is_day()) {
         
         $breadcrumb .= '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . ' ' . $delimiter . ' ' . '</li>';
@@ -78,7 +83,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $breadcrumb .= $before . get_the_time('Y') . $after;
         $page_title = get_the_time('Y');
       
-      }elseif ( is_search() || get_query_var('s') ) {
+      } elseif ( is_search() || get_query_var('s') ) {
 
         $breadcrumb .= ($before) . 'Kết quả tìm kiếm "' . get_search_query() . '"' . $after;
         $page_title = get_search_query();
@@ -149,14 +154,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $breadcrumb .= ($before) . 'Lỗi 404' . $after;
         $page_title = 'Không tìm thấy nội dung';
 
-      }
-      elseif(is_shop()){
-        $page_title = 'Sản phẩm';
-        $breadcrumb .= ($before) . $page_title . $after;
-      }
-      elseif( is_product_category() ) {
-        $breadcrumb .= $before . 'Danh mục sản phẩm' . $after;
-      }
+      }            
 
       $breadcrumb .= '</ol>';
       echo trim($breadcrumb);
