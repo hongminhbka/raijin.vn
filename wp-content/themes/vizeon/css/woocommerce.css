@@ -1555,11 +1555,13 @@ table.variations a.reset_variations {
 
 .single-product .product-single-main .container .woocommerce-tabs-inner .tab-content .tab-pane {
   max-width: 960px;
+  text-align: justify;
 }
 
-.single-product .product-single-main .container .woocommerce-tabs-inner .tab-content .tab-pane p{
+.single-product .product-single-main .container .woocommerce-tabs-inner .tab-content .tab-pane .wp-caption-text{
   text-align: center;
 }
+
 
 .single-product .product-single-main .menu-single-product {
   margin-bottom: 15px;
