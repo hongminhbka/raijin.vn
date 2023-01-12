@@ -124,7 +124,7 @@ $woo_display = vizeon_display_modes_value();
                                                     <div class="elementor-widget-container">
                                                       <div class="elementor-button-wrapper">
                                                         <a href="'. get_term_link( $term->term_id, 'product_cat' ) .'"
-                                                          class="elementor-button-link elementor-button elementor-size-md full-width" title="'.$term->description'">
+                                                          class="elementor-button-link elementor-button elementor-size-md full-width" title="'.$term->description.'">
                                                           <span class="elementor-button-content-wrapper">
                                                             <span class="elementor-button-text">'.$term->name.'</span>
                                                           </span>
