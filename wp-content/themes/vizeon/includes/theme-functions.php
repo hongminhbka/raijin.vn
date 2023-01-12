@@ -122,7 +122,7 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $page_title = get_the_title();
 
       } elseif ( is_page() && $post->post_parent ) {
-        if(if( is_shop()){
+        if(is_shop()){
           $breadcrumb = ($before) . 'Sản phẩm' . $after;
         }
         else{
