@@ -68,6 +68,12 @@ if(!function_exists('vizeon_general_breadcrumbs')){
         $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
         $breadcrumb .= '<li><a href="' . $shop_page_url . '"> Sản phẩm </a> ' . $delimiter . '</li> ';
         $breadcrumb .= $before . 'Danh mục sản phẩm' . $after;
+      } elseif(is_product()){
+        $breadcrumb = '<ol class="breadcrumb">';
+        $shop_page_url = get_permalink( wc_get_page_id ( 'shop' ) );
+        $breadcrumb .= '<li><a href="' . $shop_page_url . '"> Sản phẩm </a> ' . $delimiter . '</li> ';
+        $breadcrumb .= ($before) . get_the_title() . $after;
+        $page_title = get_the_title();
       } elseif (is_day()) {
         
         $breadcrumb .= '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . ' ' . $delimiter . ' ' . '</li>';
