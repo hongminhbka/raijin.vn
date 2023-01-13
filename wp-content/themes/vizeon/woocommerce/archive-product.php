@@ -106,10 +106,14 @@ $woo_display = vizeon_display_modes_value();
                             <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
-                                  <?php                                    
-                                    $hondaCategory =  get_the_terms( 80,'product_cat');print_r($hondaCategory);
-                                    $yamahaCategory =  get_the_terms( 931,'product_cat');
-                                    $piaggioCategory =  get_the_terms( 932,'product_cat');
+                                  <?php
+                                    $args_query = array(
+                                      'taxonomy' => 'product_cat', 
+                                      'hide_empty' => false, 
+                                      'name' => 'HONDA',
+                                      'child_of' => 'ac-quy-lithium-xe-may',                                     
+                                    );
+                                    $hondaCategory = get_terms($args_query);
                                     $childrentOfHonda = [];
                                     if($hondaCategory){
                                       $args_query_childrent_of_honda = array(
