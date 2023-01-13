@@ -195,7 +195,8 @@ function vizeon_breadcrumb(){
               }  
               if($description){
                 echo '<p class="description">' . esc_html( $description ) . '</p>';
-              }                          
+              } 
+              echo '<p class="description">' . esc_html( $description ) . '</p>';                         
             } ?>
           </div>  
         </div>   
