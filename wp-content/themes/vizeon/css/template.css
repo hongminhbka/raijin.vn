@@ -11360,6 +11360,7 @@ ul.nav-tabs > li.active > a {
 .dropdown {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 
 .dropdown-content {
