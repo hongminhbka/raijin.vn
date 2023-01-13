@@ -219,13 +219,12 @@ $woo_display = vizeon_display_modes_value();
                                     $args_query_other = array(
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false,                                    
-                                      'child_of' => 80,
-                                      'childrent' => 0,
+                                      'child_of' => 80,                                      
                                       'tax_query'=> array(
                                         array(
                                             'taxonomy' => 'product_cat',
-                                            'field'    => 'term_id',
-                                            'terms'    => array($hondaCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id),
+                                            'field'    => 'slug',
+                                            'terms'    => array($hondaCategory[0]->slug, $yamahaCategory[0]->slug, $piaggioCategory[0]->slug),
                                             'operator' => 'NOT IN'                                            
                                         )
                                       )                                     
