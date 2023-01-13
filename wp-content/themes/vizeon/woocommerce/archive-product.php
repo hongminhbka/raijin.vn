@@ -236,18 +236,19 @@ $woo_display = vizeon_display_modes_value();
                                                 <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                                   <div class="elementor-widget-container">
                                                     <div class="dropdown">
-                                                      <a class="dropbtn" href="">XE HÃNG KHÁC</a>';                                                      
+                                                      <a class="dropbtn" href="">XE HÃNG KHÁC</a>
+                                                      <div class="dropdown-content">';                                                      
                                                         foreach ( $otherCategory as $key => $term ){
                                                           echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
                                                         }                                                                                                                                                                                                                       
-                                              echo  '</div>                                            
+                                              echo    '</div>                                            
+                                                    </div>
                                                   </div>
                                                 </div>
                                               </div>
-                                            </div>
-                                          </div>';
-                                  ?>                                  
-                                  
+                                            </div>';
+                                          '</div>';
+                                    ?>                                                             
                                 </div>
                               </div>
                             </section>
