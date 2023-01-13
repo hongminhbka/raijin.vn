@@ -226,6 +226,7 @@ $woo_display = vizeon_display_modes_value();
                                             'field'    => 'slug',
                                             'terms'    => array($hondaCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id),
                                             'operator' => 'NOT IN',
+                                            'hierarchical' => 1,
                                         )
                                       )                                     
                                     );
