@@ -111,7 +111,7 @@ $woo_display = vizeon_display_modes_value();
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false, 
                                       'name' => 'HONDA',
-                                      'child_of' => 'ac-quy-lithium-xe-may',                                     
+                                      'child_of' => 80,                                     
                                     );
                                     $hondaCategory = get_terms($args_query);
                                     $childrentOfHonda = [];
