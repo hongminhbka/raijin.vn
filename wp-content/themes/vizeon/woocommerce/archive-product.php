@@ -219,7 +219,8 @@ $woo_display = vizeon_display_modes_value();
                                     $args_query_other = array(
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false,                                    
-                                      'child_of' => 80,                                      
+                                      'child_of' => 80, 
+                                      'childless' => true                                     
                                       'tax_query'=> array(
                                         array(
                                             'taxonomy' => 'product_cat',
