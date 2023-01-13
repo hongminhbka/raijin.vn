@@ -119,7 +119,12 @@ function vizeon_style_breadcrumb(){
       $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
     }
     elseif(get_post_type() == 'product'){
-      $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
+      $product = new WC_Product( get_the_ID() );
+      $attachment_ids = $product->get_gallery_image_ids();
+
+      if ( is_array( $attachment_ids ) && !empty($attachment_ids) ) {
+        $image_background_breadcrumb = wp_get_attachment_url( $attachment_ids[0] );          
+      }      
     }
     $styles[] = 'background-image: url(\'' . $image_background_breadcrumb . '\')';
   }
