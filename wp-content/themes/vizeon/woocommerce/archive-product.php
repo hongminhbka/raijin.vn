@@ -230,7 +230,7 @@ $woo_display = vizeon_display_modes_value();
                                         )
                                       )                                     
                                     );
-                                    $otherCategory = get_terms($args_query_other);
+                                    $otherCategory = get_terms($args_query_other);print_r($otherCategory);
                                     echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
                                             <div class="elementor-column-wrap elementor-element-populated">
                                               <div class="elementor-widget-wrap">
