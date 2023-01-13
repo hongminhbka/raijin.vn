@@ -73,6 +73,7 @@ function vizeon_style_breadcrumb(){
   $classes = array();
   $title = '';
   $description = '';
+  $isShowTitleH1 = true;
   if($show_no_breadcrumbs){
     $result['no_breadcrumbs'] = true;
   }
@@ -124,7 +125,9 @@ function vizeon_style_breadcrumb(){
 
       if ( is_array( $attachment_ids ) && !empty($attachment_ids) ) {
         $image_background_breadcrumb = wp_get_attachment_url( $attachment_ids[0] );          
-      }      
+      }  
+            
+      $description = $product->get_attribute( 'Thông điệp SP' );
     }
     $styles[] = 'background-image: url(\'' . $image_background_breadcrumb . '\')';
   }
@@ -141,15 +144,17 @@ function vizeon_style_breadcrumb(){
   }
 
   if( get_post_type() == 'post'){
-    $title = 'Tin tức';
+    $title = 'Tin tức';    
   }
 
   if(is_search()){
     $title = 'Tìm kiếm';
+    $isShowTitleH1 = false;
   }
 
   if(is_product()){
     $title = 'Sản phẩm';
+    $isShowTitleH1 = false;
   }
 
   $result['title'] = $title;
@@ -180,8 +185,16 @@ function vizeon_breadcrumb(){
         <div class="container">
           <div class="breadcrumb-container-inner" <?php echo(count($styles_inner) > 0 ? 'style="' . implode(';', $styles_inner) . '"' : ''); ?>>
             <?php vizeon_general_breadcrumbs(); ?>
-            <?php if($title && ( $show_page_title || empty($show_page_title) ) ){ 
-              echo '<h1 class="heading-title">' . esc_html( $title ) . '</p>';
+            <?php if($title && ( $show_page_title || empty($show_page_title) ) ){
+              if($isShowTitleH1) {
+                echo '<h1 class="heading-title">' . esc_html( $title ) . '</h1>';                
+              }
+              else{
+                echo '<p class="heading-title">' . esc_html( $title ) . '</p>';
+              }  
+              if($description){
+                echo '<p class="description">' . esc_html( $description ) . '</p>';
+              }                          
             } ?>
           </div>  
         </div>   
