@@ -128,6 +128,7 @@ function vizeon_style_breadcrumb(){
       }  
             
       $description = $product->get_attribute( 'Thông điệp SP' );
+      $description = 'Test';
     }
     $styles[] = 'background-image: url(\'' . $image_background_breadcrumb . '\')';
   }
