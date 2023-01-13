@@ -72,6 +72,7 @@ function vizeon_style_breadcrumb(){
   $styles_overlay = '';
   $classes = array();
   $title = '';
+  $description = '';
   if($show_no_breadcrumbs){
     $result['no_breadcrumbs'] = true;
   }
@@ -106,21 +107,7 @@ function vizeon_style_breadcrumb(){
   //Classes
   $classes[] = $breadcrumb_text_style;
   $classes[] = $breadcrumb_text_align;
-  if($breadcrumb_enable_image){
-    // $image_background_breadcrumb = '';
-    // if($breadcrumb_image){
-    //   if(isset($breadcrumb_image['id']) && $breadcrumb_image['id'] && !is_numeric($breadcrumb_image)){
-    //     if($breadcrumb_image['id'] && is_numeric($breadcrumb_image['id'])){
-    //       $breadcrumb_image = $breadcrumb_image['id'];
-    //     }
-    //     // $image = wp_get_attachment_image_src( $breadcrumb_image, 'full');
-    //     // if(isset($image[0]) && $image[0]){
-    //     //   $image_background_breadcrumb = esc_url($image[0]);
-    //     // }
-    //   }elseif(!is_array($breadcrumb_image)){
-    //     $image_background_breadcrumb = $breadcrumb_image;
-    //   }
-    // }
+  if($breadcrumb_enable_image){    
     $thumbnail_url_link = get_the_post_thumbnail_url(get_the_ID(),'full');
     if($thumbnail_url_link){
       $image_background_breadcrumb = $thumbnail_url_link;
@@ -129,6 +116,9 @@ function vizeon_style_breadcrumb(){
       $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
     }
     if( get_post_type() == 'post'){
+      $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
+    }
+    else(get_post_type() == 'product'){
       $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
     }
     $styles[] = 'background-image: url(\'' . $image_background_breadcrumb . '\')';
