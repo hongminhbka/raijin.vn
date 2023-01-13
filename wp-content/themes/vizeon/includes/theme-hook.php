@@ -127,8 +127,7 @@ function vizeon_style_breadcrumb(){
         $image_background_breadcrumb = wp_get_attachment_url( $attachment_ids[0] );          
       }  
             
-      $description = $product->get_attribute( 'Thông điệp SP' );
-      $description = 'Test';
+      $description = $product->get_attribute( 'Thông điệp SP' );      
     }
     $styles[] = 'background-image: url(\'' . $image_background_breadcrumb . '\')';
   }
@@ -164,6 +163,8 @@ function vizeon_style_breadcrumb(){
   $result['styles_overlay'] = $styles_overlay;
   $result['classes'] = $classes;
   $result['show_page_title'] = $breadcrumb_show_title;
+  $result['show_title_h1'] = $isShowTitleH1;
+  $result['description'] = $description;
   return $result;
 }
 
@@ -187,7 +188,7 @@ function vizeon_breadcrumb(){
           <div class="breadcrumb-container-inner" <?php echo(count($styles_inner) > 0 ? 'style="' . implode(';', $styles_inner) . '"' : ''); ?>>
             <?php vizeon_general_breadcrumbs(); ?>
             <?php if($title && ( $show_page_title || empty($show_page_title) ) ){
-              if($isShowTitleH1) {
+              if($show_title_h1) {
                 echo '<h1 class="heading-title">' . esc_html( $title ) . '</h1>';                
               }
               else{
@@ -195,10 +196,8 @@ function vizeon_breadcrumb(){
               }  
               if($description){
                 echo '<p class="description">' . esc_html( $description ) . '</p>';
-              } 
-              echo '<p class="description">' . esc_html( $description ) . '</p>';                         
-            } ?>
-            <p class="description"> Test </p>;
+              }                                    
+            } ?>            
           </div>  
         </div>   
       </div>  
