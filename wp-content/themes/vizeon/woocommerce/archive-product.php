@@ -107,20 +107,20 @@ $woo_display = vizeon_display_modes_value();
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
                                   <?php
-                                    $args_query = array(
+                                    $args_query_honda = array(
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false, 
                                       'name' => 'HONDA',
                                       'child_of' => 80,                                     
                                     );
-                                    $hondaCategory = get_terms($args_query);
-                                    print_r($hondaCategory);
+                                    $hondaCategory = get_terms($args_query_honda);
+                                    
                                     $childrentOfHonda = [];
-                                    if($hondaCategory){
+                                    if(is_array($hondaCategory) && count($hondaCategory)>0){
                                       $args_query_childrent_of_honda = array(
                                         'taxonomy' => 'product_cat', 
                                         'hide_empty' => false, 
-                                        'child_of' => $hondaCategory->term_id,
+                                        'child_of' => $hondaCategory[0]->term_id,
                                         'order' => 'order'
                                       );
                                       $childrentOfHonda = get_terms($args_query_childrent_of_honda);
@@ -130,38 +130,10 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
-                                                        <button class="dropbtn">'.$hondaCategory->name.'</button>
+                                                        <button class="dropbtn">'.$hondaCategory[0]->name.'</button>
                                                         <div class="dropdown-content">';
                                                           foreach ( get_terms( $args_query ) as $key => $term ){
-                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">$term</a>';
-                                                          }                                                                                                                    
-                                                  echo '</div>
-                                                      </div>                                                      
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>';
-                                    }
-                                    $childrentOfYamaha = [];
-                                    if($yamahaCategory){
-                                      $args_query_childrent_of_yamaha = array(
-                                        'taxonomy' => 'product_cat', 
-                                        'hide_empty' => false, 
-                                        'child_of' => $yamahaCategory->term_id,
-                                        'order' => 'order'
-                                      );
-                                      $childrentOfYamaha = get_terms($args_query_childrent_of_yamaha);
-                                      echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                              <div class="elementor-column-wrap elementor-element-populated">
-                                                <div class="elementor-widget-wrap">
-                                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                                    <div class="elementor-widget-container">
-                                                      <div class="dropdown">
-                                                        <button class="dropbtn">'.$childrentOfYamaha->name.'</button>
-                                                        <div class="dropdown-content">';
-                                                          foreach ( get_terms( $args_query ) as $key => $term ){
-                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">$term</a>';
+                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
                                                           }                                                                                                                    
                                                   echo '</div>
                                                       </div>                                                      
@@ -172,12 +144,55 @@ $woo_display = vizeon_display_modes_value();
                                             </div>';
                                     }
 
+                                    $args_query_yamaha = array(
+                                      'taxonomy' => 'product_cat', 
+                                      'hide_empty' => false, 
+                                      'name' => 'YAMAHA',
+                                      'child_of' => 80,                                     
+                                    );
+                                    $yamahaCategory = get_terms($args_query_yamaha);
+                                    $childrentOfYamaha = [];
+                                    if(is_array($yamahaCategory) && count($yamahaCategory) > 0){
+                                      $args_query_childrent_of_yamaha = array(
+                                        'taxonomy' => 'product_cat', 
+                                        'hide_empty' => false, 
+                                        'child_of' => $yamahaCategory[0]->term_id,
+                                        'order' => 'order'
+                                      );
+                                      $childrentOfYamaha = get_terms($args_query_childrent_of_yamaha);
+                                      echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                              <div class="elementor-column-wrap elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                  <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                                    <div class="elementor-widget-container">
+                                                      <div class="dropdown">
+                                                        <button class="dropbtn">'.$yamahaCategory[0]->name.'</button>
+                                                        <div class="dropdown-content">';
+                                                          foreach ( get_terms( $args_query ) as $key => $term ){
+                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
+                                                          }                                                                                                                    
+                                                  echo '</div>
+                                                      </div>                                                      
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>';
+                                    }
+                                    $args_query_piaggio = array(
+                                      'taxonomy' => 'product_cat', 
+                                      'hide_empty' => false, 
+                                      'name' => 'PIAGGIO',
+                                      'child_of' => 80,                                     
+                                    );
+                                    $piaggioCategory = get_terms($args_query_piaggio);
+
                                     $childrentOfPiaggio = [];
-                                    if($piaggioCategory){
+                                    if(is_array($piaggioCategory) && count($piaggioCategory) > 0){
                                       $args_query_childrent_of_piaggio = array(
                                         'taxonomy' => 'product_cat', 
                                         'hide_empty' => false, 
-                                        'child_of' => $piaggioCategory->term_id,
+                                        'child_of' => $piaggioCategory[0]->term_id,
                                         'order' => 'order'
                                       );
                                       $childrentOfPiaggio = get_terms($args_query_childrent_of_piaggio);
@@ -187,10 +202,10 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
-                                                        <button class="dropbtn">'.$childrentOfPiaggio->name.'</button>
+                                                        <button class="dropbtn">'.$piaggioCategory[0]->name.'</button>
                                                         <div class="dropdown-content">';
                                                           foreach ( get_terms( $args_query ) as $key => $term ){
-                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">$term</a>';
+                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
                                                           }                                                                                                                    
                                                   echo '</div>
                                                       </div>                                                      
