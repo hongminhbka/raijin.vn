@@ -360,7 +360,12 @@ function show_products_per_category() {
       }
       echo '<h2 class="elementor-heading-title elementor-size-default" id="'. $category_slug .'">' . $term_object->name . '</h2>';
       echo do_shortcode( '[products limit="3" columns="3" category="' . $category_slug . '"]' );
-      echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' khác &rarr;</a>';
+      if($term_object->name != 'Sản phẩm khác'){
+        echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm ' . $term_object->name . ' khác &rarr;</a>';
+      }    
+      else{
+        echo '<p><a href="' . get_term_link( $category_slug, 'product_cat' ) . '">Xem các sản phẩm khác &rarr;</a>';
+      }  
    }
 }
 
