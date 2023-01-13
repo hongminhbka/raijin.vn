@@ -169,7 +169,7 @@ function vizeon_style_breadcrumb(){
 }
 
 function vizeon_breadcrumb(){
-   $result = vizeon_style_breadcrumb();
+   $result = vizeon_style_breadcrumb();print_r($result);
    extract($result);
    if(isset($no_breadcrumbs) && $no_breadcrumbs == true){
     echo '<div class="disable-breadcrumb clearfix"></div>';
