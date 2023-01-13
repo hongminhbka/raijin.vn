@@ -285,8 +285,7 @@ function show_products_per_category() {
       'hide_empty' => true,
       'taxonomy' => 'product_cat',
       'fields' => 'slugs',
-      'orderby'   => 'title',
-      'order' => 'order',
+      'orderby'   => 'order'      
    );
    $categories = get_categories( $args );
 
