@@ -1,0 +1,24 @@
+2023-01-12T06:45:06+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 125
+
+2023-01-12T06:49:35+00:00 CRITICAL syntax error, unexpected '=' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 122
+
+2023-01-12T06:50:03+00:00 CRITICAL syntax error, unexpected '=' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 122
+
+2023-01-12T06:50:42+00:00 CRITICAL syntax error, unexpected '=' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 122
+
+2023-01-12T06:51:15+00:00 CRITICAL syntax error, unexpected '=' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 122
+
+2023-01-12T06:52:04+00:00 CRITICAL syntax error, unexpected '=' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 122
+
+2023-01-12T07:34:47+00:00 CRITICAL syntax error, unexpected 'Sản' (T_STRING) in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-functions.php on line 68
+
+2023-01-12T09:58:01+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/functions.php on line 442
+
+2023-01-12T09:58:01+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/functions.php on line 442
+
+2023-01-12T10:15:19+00:00 CRITICAL syntax error, unexpected ''">' (T_CONSTANT_ENCAPSED_STRING), expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/archive-product.php on line 129
+
+2023-01-12T10:51:43+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/archive-product.php on line 121
+
+2023-01-12T11:24:55+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/archive-product.php on line 130
+
