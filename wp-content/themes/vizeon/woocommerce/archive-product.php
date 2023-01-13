@@ -132,7 +132,7 @@ $woo_display = vizeon_display_modes_value();
                                                       <div class="dropdown">
                                                         <button class="dropbtn">'.$hondaCategory[0]->name.'</button>
                                                         <div class="dropdown-content">';
-                                                          foreach ( get_terms( $args_query ) as $key => $term ){
+                                                          foreach ( $childrentOfHonda as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
                                                           }                                                                                                                    
                                                   echo '</div>
@@ -168,7 +168,7 @@ $woo_display = vizeon_display_modes_value();
                                                       <div class="dropdown">
                                                         <button class="dropbtn">'.$yamahaCategory[0]->name.'</button>
                                                         <div class="dropdown-content">';
-                                                          foreach ( get_terms( $args_query ) as $key => $term ){
+                                                          foreach ( $childrentOfYamaha as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
                                                           }                                                                                                                    
                                                   echo '</div>
@@ -204,7 +204,7 @@ $woo_display = vizeon_display_modes_value();
                                                       <div class="dropdown">
                                                         <button class="dropbtn">'.$piaggioCategory[0]->name.'</button>
                                                         <div class="dropdown-content">';
-                                                          foreach ( get_terms( $args_query ) as $key => $term ){
+                                                          foreach ( $childrentOfPiaggio as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
                                                           }                                                                                                                    
                                                   echo '</div>
