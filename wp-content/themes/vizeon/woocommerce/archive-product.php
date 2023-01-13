@@ -227,9 +227,9 @@ $woo_display = vizeon_display_modes_value();
                                     $allCategoryChildrentOfAcQuyXeMay = get_terms($args_query_other);
                                     $otherCategory = [];
                                     foreach($allCategoryChildrentOfAcQuyXeMay as $key => $term ){
-                                      if($term->parent == $term_id_ac_quy_xe_may && !in_array($term->term_id,[$hondaCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id]))
+                                      if($term->parent == $term_id_ac_quy_xe_may && !in_array($term->term_id,[$hondaCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id])){
                                         array_push($otherCategory, $term);
-                                      }
+                                      }                                     
                                     }
                                     if(count($otherCategory) > 0){
                                       echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
