@@ -214,21 +214,40 @@ $woo_display = vizeon_display_modes_value();
                                                 </div>
                                               </div>
                                             </div>';
-                                    }                                                                                                                                                
+                                    }
+                                    
+                                    $args_query_other = array(
+                                      'taxonomy' => 'product_cat', 
+                                      'hide_empty' => false,                                    
+                                      'child_of' => 80,
+                                      'tax_query'=> array(
+                                        array(
+                                            'taxonomy' => 'product_cat',
+                                            'field'    => 'slug',
+                                            'terms'    => array($hondaCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id),
+                                            'operator' => 'NOT IN',
+                                        )
+                                      )                                     
+                                    );
+                                    $otherCategory = get_terms($args_query_other);
+                                    echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                              <div class="elementor-widget-wrap">
+                                                <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
+                                                  <div class="elementor-widget-container">
+                                                    <div class="dropdown">
+                                                      <a class="dropbtn" href="">XE HÃNG KHÁC</a>';                                                      
+                                                        foreach ( $otherCategory as $key => $term ){
+                                                          echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
+                                                        }                                                                                                                                                                                                                       
+                                              echo  '</div>                                            
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>';
                                   ?>                                  
-                                  <div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                      <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
-                                          <div class="elementor-widget-container">
-                                            <div class="dropdown">
-                                              <a class="dropbtn" href="">XE HÃNG KHÁC</a>                                                                                                                                                                  
-                                            </div>                                            
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  
                                 </div>
                               </div>
                             </section>
