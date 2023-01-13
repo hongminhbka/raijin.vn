@@ -130,7 +130,7 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
-                                                        <button class="dropbtn">'.$hondaCategory[0]->name.'</button>
+                                                        <a class="dropbtn" href="">'.$hondaCategory[0]->name.'</a>
                                                         <div class="dropdown-content">';
                                                           foreach ( $childrentOfHonda as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
@@ -166,7 +166,7 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
-                                                        <button class="dropbtn">'.$yamahaCategory[0]->name.'</button>
+                                                        <a class="dropbtn" href="">'.$yamahaCategory[0]->name.'</a>
                                                         <div class="dropdown-content">';
                                                           foreach ( $childrentOfYamaha as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
@@ -202,7 +202,7 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                                     <div class="elementor-widget-container">
                                                       <div class="dropdown">
-                                                        <button class="dropbtn">'.$piaggioCategory[0]->name.'</button>
+                                                        <a class="dropbtn" href="">'.$piaggioCategory[0]->name.'</a>
                                                         <div class="dropdown-content">';
                                                           foreach ( $childrentOfPiaggio as $key => $term ){
                                                             echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
@@ -221,14 +221,9 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-align-center elementor-widget elementor-widget-button">
                                           <div class="elementor-widget-container">
-                                            <div class="elementor-button-wrapper">
-                                              <a href="#ac-quy-o-to" class="elementor-button-link elementor-button elementor-size-md full-width"
-                                                title="Ắc quy Lithium dành cho Ô tô">
-                                                <span class="elementor-button-content-wrapper">
-                                                  <span class="elementor-button-text">XE HÃNG KHÁC</span>
-                                                </span>
-                                              </a>
-                                            </div>
+                                            <div class="dropdown">
+                                              <a class="dropbtn" href="">XE HÃNG KHÁC</a>                                                                                                                                                                  
+                                            </div>                                            
                                           </div>
                                         </div>
                                       </div>

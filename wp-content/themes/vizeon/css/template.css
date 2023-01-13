@@ -11343,12 +11343,17 @@ ul.nav-tabs > li.active > a {
   font-weight: 600;
 }
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
+  cursor: pointer;
   padding: 16px;
   font-size: 16px;
-  border: none;
   cursor: pointer;
+  width: 100%;
+  border: 1px solid #596481;
+  border-radius: 8px;
+  color: #596481;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: #F4F5F6;
 }
 
 .dropdown {
@@ -11379,5 +11384,8 @@ ul.nav-tabs > li.active > a {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #C40000;
+  color: #fff;
+  border-color: #C40000;
+  transition: background-color 0.5s ease;
 }
