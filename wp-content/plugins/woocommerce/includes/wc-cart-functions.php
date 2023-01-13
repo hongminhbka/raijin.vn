@@ -118,9 +118,9 @@ function wc_add_to_cart_message( $products, $show_qty = false, $return = false )
 	// Output success messages.
 	if ( 'yes' === get_option( 'woocommerce_cart_redirect_after_add' ) ) {
 		$return_to = apply_filters( 'woocommerce_continue_shopping_redirect', wc_get_raw_referer() ? wp_validate_redirect( wc_get_raw_referer(), false ) : wc_get_page_permalink( 'shop' ) );
-		$message   = sprintf( '<a href="%s" tabindex="1" class="button wc-forward">%s</a> %s', esc_url( $return_to ), esc_html__( 'Continue shopping', 'woocommerce' ), esc_html( $added_text ) );
+		$message   = sprintf(esc_html( $added_text ), '<a href="%s" tabindex="1" class="button wc-forward">%s</a> %s', esc_url( $return_to ), 'Tiếp tục mua hàng' );
 	} else {
-		$message = sprintf( '<a href="%s" tabindex="1" class="button wc-forward">%s</a> %s', esc_url( wc_get_cart_url() ), 'Xem giỏ hàng', esc_html( $added_text ) );
+		$message = sprintf(esc_html( $added_text ), '<a href="%s" tabindex="1" class="button wc-forward">%s</a> %s', esc_url( wc_get_cart_url() ), 'Xem giỏ hàng' );
 	}
 
 	if ( has_filter( 'wc_add_to_cart_message' ) ) {
