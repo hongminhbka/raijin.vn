@@ -114,6 +114,7 @@ $woo_display = vizeon_display_modes_value();
                                       'child_of' => 80,                                     
                                     );
                                     $hondaCategory = get_terms($args_query);
+                                    print_r($hondaCategory);
                                     $childrentOfHonda = [];
                                     if($hondaCategory){
                                       $args_query_childrent_of_honda = array(
