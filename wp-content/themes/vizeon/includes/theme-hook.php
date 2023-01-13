@@ -118,7 +118,7 @@ function vizeon_style_breadcrumb(){
     if( get_post_type() == 'post'){
       $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
     }
-    else(get_post_type() == 'product'){
+    elseif(get_post_type() == 'product'){
       $image_background_breadcrumb = VIZEON_THEME_URL . '/images/bg-breadcrumb.jpg';
     }
     $styles[] = 'background-image: url(\'' . $image_background_breadcrumb . '\')';
