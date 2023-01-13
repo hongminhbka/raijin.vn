@@ -193,7 +193,8 @@ function vizeon_breadcrumb(){
               }
               else{
                 echo '<p class="heading-title">' . esc_html( $title ) . '</p>';
-              }  
+              }
+              echo '<p class="description">' . esc_html( $description ) . '</p>';  
               if($description){
                 echo '<p class="description">' . esc_html( $description ) . '</p>';
               }                                    
