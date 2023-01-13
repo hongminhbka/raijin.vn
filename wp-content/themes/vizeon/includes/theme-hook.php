@@ -73,7 +73,7 @@ function vizeon_style_breadcrumb(){
   $classes = array();
   $title = '';
   $description = '';
-  $isShowTitleH1 = true;
+  $is_show_title_h1 = true;
   if($show_no_breadcrumbs){
     $result['no_breadcrumbs'] = true;
   }
@@ -149,12 +149,12 @@ function vizeon_style_breadcrumb(){
 
   if(is_search()){
     $title = 'Tìm kiếm';
-    $isShowTitleH1 = false;
+    $is_show_title_h1 = false;
   }
 
   if(is_product()){
     $title = 'Sản phẩm';
-    $isShowTitleH1 = false;
+    $is_show_title_h1 = false;
   }
 
   $result['title'] = $title;
@@ -163,13 +163,13 @@ function vizeon_style_breadcrumb(){
   $result['styles_overlay'] = $styles_overlay;
   $result['classes'] = $classes;
   $result['show_page_title'] = $breadcrumb_show_title;
-  $result['show_title_h1'] = $isShowTitleH1;
+  $result['show_title_h1'] = $is_show_title_h1;
   $result['description'] = $description;
   return $result;
 }
 
 function vizeon_breadcrumb(){
-   $result = vizeon_style_breadcrumb();print_r($result);
+   $result = vizeon_style_breadcrumb();
    extract($result);
    if(isset($no_breadcrumbs) && $no_breadcrumbs == true){
     echo '<div class="disable-breadcrumb clearfix"></div>';
@@ -193,13 +193,8 @@ function vizeon_breadcrumb(){
               }
               else{
                 echo '<p class="heading-title">' . esc_html( $title ) . '</p>';
-              }
-              echo '<p class="description">Test</p>';  
-              if($description){
-                echo '<p class="description">' . esc_html( $description ) . '</p>';
-              }                                    
-            } ?> 
-            <p class="description">Test</p>           
+              }                                                                
+            } ?>                      
           </div>  
         </div>   
       </div>  
