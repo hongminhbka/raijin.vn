@@ -107,11 +107,12 @@ $woo_display = vizeon_display_modes_value();
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
                                   <?php
+                                    $term_id_ac_quy_xe_may = 80;
                                     $args_query_honda = array(
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false, 
                                       'name' => 'HONDA',
-                                      'child_of' => 80,                                     
+                                      'child_of' => $term_id_ac_quy_xe_may,                                     
                                     );
                                     $hondaCategory = get_terms($args_query_honda);
                                     
@@ -148,7 +149,7 @@ $woo_display = vizeon_display_modes_value();
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false, 
                                       'name' => 'YAMAHA',
-                                      'child_of' => 80,                                     
+                                      'child_of' => $term_id_ac_quy_xe_may,                                     
                                     );
                                     $yamahaCategory = get_terms($args_query_yamaha);
                                     $childrentOfYamaha = [];
@@ -183,7 +184,7 @@ $woo_display = vizeon_display_modes_value();
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false, 
                                       'name' => 'PIAGGIO',
-                                      'child_of' => 80,                                     
+                                      'child_of' => $term_id_ac_quy_xe_may,                                     
                                     );
                                     $piaggioCategory = get_terms($args_query_piaggio);
 
@@ -219,18 +220,11 @@ $woo_display = vizeon_display_modes_value();
                                     $args_query_other = array(
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false,                                    
-                                      'child_of' => 80, 
-                                      'childless' => false,                                     
-                                      'tax_query'=> array(
-                                        array(
-                                            'taxonomy' => 'product_cat',
-                                            'field'    => 'slug',
-                                            'terms'    => array($hondaCategory[0]->slug, $yamahaCategory[0]->slug, $piaggioCategory[0]->slug),
-                                            'operator' => 'NOT IN'                                            
-                                        )
-                                      )                                     
+                                      'child_of' => $term_id_ac_quy_xe_may,
+                                      'order' => 'order'                                                                           
                                     );
-                                    $otherCategory = get_terms($args_query_other);print_r($otherCategory);
+
+                                    $otherCategory = get_terms($args_query_other);
                                     echo '<div class="elementor-element elementor-column elementor-col-25 elementor-inner-column">
                                             <div class="elementor-column-wrap elementor-element-populated">
                                               <div class="elementor-widget-wrap">
@@ -240,8 +234,9 @@ $woo_display = vizeon_display_modes_value();
                                                       <a class="dropbtn" href="">XE HÃNG KHÁC</a>
                                                       <div class="dropdown-content">';                                                      
                                                         foreach ( $otherCategory as $key => $term ){
-                                                          echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
-                                                        }                                                                                                                                                                                                                       
+                                                          if($term->parent == $term_id_ac_quy_xe_may && !in_array($term->term_id,[$piaggioCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id]))
+                                                            echo '<a href="'. get_term_link( $term->term_id, 'product_cat' ) .'">'.$term->name.'</a>';
+                                                          }                                                                                                                                                                                                                       
                                               echo    '</div>                                            
                                                     </div>
                                                   </div>
