@@ -220,13 +220,14 @@ $woo_display = vizeon_display_modes_value();
                                       'taxonomy' => 'product_cat', 
                                       'hide_empty' => false,                                    
                                       'child_of' => 80,
+                                      'hierarchical' => 0,
+                                      'childrent' => 0,
                                       'tax_query'=> array(
                                         array(
                                             'taxonomy' => 'product_cat',
                                             'field'    => 'slug',
                                             'terms'    => array($hondaCategory[0]->term_id, $yamahaCategory[0]->term_id, $piaggioCategory[0]->term_id),
-                                            'operator' => 'NOT IN',
-                                            'hierarchical' => 1,
+                                            'operator' => 'NOT IN'                                            
                                         )
                                       )                                     
                                     );
