@@ -372,7 +372,7 @@ class WC_Admin_List_Table_Orders extends WC_Admin_List_Table {
 
 							<div class="wc-order-preview-addresses">
 								<div class="wc-order-preview-address">
-									<h2><?php esc_html_e( 'Billing details', 'woocommerce' ); ?></h2>
+									<h2>Chi tiết thanh toán</h2>
 									{{{ data.formatted_billing_address }}}
 
 									<# if ( data.data.billing.email ) { #>
@@ -381,7 +381,7 @@ class WC_Admin_List_Table_Orders extends WC_Admin_List_Table {
 									<# } #>
 
 									<# if ( data.data.billing.phone ) { #>
-										<strong><?php esc_html_e( 'Phone', 'woocommerce' ); ?></strong>
+										<strong>Số điện thoại</strong>
 										<a href="tel:{{ data.data.billing.phone }}">{{ data.data.billing.phone }}</a>
 									<# } #>
 
