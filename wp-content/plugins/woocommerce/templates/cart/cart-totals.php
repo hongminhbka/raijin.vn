@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<p>Cộng giỏ hàng</p>
+	<p class="title-total">Cộng giỏ hàng</p>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
