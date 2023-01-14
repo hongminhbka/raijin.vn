@@ -490,7 +490,7 @@ function woo_cart_but() {
   $cart_count = WC()->cart->cart_contents_count;
   $cart_url = wc_get_cart_url();  
   ?>
-    <div class="cart-button"><a class="cart-contents" href="<?php echo $cart_url; ?>" title="Xem giỏ hàng">&nbsp;GIỎ HÀNG
+    <div class="cart-button"><a class="cart-contents" href="<?php echo $cart_url; ?>" title="Xem giỏ hàng">GIỎ HÀNG&nbsp;
   <?php
   if ( $cart_count > 0 ) {
     ?>
@@ -515,7 +515,7 @@ function woo_cart_but_count( $fragments ) {
     $cart_url = wc_get_cart_url();
     
     ?>
-    <a class="cart-contents" href="<?php echo $cart_url; ?>" title="<?php _e( 'Xem giỏ hàng' ); ?>">&nbsp;GIỎ HÀNG
+    <a class="cart-contents" href="<?php echo $cart_url; ?>" title="<?php _e( 'Xem giỏ hàng' ); ?>">GIỎ HÀNG&nbsp;
 	  <?php
     if ( $cart_count > 0 ) {
         ?>

@@ -12073,7 +12073,7 @@ ul.nav-tabs>li.active>a {
 }
 
 .cart-button{
-  padding: 5px 15px;
+  padding: 5px;
   color: #fff;
 }
 .cart-button a{
@@ -12085,11 +12085,11 @@ ul.nav-tabs>li.active>a {
   display: block;
 }
 
-.cart-contents::before {
+.cart-contents::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
   content: "\f290" !important;
-  font-size: 34px;
+  font-size: 32px;
   color: #ffffff;
 }
 
@@ -12099,7 +12099,7 @@ ul.nav-tabs>li.active>a {
 
 .cart-contents-count {
   position: absolute;
-  top: 0px;
+  top: 30px;
   right: 0px;
   transform: translateY(-105%) translateX(25%);
   font-weight: normal;
