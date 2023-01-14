@@ -490,7 +490,7 @@ function woo_cart_but() {
   $cart_count = WC()->cart->cart_contents_count;
   $cart_url = wc_get_cart_url();  
   ?>
-    <li><a class="menu-item cart-contents" href="<?php echo $cart_url; ?>" title="Giỏ hàng">
+    <div><a class="menu-item cart-contents" href="<?php echo $cart_url; ?>" title="Giỏ hàng">
   <?php
   if ( $cart_count > 0 ) {
     ?>
@@ -498,7 +498,7 @@ function woo_cart_but() {
     <?php
   }
   ?>
-  </a></li>
+  </a></div>
   <?php
   return ob_get_clean();
 }
