@@ -12081,10 +12081,10 @@ ul.nav-tabs>li.active>a {
 
 .cart-contents:before {
   font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
+  font-weight: 600;
   content: "\f290" !important;
   font-size: 30px;
-  color: #FF1493;
+  color: #ffffff;
 }
 
 .cart-contents:hover {
