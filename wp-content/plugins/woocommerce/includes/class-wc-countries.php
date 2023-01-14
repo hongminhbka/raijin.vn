@@ -628,21 +628,21 @@ class WC_Countries {
 
 		$fields = array(
 			'first_name' => array(
-				'label'        => __( 'First name', 'woocommerce' ),
+				'label'        => 'Họ',
 				'required'     => true,
 				'class'        => array( 'form-row-first' ),
 				'autocomplete' => 'given-name',
 				'priority'     => 10,
 			),
 			'last_name'  => array(
-				'label'        => __( 'Last name', 'woocommerce' ),
+				'label'        => 'Tên',
 				'required'     => true,
 				'class'        => array( 'form-row-last' ),
 				'autocomplete' => 'family-name',
 				'priority'     => 20,
 			),
 			'company'    => array(
-				'label'        => __( 'Company name', 'woocommerce' ),
+				'label'        => 'Tên tổ chức/công ty',
 				'class'        => array( 'form-row-wide' ),
 				'autocomplete' => 'organization',
 				'priority'     => 30,
@@ -650,16 +650,16 @@ class WC_Countries {
 			),
 			'country'    => array(
 				'type'         => 'country',
-				'label'        => __( 'Country', 'woocommerce' ),
-				'required'     => true,
+				'label'        => 'Quốc gia',
+				'required'     => false,
 				'class'        => array( 'form-row-wide', 'address-field', 'update_totals_on_change' ),
 				'autocomplete' => 'country',
 				'priority'     => 40,
 			),
 			'address_1'  => array(
-				'label'        => __( 'Street address', 'woocommerce' ),
+				'label'        => 'Địa chỉ',
 				/* translators: use local order of street name and house number. */
-				'placeholder'  => esc_attr__( 'House number and street name', 'woocommerce' ),
+				'placeholder'  => 'Nhập thông tin địa chỉ nhận hàng',
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'autocomplete' => 'address-line1',
@@ -673,7 +673,7 @@ class WC_Countries {
 				'required'     => 'required' === get_option( 'woocommerce_checkout_address_2_field', 'optional' ),
 			),
 			'city'       => array(
-				'label'        => __( 'Town / City', 'woocommerce' ),
+				'label'        => 'Tỉnh/Thành phố',
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'autocomplete' => 'address-level2',
@@ -681,7 +681,7 @@ class WC_Countries {
 			),
 			'state'      => array(
 				'type'         => 'state',
-				'label'        => __( 'State / County', 'woocommerce' ),
+				'label'        => 'Quận/Huyện',
 				'required'     => true,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'validate'     => array( 'state' ),
@@ -689,8 +689,8 @@ class WC_Countries {
 				'priority'     => 80,
 			),
 			'postcode'   => array(
-				'label'        => __( 'Postcode / ZIP', 'woocommerce' ),
-				'required'     => true,
+				'label'        => 'Mã bưu điện',
+				'required'     => false,
 				'class'        => array( 'form-row-wide', 'address-field' ),
 				'validate'     => array( 'postcode' ),
 				'autocomplete' => 'postal-code',
