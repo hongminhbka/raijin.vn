@@ -579,7 +579,7 @@ function wc_price( $price, $args = array() ) {
 		$price = wc_trim_zeros( $price );
 	}
 
-	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol">' 
+	$formatted_price = ( $negative ? '-' : '' ) . sprintf( $args['price_format'], '<span class="woocommerce-Price-currencySymbol">&nbsp;' 
 	. get_woocommerce_currency_symbol( $args['currency'] ) . '</span>', $price );
 	
 	$return          = '<span class="woocommerce-Price-amount amount">' . $formatted_price . '</span>';
