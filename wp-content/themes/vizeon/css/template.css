@@ -12076,13 +12076,16 @@ ul.nav-tabs>li.active>a {
   padding: 5px 15px;
   color: #fff;
 }
+.cart-button a{
+  color: #fff;
+}
 
 .cart-contents {
   position: relative;
   display: block;
 }
 
-.cart-contents::after {
+.cart-contents::before {
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
   content: "\f290" !important;
