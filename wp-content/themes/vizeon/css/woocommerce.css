@@ -2263,7 +2263,8 @@ table.cart img {
 }
 
 .woocommerce-page .content-page-inner input.button:hover, .woocommerce-page .content-page-inner a.button:hover {
-  background: #242424;
+  -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
+  box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
 }
 
 .woocommerce-page .content-page-inner .col2-set {

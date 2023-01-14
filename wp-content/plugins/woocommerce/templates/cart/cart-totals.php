@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
-			<th>Tạm tính></th>
+			<th>Tạm tính</th>
 			<td data-title="Tổng"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
 
