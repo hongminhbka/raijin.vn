@@ -12073,11 +12073,14 @@ ul.nav-tabs>li.active>a {
 }
 
 .cart-button{
-  padding: 5px;
+  padding: 5px 7px;
   color: #fff;
+  text-align: center;
 }
 .cart-button a{
   color: #fff;
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .cart-contents {
@@ -12089,7 +12092,7 @@ ul.nav-tabs>li.active>a {
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
   content: "\f290" !important;
-  font-size: 32px;
+  font-size: 25px;
   color: #ffffff;
 }
 
