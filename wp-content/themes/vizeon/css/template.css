@@ -12072,18 +12072,21 @@ ul.nav-tabs>li.active>a {
   transition: background-color 0.5s ease;
 }
 
-.cart-contents {
-  position: relative;
-  display: flex !important;
-  flex-flow: column nowrap;
-  justify-content: center;
+.cart-button{
+  padding: 5px 15px;
+  color: #fff;
 }
 
-.cart-contents:before {
+.cart-contents {
+  position: relative;
+  display: block;
+}
+
+.cart-contents::after {
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
   content: "\f290" !important;
-  font-size: 30px;
+  font-size: 34px;
   color: #ffffff;
 }
 
@@ -12093,19 +12096,18 @@ ul.nav-tabs>li.active>a {
 
 .cart-contents-count {
   position: absolute;
-  top: 15px;
-  right: 1px;
+  top: 0px;
+  right: 0px;
   transform: translateY(-105%) translateX(25%);
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 22px;
-  height: 22px;
-  width: 22px;
+  font-size: 21px;
+  line-height: 24px;
+  height: 30px;
+  width: 30px;
   vertical-align: middle;
   text-align: center;
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #fff;
   border-radius: 50%;
-  padding: 1px;
+  padding: 4px;
 }
