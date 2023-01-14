@@ -10451,8 +10451,10 @@ body.error404 .header-default {
   background: rgba(255, 255, 255, 0.8);
 }
 
-.woocommerce-cart h2 {
+.woocommerce-cart .title-total {
   font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .woocommerce-cart .shipping_calculator {
