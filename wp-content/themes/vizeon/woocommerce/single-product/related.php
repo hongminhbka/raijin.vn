@@ -267,6 +267,7 @@ $woocommerce_loop['columns'] = $columns;
 												document.getElementById("open-icon-" + index).style.display = 'none';
 												document.getElementById("close-icon-" + index).style.display = 'block';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'block';
+												document.getElementById("elementor-tab-title-" + index).classList.add('elementor-active');
 												console.log(0);
 											}
 											function closeQuestion(index){
