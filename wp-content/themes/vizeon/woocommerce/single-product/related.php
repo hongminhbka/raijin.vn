@@ -267,7 +267,9 @@ $woocommerce_loop['columns'] = $columns;
 												console.log(el);
 											}
 											function closeQuestion(el){
-												console.log(el);
+												el.style.display = 'none';
+												el.parentNode.firstChild.style.display = 'block';
+												else.parentNode.parentNode.nextSibling.style.display = 'none';
 											}
 										</script>
 										<?php foreach ($questions as $question_key => $question) : ?>
@@ -295,10 +297,10 @@ $woocommerce_loop['columns'] = $columns;
 													<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title"
 														data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
 														<span class="elementor-toggle-icon elementor-toggle-icon-right">
-															<span class="elementor-toggle-icon-closed">
+															<span class="elementor-toggle-icon-closed" onclick="closeQuestion(this)"> 
 																<i class="fas fa-plus"></i>
 															</span>
-															<span class="elementor-toggle-icon-opened">
+															<span class="elementor-toggle-icon-opened" onclick="openQuestion(this)">
 																<i class="elementor-toggle-icon-opened fas fa-window-minimize"></i>
 															</span>
 														</span>
