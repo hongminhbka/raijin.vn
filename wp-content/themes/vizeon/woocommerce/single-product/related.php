@@ -268,7 +268,7 @@ $woocommerce_loop['columns'] = $columns;
 											}
 											function closeQuestion(el){
 												el.style.display = 'none';
-												el.parentNode.firstChild.style.display = 'block';
+												el.previousSibling.style.display = 'block';
 												el.parentNode.parentNode.nextSibling.style.display = 'none';
 											}
 										</script>
