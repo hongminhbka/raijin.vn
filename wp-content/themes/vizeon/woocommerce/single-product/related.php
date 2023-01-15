@@ -268,10 +268,10 @@ $woocommerce_loop['columns'] = $columns;
 													<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title elementor-active"
 														data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
 														<span class="elementor-toggle-icon elementor-toggle-icon-right">
-															<span class="elementor-toggle-icon-closed">
+															<span class="elementor-toggle-icon-closed" onclick="open(this)">
 																<i class="fas fa-plus"></i>
 															</span>
-															<span class="elementor-toggle-icon-opened">
+															<span class="elementor-toggle-icon-opened" onclick="close(this)">
 																<i class="elementor-toggle-icon-opened fas fa-window-minimize"></i>
 															</span>
 														</span>
@@ -302,6 +302,14 @@ $woocommerce_loop['columns'] = $columns;
 														<p><?php echo esc_attr($question->answer);?></p>
 													</div>
 												<?php endif;?>
+												<script>
+													function close(el){
+														console.log(el);
+													}
+													function open(el){
+														console.log(el);
+													}
+												</script>
 											</div>
 										<?php endforeach; ?>
 									</div>
