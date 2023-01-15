@@ -81,10 +81,10 @@ class WC_Meta_Box_Order_Data {
 					'show'  => false,
 				),
 				'email'      => array(
-					'label' => __( 'Email address', 'woocommerce' ),
+					'label' => 'Email',
 				),
 				'phone'      => array(
-					'label' => __( 'Phone', 'woocommerce' ),
+					'label' => 'SĐT',
 				),
 			)
 		);

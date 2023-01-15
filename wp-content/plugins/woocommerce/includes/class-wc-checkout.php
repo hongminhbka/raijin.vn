@@ -236,11 +236,8 @@ class WC_Checkout {
 				'order_comments' => array(
 					'type'        => 'textarea',
 					'class'       => array( 'notes' ),
-					'label'       => __( 'Order notes', 'woocommerce' ),
-					'placeholder' => esc_attr__(
-						'Notes about your order, e.g. special notes for delivery.',
-						'woocommerce'
-					),
+					'label'       => 'Ghi chú',
+					'placeholder' => 'Ghi chú đơn hàng, chẳng hạn như giờ giao, địa chỉ giao ...',
 				),
 			),
 		);

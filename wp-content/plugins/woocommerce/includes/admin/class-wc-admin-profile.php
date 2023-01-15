@@ -82,11 +82,11 @@ if ( ! class_exists( 'WC_Admin_Profile', false ) ) :
 								'class'       => 'js_field-state',
 							),
 							'billing_phone'      => array(
-								'label'       => __( 'Phone', 'woocommerce' ),
+								'label'       => 'SĐT',
 								'description' => '',
 							),
 							'billing_email'      => array(
-								'label'       => __( 'Email address', 'woocommerce' ),
+								'label'       => 'Email',
 								'description' => '',
 							),
 						),

@@ -794,7 +794,7 @@ class WC_Countries {
 		if ( 'billing_' === $type ) {
 			if ( 'hidden' !== get_option( 'woocommerce_checkout_phone_field', 'required' ) ) {
 				$address_fields['billing_phone'] = array(
-					'label'        => __( 'Phone', 'woocommerce' ),
+					'label'        => 'SĐT',
 					'required'     => 'required' === get_option( 'woocommerce_checkout_phone_field', 'required' ),
 					'type'         => 'tel',
 					'class'        => array( 'form-row-wide' ),
@@ -804,8 +804,8 @@ class WC_Countries {
 				);
 			}
 			$address_fields['billing_email'] = array(
-				'label'        => __( 'Email address', 'woocommerce' ),
-				'required'     => true,
+				'label'        => 'Email',
+				'required'     => false,
 				'type'         => 'email',
 				'class'        => array( 'form-row-wide' ),
 				'validate'     => array( 'email' ),
