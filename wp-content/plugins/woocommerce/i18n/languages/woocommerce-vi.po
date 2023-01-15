@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
 "POT-Creation-Date: 2014-09-10 14:09:23+00:00\n"
-"PO-Revision-Date: 2023-01-15 12:31+0700\n"
+"PO-Revision-Date: 2023-01-15 15:53+0700\n"
 "Last-Translator: Claudio Sanches <contato@claudiosmweb.com>\n"
 "Language-Team: Vietnamese (http://www.transifex.com/projects/p/woocommerce/language/vi/)\n"
 "Language: vi\n"
@@ -6454,7 +6454,6 @@ msgid "Order %s has been marked on-hold due to a reversal - PayPal reason code: 
 msgstr ""
 
 #: includes/gateways/paypal/class-wc-gateway-paypal.php:881
-#, fuzzy
 msgid "Reversal cancelled for order %s"
 msgstr "Đơn hàng đã bị hủy bởi khách hàng."
 
@@ -6558,7 +6557,6 @@ msgid "Sign up for Simplify Commerce"
 msgstr ""
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:94
-#, fuzzy
 msgid "Learn more"
 msgstr "Đọc tiếp"
 
@@ -6600,9 +6598,8 @@ msgid "Place the payment gateway in sandbox mode using sandbox API keys (real pa
 msgstr ""
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:198
-#, fuzzy
 msgid "Sandbox Public Key"
-msgstr "Khóa không hợp lệ"
+msgstr "Khóa công khai"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:200 includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:207
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:214 includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:221
@@ -6610,41 +6607,34 @@ msgid "Get your API keys from your Simplify account: Settings > API Keys."
 msgstr ""
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:205
-#, fuzzy
 msgid "Sandbox Private Key"
-msgstr "Khóa không hợp lệ"
+msgstr "Khóa bí mật"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:212
-#, fuzzy
 msgid "Public Key"
-msgstr "Khóa truy cập"
+msgstr "Khóa công khai"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:219
-#, fuzzy
 msgid "Private Key"
-msgstr "Khóa không hợp lệ"
+msgstr "Khóa bí mật"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:235
 msgid "TEST MODE ENABLED. Use a test card: %s"
 msgstr ""
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:260
-#, fuzzy
 msgid "Expiry Month"
 msgstr "Ngày hết hạn (MM/YY)"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:261
-#, fuzzy
 msgid "Expiry Year"
 msgstr "Ngày hết hạn (MM/YY)"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:262
-#, fuzzy
 msgid "is invalid"
-msgstr "Khóa không hợp lệ"
+msgstr "không hợp lệ"
 
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:289
-#, fuzzy
 msgid "%s - Order %s"
 msgstr "Đơn hàng: %s"
 
@@ -6826,9 +6816,8 @@ msgstr "Bật giao hàng miễn phí"
 
 #: includes/shipping/free-shipping/class-wc-shipping-free-shipping.php:77 includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:138
 #: includes/shipping/local-pickup/class-wc-shipping-local-pickup.php:96
-#, fuzzy
 msgid "Method availability"
-msgstr "Phương thức thanh toán:"
+msgstr "Phương thức thanh toán"
 
 #: includes/shipping/free-shipping/class-wc-shipping-free-shipping.php:98
 #, fuzzy
@@ -6924,9 +6913,8 @@ msgid "Fixed amount"
 msgstr ""
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:116
-#, fuzzy
 msgid "Percentage of cart total"
-msgstr "Tổng cộng:"
+msgstr "Tổng cộng"
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:117
 msgid "Fixed amount per product"
@@ -6971,9 +6959,8 @@ msgid "Local pickup is a simple method which allows the customer to pick up thei
 msgstr ""
 
 #: includes/shortcodes/class-wc-shortcode-cart.php:58
-#, fuzzy
 msgid "Shipping costs updated."
-msgstr "Vận chuyển:"
+msgstr "Chi phí vận chuyển đã được cập nhật."
 
 #: includes/shortcodes/class-wc-shortcode-checkout.php:92
 msgid "Invalid order. If you have an account please log in and try again."
@@ -7029,9 +7016,8 @@ msgid "Invalid username or e-mail."
 msgstr "Tên đăng nhập hoặc email không hợp lệ."
 
 #: includes/shortcodes/class-wc-shortcode-my-account.php:256
-#, fuzzy
 msgid "Password reset is not allowed for this user"
-msgstr "Đặt lại mật khẩu cho {site_title}"
+msgstr "Mật khẩu không hợp lệ"
 
 #: includes/shortcodes/class-wc-shortcode-my-account.php:285
 msgid "Check your e-mail for the confirmation link."
@@ -7042,19 +7028,16 @@ msgid "Invalid key"
 msgstr "Khóa không hợp lệ"
 
 #: includes/shortcodes/class-wc-shortcode-my-account.php:354
-#, fuzzy
 msgid "Add a new payment method."
-msgstr "Thêm phương thức thanh toán"
+msgstr "Thêm phương thức thanh toán."
 
 #: includes/shortcodes/class-wc-shortcode-order-tracking.php:54
-#, fuzzy
 msgid "Please enter a valid order ID"
-msgstr "không hợp lệ. Vui lòng nhập một trong số sau:"
+msgstr "không hợp lệ. Vui lòng nhập mã đơn hàng:"
 
 #: includes/shortcodes/class-wc-shortcode-order-tracking.php:58
-#, fuzzy
 msgid "Please enter a valid order email"
-msgstr "không hợp lệ. Vui lòng nhập một trong số sau:"
+msgstr "không hợp lệ. Vui lòng nhập email đã đặt hàng:"
 
 #: includes/shortcodes/class-wc-shortcode-order-tracking.php:77
 msgid "Sorry, we could not find that order id in our database."
@@ -7085,7 +7068,6 @@ msgid "Coupon:"
 msgstr "Phiếu khuyến mại:"
 
 #: includes/wc-cart-functions.php:218
-#, fuzzy
 msgid "Free shipping coupon"
 msgstr "Miễn phí vận chuyển"
 
@@ -7102,14 +7084,12 @@ msgid "Order &ndash; %s"
 msgstr "Đơn hàng &ndash; %s"
 
 #: includes/wc-core-functions.php:78
-#, fuzzy
 msgid "Invalid order status"
 msgstr "Đơn hàng không hợp lệ."
 
 #: includes/wc-core-functions.php:121
-#, fuzzy
 msgid "Invalid order ID"
-msgstr "ID Đơn hàng"
+msgstr "Đơn hàng không hợp lệ."
 
 #: includes/wc-core-functions.php:249 tests/unit-tests/core-functions.php:28
 #, fuzzy
@@ -7330,14 +7310,12 @@ msgid "Refund &ndash; %s"
 msgstr "%s &ndash; %s"
 
 #: includes/wc-product-functions.php:492
-#, fuzzy
 msgid "Simple product"
 msgstr "Sản phẩm"
 
 #: includes/wc-product-functions.php:493
-#, fuzzy
 msgid "Grouped product"
-msgstr "Sản phẩm"
+msgstr "Nhóm sản phẩm"
 
 #: includes/wc-product-functions.php:494
 #, fuzzy
@@ -7345,9 +7323,8 @@ msgid "External/Affiliate product"
 msgstr "Đặt hàng trước sản phẩm"
 
 #: includes/wc-product-functions.php:495
-#, fuzzy
 msgid "Variable product"
-msgstr "Sản phẩm"
+msgstr "Sản phẩm ảo"
 
 #: includes/wc-template-functions.php:120
 msgid "New products"
@@ -7422,7 +7399,6 @@ msgid "Update country"
 msgstr "Cập nhật quốc gia"
 
 #: includes/wc-template-functions.php:1728 templates/cart/shipping-calculator.php:50
-#, fuzzy
 msgid "Select a state&hellip;"
 msgstr "Chọn một tùy chọn&hellip;"
 
@@ -7451,9 +7427,8 @@ msgid "An account is already registered with your email address. Please login."
 msgstr "Đã có tài khoản đăng ký với địa chỉ email này. Vui lòng đăng nhập."
 
 #: includes/wc-user-functions.php:61
-#, fuzzy
 msgid "Please enter a valid account username."
-msgstr "Vui lòng nhập mật khẩu tài khoản."
+msgstr "Vui lòng nhập thông tin tài khoản"
 
 #: includes/wc-user-functions.php:65
 msgid "An account is already registered with that username. Please choose another."
@@ -7496,9 +7471,8 @@ msgid "Active Filters"
 msgstr ""
 
 #: includes/widgets/class-wc-widget-layered-nav-filters.php:85 includes/widgets/class-wc-widget-layered-nav-filters.php:92 includes/widgets/class-wc-widget-layered-nav-filters.php:97
-#, fuzzy
 msgid "Remove filter"
-msgstr "Lọc theo"
+msgstr "Bỏ lọc"
 
 #: includes/widgets/class-wc-widget-layered-nav-filters.php:92
 msgid "Min"
@@ -7596,41 +7570,34 @@ msgid "Order by"
 msgstr "Sắp xếp theo"
 
 #: includes/widgets/class-wc-widget-product-categories.php:38
-#, fuzzy
 msgid "Category Order"
-msgstr "Danh mục:"
+msgstr "Sắp xếp danh mục"
 
 #: includes/widgets/class-wc-widget-product-categories.php:45
-#, fuzzy
 msgid "Show as dropdown"
-msgstr "Thả xuống"
+msgstr "Hiển thị cây mở"
 
 #: includes/widgets/class-wc-widget-product-categories.php:50
-#, fuzzy
 msgid "Show post counts"
-msgstr "Mã bưu điện"
+msgstr "Hiển thị số lượng"
 
 #: includes/widgets/class-wc-widget-product-categories.php:55
-#, fuzzy
 msgid "Show hierarchy"
-msgstr "Hiển thị"
+msgstr "Hiển thị hình cây"
 
 #: includes/widgets/class-wc-widget-product-categories.php:60
 msgid "Only show children of the current category"
 msgstr "Chỉ hiển thị danh mục con của danh mục hiện thời"
 
 #: includes/widgets/class-wc-widget-product-categories.php:218
-#, fuzzy
 msgid "No product categories exist."
-msgstr "Danh mục sản phẩm"
+msgstr "Không tồn tại sản phẩm"
 
 #: includes/widgets/class-wc-widget-product-search.php:21
-#, fuzzy
 msgid "A Search box for products only."
 msgstr "Tìm sản phẩm"
 
 #: includes/widgets/class-wc-widget-product-search.php:23
-#, fuzzy
 msgid "WooCommerce Product Search"
 msgstr "Tìm danh mục sản phẩm"
 
@@ -7639,7 +7606,6 @@ msgid "Your most used product tags in cloud format."
 msgstr ""
 
 #: includes/widgets/class-wc-widget-product-tag-cloud.php:23
-#, fuzzy
 msgid "WooCommerce Product Tags"
 msgstr "Tìm từ khóa sản phẩm"
 
@@ -7721,9 +7687,8 @@ msgid "Number of reviews to show"
 msgstr "Số đánh giá hiển thị"
 
 #: includes/widgets/class-wc-widget-recently-viewed.php:21
-#, fuzzy
 msgid "Display a list of recently viewed products."
-msgstr "Sản phẩm vừa xem"
+msgstr "Sản phẩm vừa xem."
 
 #: includes/widgets/class-wc-widget-recently-viewed.php:23
 msgid "WooCommerce Recently Viewed"
@@ -7754,7 +7719,6 @@ msgid "Return To Shop"
 msgstr "Quay lại Shop"
 
 #: templates/cart/cart-shipping.php:16
-#, fuzzy
 msgid "Shipping #%d"
 msgstr "Vận chuyển:"
 
@@ -7795,7 +7759,6 @@ msgid "Order Total"
 msgstr "Tổng cộng"
 
 #: templates/cart/cart-totals.php:87
-#, fuzzy
 msgid " (taxes estimated for %s)"
 msgstr "%s &ndash; %s"
 
@@ -7877,7 +7840,6 @@ msgid "Billing &amp; Shipping"
 msgstr "Thanh toán và giao hàng"
 
 #: templates/checkout/form-billing.php:19
-#, fuzzy
 msgid "Billing Details"
 msgstr "Địa chỉ thanh toán"
 
@@ -7926,18 +7888,16 @@ msgid "Totals"
 msgstr "Tổng"
 
 #: templates/checkout/form-pay.php:52
-#, fuzzy
 msgid "Payment"
-msgstr "Phương thức thanh toán không hợp lệ."
+msgstr "Thêm phương thức thanh toán."
 
 #: templates/checkout/form-pay.php:77
 msgid "Sorry, it seems that there are no available payment methods for your location. Please contact us if you require assistance or wish to make alternate arrangements."
 msgstr ""
 
 #: templates/checkout/form-pay.php:87
-#, fuzzy
 msgid "Pay for order"
-msgstr "Thanh toán"
+msgstr "thanh toán"
 
 #: templates/checkout/form-shipping.php:29
 msgid "Ship to a different address?"
@@ -8023,9 +7983,8 @@ msgid "An order has been created for you on %s. To pay for this order please use
 msgstr ""
 
 #: templates/emails/customer-invoice.php:16
-#, fuzzy
 msgid "pay"
-msgstr "Thanh toán"
+msgstr "thanh toán"
 
 #: templates/emails/customer-new-account.php:14 templates/emails/plain/customer-new-account.php:13
 msgid "Thanks for creating an account on %s. Your username is <strong>%s</strong>."
@@ -8126,7 +8085,6 @@ msgid "Cost: %s"
 msgstr "Giá: %s"
 
 #: templates/global/breadcrumb.php:72
-#, fuzzy
 msgid "Products tagged &ldquo;"
 msgstr "Sản phẩm mới đã được đặt từ khóa %s"
 
@@ -8139,7 +8097,6 @@ msgid "Error 404"
 msgstr "Lỗi 404"
 
 #: templates/global/breadcrumb.php:206
-#, fuzzy
 msgid "Posts tagged &ldquo;"
 msgstr "Sản phẩm mới đã được đặt từ khóa %s"
 
@@ -8305,7 +8262,6 @@ msgid "Available downloads"
 msgstr "Tải về có sẵn"
 
 #: templates/myaccount/my-downloads.php:29
-#, fuzzy
 msgid "%s download remaining"
 msgid_plural "%s downloads remaining"
 msgstr[0] "Tải về tệp tin%s"
@@ -8336,9 +8292,8 @@ msgid "Order <mark class=\"order-number\">%s</mark> was placed on <mark class=\"
 msgstr ""
 
 #: templates/myaccount/view-order.php:23 templates/order/tracking.php:23
-#, fuzzy
 msgid "Order Updates"
-msgstr "Sắp xếp theo"
+msgstr "Cập nhật đơn hàng"
 
 #: templates/myaccount/view-order.php:29 templates/order/tracking.php:29
 msgid "l jS \\o\\f F Y, h:ia"
@@ -8405,7 +8360,6 @@ msgid "Clear selection"
 msgstr "Bỏ các lựa chọn"
 
 #: templates/single-product/add-to-cart/variable.php:103
-#, fuzzy
 msgid "This product is currently out of stock and unavailable."
 msgstr "Sản phẩm đã hết hàng"
 
@@ -8432,7 +8386,6 @@ msgid "Dimensions"
 msgstr "Kích thước"
 
 #: templates/single-product/rating.php:28
-#, fuzzy
 msgid "%s customer review"
 msgid_plural "%s customer reviews"
 msgstr[0] "%s bình luận cho %s"
@@ -8685,21 +8638,19 @@ msgid "uncategorized"
 msgstr "chưa phân loại"
 
 #: includes/class-wc-post-types.php:394 includes/wc-order-functions.php:23
-#, fuzzy
 msgctxt "Order status"
 msgid "Pending payment"
 msgstr "Phương thức thanh toán:"
 
 #: includes/class-wc-post-types.php:402 includes/wc-order-functions.php:24
-#, fuzzy
 msgctxt "Order status"
 msgid "Processing"
-msgstr "Đang xử lý đơn hàng"
+msgstr "Đang xử lý"
 
 #: includes/class-wc-post-types.php:410 includes/wc-order-functions.php:25
 msgctxt "Order status"
 msgid "On hold"
-msgstr ""
+msgstr "Đang phát"
 
 #: includes/class-wc-post-types.php:418 includes/wc-order-functions.php:26
 msgctxt "Order status"
@@ -8717,7 +8668,6 @@ msgid "Refunded"
 msgstr "Đã hoàn lại tiền"
 
 #: includes/class-wc-post-types.php:442 includes/wc-order-functions.php:29
-#, fuzzy
 msgctxt "Order status"
 msgid "Failed"
 msgstr "Chữ ký không hợp lệ - không thể sắp xếp các tham số"
@@ -8738,13 +8688,11 @@ msgid "%b %d, %Y @ %I:%M %p"
 msgstr "%b %d, %Y @ %I:%M %p"
 
 #: includes/wc-page-functions.php:77
-#, fuzzy
 msgctxt "edit-address-slug"
 msgid "billing"
 msgstr "Thanh toán và giao hàng"
 
 #: includes/wc-page-functions.php:78
-#, fuzzy
 msgctxt "edit-address-slug"
 msgid "shipping"
 msgstr "Vận chuyển"
@@ -8760,7 +8708,6 @@ msgid "Order"
 msgstr "Đơn hàng"
 
 #: includes/widgets/class-wc-widget-recent-reviews.php:85
-#, fuzzy
 msgctxt "by comment author"
 msgid "by %1$s"
 msgstr "Bạn chỉ có thể có 1 %s trong giỏ hàng."
