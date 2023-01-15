@@ -11781,10 +11781,10 @@ ul.nav-tabs>li.active>a {
     padding: 15px !important;
     background-color: #fff !important;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 15px !important;
   }
   .woocommerce .product-related .product-listing .elementor-heading-title{
-    color: #2E3A5B;
+    color: #2E3A5B !important;
   }
   .elementor-widget-heading.elementor-widget-heading .elementor-heading-title{
     text-align: center;
