@@ -3696,3 +3696,14 @@ ul.list-sub-category > li > a {
   left: -1px;
   right: auto;
 }
+
+.woocommerce .woocommerce-order .woocommerce-notice {
+  font-size: 25px;
+  font-weight: 600;
+}
+.woocommerce .woocommerce-order .woocommerce-order-overview, 
+.woocommerce .woocommerce-order .woocommerce-customer-details{
+  list-style: none;
+  padding: 15px;
+  background-color: #FCF2F2;
+}
