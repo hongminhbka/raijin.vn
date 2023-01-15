@@ -1695,7 +1695,7 @@ table.variations a.reset_variations {
 .single-product .product-single-main.product-type-simple .quantity {
   float: left;
   display: inline-block;
-  margin: 0 20px 0 0;
+  margin: 0 20px 15px 0;
 }
 
 .single-product .product-single-main.product-type-simple .button-group {
