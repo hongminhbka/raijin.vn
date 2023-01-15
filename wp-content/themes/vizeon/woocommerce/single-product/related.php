@@ -262,6 +262,14 @@ $woocommerce_loop['columns'] = $columns;
 							<div class="elementor-element elementor-widget elementor-widget-toggle">
 								<div class="elementor-widget-container">
 									<div class="elementor-toggle" role="tablist">
+										<script>
+											function close(el){
+												console.log(el);
+											}
+											function open(el){
+												console.log(el);
+											}
+										</script>
 										<?php foreach ($questions as $question_key => $question) : ?>
 											<div class="elementor-toggle-item">
 												<?php if($question_key==0):?>
@@ -302,14 +310,6 @@ $woocommerce_loop['columns'] = $columns;
 														<p><?php echo esc_attr($question->answer);?></p>
 													</div>
 												<?php endif;?>
-												<script>
-													function close(el){
-														console.log(el);
-													}
-													function open(el){
-														console.log(el);
-													}
-												</script>
 											</div>
 										<?php endforeach; ?>
 									</div>
