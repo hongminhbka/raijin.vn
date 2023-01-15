@@ -273,7 +273,7 @@ $woocommerce_loop['columns'] = $columns;
 												document.getElementById("open-icon-" + index).style.display = 'block';
 												document.getElementById("close-icon-" + index).style.display = 'none';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'none';
-												document.getElementById("elementor-tab-title-" + index).classList.remove = 'elementor-active';
+												document.getElementById("elementor-tab-title-" + index).classList.remove('elementor-active');
 												console.log(1);
 											}
 										</script>
