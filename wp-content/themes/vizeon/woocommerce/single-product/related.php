@@ -264,13 +264,13 @@ $woocommerce_loop['columns'] = $columns;
 									<div class="elementor-toggle" role="tablist">
 										<script>
 											function openQuestion(index){
-												document.getElementById("open-icon-" + index).style.display = 'block';
-												document.getElementById("close-icon-" + index).style.display = 'none';
+												document.getElementById("open-icon-" + index).style.display = 'none';
+												document.getElementById("close-icon-" + index).style.display = 'block';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'block';
 											}
 											function closeQuestion(index){
-												document.getElementById("open-icon-" + index).style.display = 'none';
-												document.getElementById("close-icon-" + index).style.display = 'block';
+												document.getElementById("open-icon-" + index).style.display = 'block';
+												document.getElementById("close-icon-" + index).style.display = 'none';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'none';
 											}
 										</script>
