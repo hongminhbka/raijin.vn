@@ -648,14 +648,6 @@ class WC_Countries {
 				'priority'     => 30,
 				'required'     => 'required' === get_option( 'woocommerce_checkout_company_field', 'optional' ),
 			),
-			'country'    => array(
-				'type'         => 'country',
-				'label'        => 'Quốc gia',
-				'required'     => false,
-				'class'        => array( 'form-row-wide', 'address-field', 'update_totals_on_change' ),
-				'autocomplete' => 'country',
-				'priority'     => 40,
-			),
 			'address_1'  => array(
 				'label'        => 'Địa chỉ',
 				/* translators: use local order of street name and house number. */
@@ -687,15 +679,7 @@ class WC_Countries {
 				'validate'     => array( 'state' ),
 				'autocomplete' => 'address-level1',
 				'priority'     => 80,
-			),
-			'postcode'   => array(
-				'label'        => 'Mã bưu điện',
-				'required'     => false,
-				'class'        => array( 'form-row-wide', 'address-field' ),
-				'validate'     => array( 'postcode' ),
-				'autocomplete' => 'postal-code',
-				'priority'     => 90,
-			),
+			)
 		);
 
 		if ( 'hidden' === get_option( 'woocommerce_checkout_company_field', 'optional' ) ) {
