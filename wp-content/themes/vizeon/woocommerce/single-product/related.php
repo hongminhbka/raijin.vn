@@ -269,7 +269,7 @@ $woocommerce_loop['columns'] = $columns;
 											function closeQuestion(el){
 												el.style.display = 'none';
 												el.parentNode.firstChild.style.display = 'block';
-												else.parentNode.parentNode.nextSibling.style.display = 'none';
+												el.parentNode.parentNode.nextSibling.style.display = 'none';
 											}
 										</script>
 										<?php foreach ($questions as $question_key => $question) : ?>
