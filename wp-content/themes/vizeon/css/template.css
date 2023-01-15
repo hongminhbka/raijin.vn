@@ -11745,7 +11745,6 @@ ul.nav-tabs>li.active>a {
 
   .woocommerce .grid-view .product-block {
     padding: 5px 35px !important;
-    border: 1px solid #E9EAEA;
   }
 
   .home-page .woocommerce .grid-view .product-block .product-thumbnail {
@@ -11794,12 +11793,17 @@ ul.nav-tabs>li.active>a {
 .woocommerce .grid-view .product-block {
   padding: 20px;
   border: 1px solid #E9EAEA;
+  border-radius: 4px;
 }
 
 .woocommerce .grid-view .product-block:hover {
   border: 2px solid #F4F5F6;
   -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
   box-shadow: 0px 5px 15px rgb(0 0 0 / 20%);
+}
+
+.woocommerce .grid-view .product-block .product-block-inner .product-meta{
+  margin: 15px 0;
 }
 
 .woocommerce .elementor-heading-title {
