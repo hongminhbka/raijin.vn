@@ -121,7 +121,7 @@ class WC_Query {
 				$title = 'Thông tin tài khoản';
 				break;
 			case 'edit-address':
-				$title = 'Địa chỉ'
+				$title = 'Địa chỉ';
 				break;
 			case 'payment-methods':
 				$title = 'Phương thức thanh toán';
