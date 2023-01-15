@@ -267,12 +267,14 @@ $woocommerce_loop['columns'] = $columns;
 												document.getElementById("open-icon-" + index).style.display = 'none';
 												document.getElementById("close-icon-" + index).style.display = 'block';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'block';
+												console.log(0);
 											}
 											function closeQuestion(index){
 												document.getElementById("open-icon-" + index).style.display = 'block';
 												document.getElementById("close-icon-" + index).style.display = 'none';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'none';
 												document.getElementById("elementor-tab-title-" + index).classList.remove = 'elementor-active';
+												console.log(1);
 											}
 										</script>
 										<?php foreach ($questions as $question_key => $question) : ?>
