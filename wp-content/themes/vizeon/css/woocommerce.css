@@ -3238,6 +3238,10 @@ ul.list-sub-category > li > a {
   .filter-sidebar .filter-sidebar-inner.layout-fullwidth > .widget {
     width: 100%;
   }
+  .single-product .product-single-inner .cart .button, .single-product .product-single-inner .add-cart .button{
+    padding: 0px 10px;
+    font-size: 10px;
+  }
 }
 
 .filter-sidebar .filter-sidebar-inner.layout-fullwidth.active {
