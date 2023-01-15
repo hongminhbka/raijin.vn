@@ -263,13 +263,15 @@ $woocommerce_loop['columns'] = $columns;
 								<div class="elementor-widget-container">
 									<div class="elementor-toggle" role="tablist">
 										<script>
-											function openQuestion(el){
-												console.log(el);
+											function openQuestion(index){
+												document.getElementById("open-icon-" + index).style.display = 'block';
+												document.getElementById("close-icon-" + index).style.display = 'none';
+												document.getElementById("elementor-tab-content-" + index).style.display = 'block';
 											}
-											function closeQuestion(el){
-												el.style.display = 'none';
-												el.previousSibling.style.display = 'block';
-												el.parentNode.parentNode.nextSibling.style.display = 'none';
+											function closeQuestion(index){
+												document.getElementById("open-icon-" + index).style.display = 'none';
+												document.getElementById("close-icon-" + index).style.display = 'block';
+												document.getElementById("elementor-tab-content-" + index).style.display = 'none';
 											}
 										</script>
 										<?php foreach ($questions as $question_key => $question) : ?>
@@ -278,10 +280,10 @@ $woocommerce_loop['columns'] = $columns;
 													<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title elementor-active"
 														data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
 														<span class="elementor-toggle-icon elementor-toggle-icon-right">
-															<span class="elementor-toggle-icon-closed" onclick="openQuestion(this)">
+															<span class="elementor-toggle-icon-closed" onclick="openQuestion(<?php echo esc_attr($question_key); ?>)" id="open-icon-<?php echo esc_attr($question_key); ?>">
 																<i class="fas fa-plus"></i>
 															</span>
-															<span class="elementor-toggle-icon-opened" onclick="closeQuestion(this)">
+															<span class="elementor-toggle-icon-opened" onclick="closeQuestion(<?php echo esc_attr($question_key); ?>)" id="close-icon-<?php echo esc_attr($question_key); ?>">
 																<i class="elementor-toggle-icon-opened fas fa-window-minimize"></i>
 															</span>
 														</span>
@@ -297,10 +299,10 @@ $woocommerce_loop['columns'] = $columns;
 													<div id="elementor-tab-title-<?php echo esc_attr($question_key); ?>" class="elementor-tab-title"
 														data-tab="<?php echo esc_attr($question_key); ?>" role="tab" aria-controls="elementor-tab-content-<?php echo esc_attr($question_key); ?>">
 														<span class="elementor-toggle-icon elementor-toggle-icon-right">
-															<span class="elementor-toggle-icon-closed" onclick="closeQuestion(this)"> 
+															<span class="elementor-toggle-icon-closed" onclick="closeQuestion(<?php echo esc_attr($question_key); ?>)" id="close-icon-<?php echo esc_attr($question_key); ?>"> 
 																<i class="fas fa-plus"></i>
 															</span>
-															<span class="elementor-toggle-icon-opened" onclick="openQuestion(this)">
+															<span class="elementor-toggle-icon-opened" onclick="openQuestion(<?php echo esc_attr($question_key); ?>)" id="open-icon-<?php echo esc_attr($question_key); ?>">
 																<i class="elementor-toggle-icon-opened fas fa-window-minimize"></i>
 															</span>
 														</span>
