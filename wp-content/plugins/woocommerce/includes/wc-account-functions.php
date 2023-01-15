@@ -101,8 +101,8 @@ function wc_get_account_menu_items() {
 		'downloads'       => __( 'Downloads', 'woocommerce' ),
 		'edit-address'    => __( 'Addresses', 'woocommerce' ),
 		'payment-methods' => __( 'Payment methods', 'woocommerce' ),
-		'edit-account'    => __( 'Account details', 'woocommerce' ),
-		'customer-logout' => __( 'Logout', 'woocommerce' ),
+		'edit-account'    => __( 'Thông tin tài khoản', 'woocommerce' ),
+		'customer-logout' => __( 'Đăng xuất', 'woocommerce' ),
 	);
 
 	// Remove missing endpoints.

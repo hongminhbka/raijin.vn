@@ -115,22 +115,22 @@ class WC_Query {
 				$title = ( $order ) ? sprintf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() ) : '';
 				break;
 			case 'downloads':
-				$title = __( 'Downloads', 'woocommerce' );
+				$title = 'Tải xuống';
 				break;
 			case 'edit-account':
-				$title = __( 'Account details', 'woocommerce' );
+				$title = 'Thông tin tài khoản';
 				break;
 			case 'edit-address':
-				$title = __( 'Addresses', 'woocommerce' );
+				$title = 'Địa chỉ'
 				break;
 			case 'payment-methods':
-				$title = __( 'Payment methods', 'woocommerce' );
+				$title = 'Phương thức thanh toán';
 				break;
 			case 'add-payment-method':
-				$title = __( 'Add payment method', 'woocommerce' );
+				$title = 'Thêm phương thức thanh toán';
 				break;
 			case 'lost-password':
-				$title = __( 'Lost password', 'woocommerce' );
+				$title = 'Mật khẩu không chính xác';
 				break;
 			default:
 				$title = '';

@@ -327,7 +327,7 @@ class WC_Form_Handler {
 				$customer->save();
 			}
 
-			wc_add_notice( __( 'Account details changed successfully.', 'woocommerce' ) );
+			wc_add_notice( __( 'Thông tin tài khoản đã được cập nhật.', 'woocommerce' ) );
 
 			do_action( 'woocommerce_save_account_details', $user->ID );
 
