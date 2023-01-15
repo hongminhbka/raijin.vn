@@ -27,7 +27,7 @@ $notes = $order->get_customer_order_notes();
 			'woocommerce_order_tracking_status',
 			sprintf(
 				/* translators: 1: order number 2: order date 3: order status */
-				__( 'Order #%1$s was placed on %2$s and is currently %3$s.', 'woocommerce' ),
+				__( 'Đơn hàng #%1$s đã đặt vào %2$s và đang ở trạng thái %3$s.', 'woocommerce' ),
 				'<mark class="order-number">' . $order->get_order_number() . '</mark>',
 				'<mark class="order-date">' . wc_format_datetime( $order->get_date_created() ) . '</mark>',
 				'<mark class="order-status">' . wc_get_order_status_name( $order->get_status() ) . '</mark>'
@@ -38,7 +38,7 @@ $notes = $order->get_customer_order_notes();
 </p>
 
 <?php if ( $notes ) : ?>
-	<h2><?php esc_html_e( 'Order updates', 'woocommerce' ); ?></h2>
+	<h2>Cập nhật đơn hàng</h2>
 	<ol class="commentlist notes">
 		<?php foreach ( $notes as $note ) : ?>
 		<li class="comment note">
