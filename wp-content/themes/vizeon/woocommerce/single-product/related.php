@@ -272,6 +272,7 @@ $woocommerce_loop['columns'] = $columns;
 												document.getElementById("open-icon-" + index).style.display = 'block';
 												document.getElementById("close-icon-" + index).style.display = 'none';
 												document.getElementById("elementor-tab-content-" + index).style.display = 'none';
+												document.getElementById("elementor-tab-title-" + index).classList.remove = 'elementor-active';
 											}
 										</script>
 										<?php foreach ($questions as $question_key => $question) : ?>
