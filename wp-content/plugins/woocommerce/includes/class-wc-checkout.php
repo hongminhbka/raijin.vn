@@ -1087,7 +1087,7 @@ class WC_Checkout {
 
 			if ( WC()->cart->is_empty() ) {
 				/* translators: %s: shop cart url */
-				throw new Exception( sprintf( __( 'Sorry, your session has expired. <a href="%s" class="wc-backward">Return to shop</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'shop' ) ) ) );
+				throw new Exception( sprintf( __( 'Hết phiên đăng nhập. <a href="%s" class="wc-backward">Quay trở lại trang sản phẩm</a>', 'woocommerce' ), esc_url( wc_get_page_permalink( 'shop' ) ) ) );
 			}
 
 			do_action( 'woocommerce_checkout_process' );
