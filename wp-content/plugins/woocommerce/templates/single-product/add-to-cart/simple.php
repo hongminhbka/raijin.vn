@@ -61,13 +61,13 @@ if ($product->is_in_stock()) : ?>
 
 		do_action('woocommerce_after_add_to_cart_quantity');
 		?>
-		<div class="d-block">
+		<div class="button-group">
 			<button type="submit" name="add-to-cart" value="<?php echo esc_attr($product->get_id()); ?>" class="single_add_to_cart_button button alt">Thêm giỏ hàng</button>
 			<?php if(isset($shopee) && $shopee!= ''):?>
-				<a class="single_add_to_cart_button button alt" style="background-color: #fd5622;" href="<?php echo $shopee ?>">Mua tại Shopee</a>
+				<a class="button button-ecommerce" style="background-color: #fd5622;" href="<?php echo $shopee ?>">Mua tại Shopee</a>
 			<?php endif; ?>
 			<?php if(isset($lazada) && $lazada!= ''):?>
-				<a class="single_add_to_cart_button button alt" style="margin-left: 5px;background-image: linear-gradient(#0100bd, #0d1079);" href="<?php echo $lazada ?>">Mua tại Lazada</a>
+				<a class="button button-ecommerce" style="background-image: linear-gradient(#0100bd, #0d1079);" href="<?php echo $lazada ?>">Mua tại Lazada</a>
 			<?php endif; ?>				
 		</div>
 		<?php do_action('woocommerce_after_add_to_cart_button'); ?>
