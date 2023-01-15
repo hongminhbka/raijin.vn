@@ -23,8 +23,8 @@ if (!$post->post_excerpt) return;
 				<img width="24" height="24" src="/wp-content/themes/vizeon/images/icon-copy.svg" alt="Sao chép liên kết sản phẩm">
 			</a>
 			<script>
-				function copyLink(this) {					
-					navigator.clipboard.writeText(this.getAttribute("href"));
+				function copyLink(el) {					
+					navigator.clipboard.writeText(el.getAttribute("href"));
 					return false;					
 				}	
 			</script>
