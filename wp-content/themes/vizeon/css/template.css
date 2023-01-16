@@ -12032,9 +12032,25 @@ ul.nav-tabs>li.active>a {
 }
 
 .product-filter .elementor-widget-button .elementor-button {
-  min-height: 65px;
+  min-height: 60px;
   padding: 15px 10px;
   font-weight: 600;
+  padding: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  border: 1px solid #596481;
+  border-radius: 8px;
+  color: #596481;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: #F4F5F6;
+  display: block;
+}
+
+.product-filter .elementor-widget-button .elementor-button:hover{
+  color: #C40000;
+  border-color: #C40000;
 }
 
 .dropbtn {
