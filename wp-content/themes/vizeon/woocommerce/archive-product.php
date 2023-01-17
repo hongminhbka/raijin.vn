@@ -310,12 +310,12 @@ $woo_display = vizeon_display_modes_value();
                                                   'taxonomy' => 'product_cat', 
                                                   'hide_empty' => false,                                                 
                                                   'child_of' => $term_id_ac_quy_pkl,
-                                                  'order' => 'order'                                     
+                                                  'orderby' => 'order',
+                                                  'parent' => $term_id_ac_quy_pkl                                    
                                                 );
                                                 $categoriesChildrentOfAcQuyXePKL = get_terms($args_query);
                                                 
-                                                foreach ( $categoriesChildrentOfAcQuyXePKL as $key => $term ){
-                                                  print_r($term);
+                                                foreach ( $categoriesChildrentOfAcQuyXePKL as $key => $term ){                                                  
                                                   echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
                                                 }
                                               ?>
