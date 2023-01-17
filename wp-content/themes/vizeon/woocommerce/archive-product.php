@@ -301,7 +301,7 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXePKL(this)">
+                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXePKL(this.value)">
                                               <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
                                               <?php
                                                 $term_id_ac_quy_pkl = 111;
