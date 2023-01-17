@@ -315,6 +315,7 @@ $woo_display = vizeon_display_modes_value();
                                                 $categoriesChildrentOfAcQuyXePKL = get_terms($args_query);
                                                 
                                                 foreach ( $categoriesChildrentOfAcQuyXePKL as $key => $term ){
+                                                  print_r($term);
                                                   echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
                                                 }
                                               ?>
