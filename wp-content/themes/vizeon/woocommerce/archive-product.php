@@ -369,13 +369,18 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <select class="wpcf7-form-control wpcf7-select full-width"
-                                                          id="dung-luong-binh">
-                                                          <option value="" disabled="" selected="" hidden="">Chọn dung
-                                                            lượng bình</option>
-                                                          <option value=" 116">15c-30Ah</option>
-                                                          <option value=" 117">200c-100Ah</option>
-                                                          <option value=" 1227">44Wh - 5Ah (4Ah)</option>
+                                                        <select class="wpcf7-form-control wpcf7-select full-width">
+                                                          <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                          <?php 
+                                                            $attribute_terms = get_terms(array(
+                                                              'taxonomy' => 'pa_dung-tich-xe-pkl',
+                                                              'hide_empty' => false,
+                                                            ));
+                                                            
+                                                            foreach ( $attribute_terms as $key => $term ){                                                  
+                                                              echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                            }
+                                                          ?>
                                                         </select>
                                                       </div>
                                                     </div>
@@ -502,13 +507,18 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <select class="wpcf7-form-control wpcf7-select full-width"
-                                                          id="dung-luong-binh">
-                                                          <option value="" disabled="" selected="" hidden="">Chọn dung
-                                                            lượng bình</option>
-                                                          <option value=" 116">15c-30Ah</option>
-                                                          <option value=" 117">200c-100Ah</option>
-                                                          <option value=" 1227">44Wh - 5Ah (4Ah)</option>
+                                                        <select class="wpcf7-form-control wpcf7-select full-width">
+                                                          <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                          <?php 
+                                                            $attribute_terms = get_terms(array(
+                                                              'taxonomy' => 'pa_dung-tich-o-to',
+                                                              'hide_empty' => false,
+                                                            ));
+                                                            
+                                                            foreach ( $attribute_terms as $key => $term ){                                                  
+                                                              echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                            }
+                                                          ?>                                                          
                                                         </select>
                                                       </div>
                                                     </div>
@@ -632,17 +642,22 @@ $woo_display = vizeon_display_modes_value();
                                                 </div>
                                               </div>
                                               <div class="elementor-element elementor-column elementor-col-50 elementor-inner-column">
-                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-column-wrap elementor-element-populated">
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <select class="wpcf7-form-control wpcf7-select full-width"
-                                                          id="dung-luong-binh">
-                                                          <option value="" disabled="" selected="" hidden="">Chọn dung
-                                                            lượng bình</option>
-                                                          <option value=" 116">15c-30Ah</option>
-                                                          <option value=" 117">200c-100Ah</option>
-                                                          <option value=" 1227">44Wh - 5Ah (4Ah)</option>
+                                                        <select class="wpcf7-form-control wpcf7-select full-width">
+                                                          <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                          <?php 
+                                                            $attribute_terms = get_terms(array(
+                                                              'taxonomy' => 'pa_dung-tich-xe-may-dien',
+                                                              'hide_empty' => false,
+                                                            ));
+                                                            
+                                                            foreach ( $attribute_terms as $key => $term ){                                                  
+                                                              echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                            }
+                                                          ?>
                                                         </select>
                                                       </div>
                                                     </div>
