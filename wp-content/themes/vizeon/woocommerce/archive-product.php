@@ -301,7 +301,7 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width">
+                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXePKL(this)">
                                               <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
                                               <?php
                                                 $term_id_ac_quy_pkl = 111;
@@ -318,7 +318,34 @@ $woo_display = vizeon_display_modes_value();
                                                   echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
                                                 }
                                               ?>
-                                            </select>                                            
+                                            </select>
+                                            <script>
+                                              function layDanhSachDongXePKL(val) {    
+                                                  var consumerKey = 'ck_09275593145b2c019ce56220a0d56c3538fee867';
+                                                  var consumerSecret = 'cs_7ffb4ed80e0ed21ca1c7aa0434a2623050b5cc11';
+                                                  var url = window.location.origin + "/wp-json/wc/v3/products/categories?parent=" + val
+                                                          + '&consumer_key=' + consumerKey
+                                                          + '&consumer_secret=' + consumerSecret;
+                                                  var xhr = new XMLHttpRequest();
+                                                  xhr.open("GET", url, true);
+                                                  xhr.setRequestHeader('Content-type','charset=utf-8');
+                                                  xhr.setRequestHeader("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
+                                                  xhr.setRequestHeader("Access-Control-Allow-Methods", "GET");
+                                                  xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                                                  xhr.onload = function () {                                               
+                                                      if (xhr.readyState == 4 && xhr.status == "200") {                
+                                                          var response = JSON.parse(xhr.responseText);
+                                                          var i = 0;
+                                                          var innerHTML = '<option value="" disabled selected hidden>Chọn dòng xe</option>';
+                                                          for (i = 0; i < response.length; i++) {
+                                                              innerHTML += '<option value=" ' + response[i].id + '">' + response[i].name + '</option>';   
+                                                          }
+                                                          document.getElementById("dong-xe-pkl").innerHTML = innerHTML; 
+                                                      }
+                                                  }
+                                                  xhr.send();
+                                              }
+                                            </script>                                            
                                           </div>
                                         </div>
                                       </div>
@@ -329,7 +356,7 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width">
+                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-pkl">
                                               <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                             </select>
                                           </div>
