@@ -261,6 +261,51 @@ $woo_display = vizeon_display_modes_value();
                     </div>
                   </div>
                 </section>
+              
+              <?php elseif(is_product_category('ac-quy-pkl')) :?>
+                <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+                  <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-row">
+                      <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                          <div class="elementor-widget-wrap">
+                            <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                              <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                                  <div class="elementor-element elementor-column elementor-col-100 elementor-inner-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                      <div class="elementor-widget-wrap">
+                                        <div class="elementor-element elementor-widget elementor-widget-gva-heading-block">
+                                          <div class="elementor-widget-container">
+                                            <div class="gva-element-gva-heading-block gva-element">
+                                              <div class="align-left style-1 widget gsc-heading">
+                                                <div class="content-inner">
+                                                  <div class="title">Bạn đang tìm ắc quy cho xe mô tô nào</div>
+                                                  <div class="title-desc">Hãy chọn hãng xe, sau đó chọn dòng xe</div>                                                 
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
+                            <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
+                              <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                                                                                               
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
               <?php else: ?>
                 <?php do_action('woocommerce_archive_description'); ?>
               <?php endif; ?>
