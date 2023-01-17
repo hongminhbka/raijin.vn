@@ -350,6 +350,57 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </section>
+                            <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
+                              <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                                  <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                      <div class="elementor-widget-wrap">
+                                        <section class="elementor-element elementor-element-33a207e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                                          <div class="elementor-container elementor-column-gap-default">
+                                            <div class="elementor-row">
+                                              <div class="elementor-element elementor-column elementor-col-50 elementor-inner-column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                  <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-17c7abc elementor-widget elementor-widget-heading">
+                                                      <div class="elementor-widget-container">
+                                                        <h2 class="elementor-heading-title elementor-size-default"><span
+                                                            class="ez-toc-section"
+                                                            id="Tim_ac_quy_theo_dung_tich_binh"></span>Tìm ắc quy
+                                                          theo dung tích bình<span class="ez-toc-section-end"></span>
+                                                        </h2>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="elementor-element elementor-column elementor-col-50 elementor-inner-column">
+                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                  <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-widget elementor-widget-html">
+                                                      <div class="elementor-widget-container">
+                                                        <select class="wpcf7-form-control wpcf7-select full-width"
+                                                          id="dung-luong-binh">
+                                                          <option value="" disabled="" selected="" hidden="">Chọn dung
+                                                            lượng bình</option>
+                                                          <option value=" 116">15c-30Ah</option>
+                                                          <option value=" 117">200c-100Ah</option>
+                                                          <option value=" 1227">44Wh - 5Ah (4Ah)</option>
+                                                        </select>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </section>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </section>
                           </div>
                         </div>
                       </div>
