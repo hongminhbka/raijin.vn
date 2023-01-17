@@ -301,8 +301,7 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="hang-xe-o-to"
-                                              onchange="thayDoiHangXe(this.value)">
+                                            <select class="wpcf7-form-control wpcf7-select full-width">
                                               <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
                                               <?php
                                                 $term_id_ac_quy_pkl = 111;
@@ -325,26 +324,13 @@ $woo_display = vizeon_display_modes_value();
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="elementor-element elementor-element-f577b18 elementor-column elementor-col-50 elementor-top-column"
-                                    data-id="f577b18" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                  <div class="elementor-element elementor-column elementor-col-50 elementor-top-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-151d1c7 elementor-widget elementor-widget-html"
-                                          data-id="151d1c7" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-o-to"
-                                              onchange="layDanhSachSanPham(this.value)">
-                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>
-                                              <option value=" 972">MT-03</option>
-                                              <option value=" 1069">MT-07</option>
-                                              <option value=" 1071">MT-09</option>
-                                              <option value=" 1070">MT-09-SP</option>
-                                              <option value=" 1073">MT-10</option>
-                                              <option value=" 1072">MT-10-SP</option>
-                                              <option value=" 973">MT-15</option>
-                                              <option value=" 1078">R1</option>
-                                              <option value=" 1079">R6</option>
-                                              <option value=" 1074">TÉNÉRE 700</option>
+                                            <select class="wpcf7-form-control wpcf7-select full-width">
+                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                             </select>
                                           </div>
                                         </div>
@@ -442,54 +428,44 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </section>
-                            <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
+                            <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
-                                  <div class="elementor-element elementor-element-e928eab elementor-column elementor-col-50 elementor-top-column"
-                                    data-id="e928eab" data-element_type="column">
+                                  <div class="elementor-element elementor-column elementor-col-50 elementor-top-column">
                                     <div class="elementor-column-wrap  elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html"
-                                          data-id="da4516b" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="hang-xe-o-to"
-                                              onchange="thayDoiHangXe(this.value)">
-                                              <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>
-                                              <option value=" 988">BMW</option>
-                                              <option value=" 986">Ducati</option>
-                                              <option value=" 985">Harley Davidson</option>
-                                              <option value=" 964">HONDA</option>
-                                              <option value=" 989">Kawasaki</option>
-                                              <option value=" 987">KTM</option>
-                                              <option value=" 966">SUZUKI</option>
-                                              <option value=" 967">TRIUMPH</option>
-                                              <option value=" 965">YAMAHA</option>
-                                            </select>
+                                            <select class="wpcf7-form-control wpcf7-select full-width">                                             
+                                              <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
+                                              <?php
+                                                $term_id = 79;
+                                                $args_query = array(
+                                                  'taxonomy' => 'product_cat', 
+                                                  'hide_empty' => false,                                                 
+                                                  'child_of' => $term_id,
+                                                  'orderby' => 'order',
+                                                  'parent' => $term_id                                    
+                                                );
+                                                $categoriesChildrent = get_terms($args_query);
+                                                
+                                                foreach ( $categoriesChildrent as $key => $term ){                                                  
+                                                  echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                }
+                                              ?>
+                                            </select>                                              
                                           </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="elementor-element elementor-element-f577b18 elementor-column elementor-col-50 elementor-top-column"
-                                    data-id="f577b18" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                  <div class="elementor-element elementor-column elementor-col-50 elementor-top-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-151d1c7 elementor-widget elementor-widget-html"
-                                          data-id="151d1c7" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-o-to"
-                                              onchange="layDanhSachSanPham(this.value)">
-                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>
-                                              <option value=" 972">MT-03</option>
-                                              <option value=" 1069">MT-07</option>
-                                              <option value=" 1071">MT-09</option>
-                                              <option value=" 1070">MT-09-SP</option>
-                                              <option value=" 1073">MT-10</option>
-                                              <option value=" 1072">MT-10-SP</option>
-                                              <option value=" 973">MT-15</option>
-                                              <option value=" 1078">R1</option>
-                                              <option value=" 1079">R6</option>
-                                              <option value=" 1074">TÉNÉRE 700</option>
+                                            <select class="wpcf7-form-control wpcf7-select full-width">
+                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                             </select>
                                           </div>
                                         </div>
@@ -505,18 +481,16 @@ $woo_display = vizeon_display_modes_value();
                                   <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <section class="elementor-element elementor-element-33a207e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                                        <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
                                           <div class="elementor-container elementor-column-gap-default">
                                             <div class="elementor-row">
                                               <div class="elementor-element elementor-column elementor-col-50 elementor-inner-column">
-                                                <div class="elementor-column-wrap  elementor-element-populated">
+                                                <div class="elementor-column-wrap elementor-element-populated">
                                                   <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-17c7abc elementor-widget elementor-widget-heading">
+                                                    <div class="elementor-element elementor-widget elementor-widget-heading">
                                                       <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default"><span
-                                                            class="ez-toc-section"
-                                                            id="Tim_ac_quy_theo_dung_tich_binh"></span>Tìm ắc quy
-                                                          theo dung tích bình<span class="ez-toc-section-end"></span>
+                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                          <span class="ez-toc-section"></span>Tìm ắc quy theo dung tích bình<span class="ez-toc-section-end"></span>
                                                         </h2>
                                                       </div>
                                                     </div>
@@ -587,54 +561,44 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </section>
-                            <section class="elementor-element elementor-element-bcad63e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
+                            <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section product-filter">
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
-                                  <div class="elementor-element elementor-element-e928eab elementor-column elementor-col-50 elementor-top-column"
-                                    data-id="e928eab" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                  <div class="elementor-element elementor-column elementor-col-50 elementor-top-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html"
-                                          data-id="da4516b" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="hang-xe-o-to"
-                                              onchange="thayDoiHangXe(this.value)">
+                                            <select class="wpcf7-form-control wpcf7-select full-width">
                                               <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>
-                                              <option value=" 988">BMW</option>
-                                              <option value=" 986">Ducati</option>
-                                              <option value=" 985">Harley Davidson</option>
-                                              <option value=" 964">HONDA</option>
-                                              <option value=" 989">Kawasaki</option>
-                                              <option value=" 987">KTM</option>
-                                              <option value=" 966">SUZUKI</option>
-                                              <option value=" 967">TRIUMPH</option>
-                                              <option value=" 965">YAMAHA</option>
+                                              <?php
+                                                $term_id = 109;
+                                                $args_query = array(
+                                                  'taxonomy' => 'product_cat', 
+                                                  'hide_empty' => false,                                                 
+                                                  'child_of' => $term_id,
+                                                  'orderby' => 'order',
+                                                  'parent' => $term_id                                    
+                                                );
+                                                $categoriesChildrent = get_terms($args_query);
+                                                
+                                                foreach ( $categoriesChildrent as $key => $term ){                                                  
+                                                  echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                }
+                                              ?>
                                             </select>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="elementor-element elementor-element-f577b18 elementor-column elementor-col-50 elementor-top-column"
-                                    data-id="f577b18" data-element_type="column">
-                                    <div class="elementor-column-wrap  elementor-element-populated">
+                                  <div class="elementor-element elementor-column elementor-col-50 elementor-top-column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <div class="elementor-element elementor-element-151d1c7 elementor-widget elementor-widget-html"
-                                          data-id="151d1c7" data-element_type="widget" data-widget_type="html.default">
+                                        <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-o-to"
-                                              onchange="layDanhSachSanPham(this.value)">
-                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>
-                                              <option value=" 972">MT-03</option>
-                                              <option value=" 1069">MT-07</option>
-                                              <option value=" 1071">MT-09</option>
-                                              <option value=" 1070">MT-09-SP</option>
-                                              <option value=" 1073">MT-10</option>
-                                              <option value=" 1072">MT-10-SP</option>
-                                              <option value=" 973">MT-15</option>
-                                              <option value=" 1078">R1</option>
-                                              <option value=" 1079">R6</option>
-                                              <option value=" 1074">TÉNÉRE 700</option>
+                                            <select class="wpcf7-form-control wpcf7-select full-width">
+                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                             </select>
                                           </div>
                                         </div>
@@ -650,17 +614,16 @@ $woo_display = vizeon_display_modes_value();
                                   <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
                                     <div class="elementor-column-wrap elementor-element-populated">
                                       <div class="elementor-widget-wrap">
-                                        <section class="elementor-element elementor-element-33a207e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
+                                        <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
                                           <div class="elementor-container elementor-column-gap-default">
                                             <div class="elementor-row">
                                               <div class="elementor-element elementor-column elementor-col-50 elementor-inner-column">
                                                 <div class="elementor-column-wrap  elementor-element-populated">
                                                   <div class="elementor-widget-wrap">
-                                                    <div class="elementor-element elementor-element-17c7abc elementor-widget elementor-widget-heading">
+                                                    <div class="elementor-element elementor-widget elementor-widget-heading">
                                                       <div class="elementor-widget-container">
                                                         <h2 class="elementor-heading-title elementor-size-default"><span
-                                                            class="ez-toc-section"
-                                                            id="Tim_ac_quy_theo_dung_tich_binh"></span>Tìm ắc quy
+                                                            class="ez-toc-section"></span>Tìm ắc quy
                                                           theo dung tích bình<span class="ez-toc-section-end"></span>
                                                         </h2>
                                                       </div>
