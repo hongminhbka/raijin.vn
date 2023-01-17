@@ -11988,6 +11988,7 @@ ul.nav-tabs>li.active>a {
   padding: 15px;
   position: relative;
   font-size: 18px;
+  background-color: #F4F5F6;
 }
 
 .wpcf7-select::after {
