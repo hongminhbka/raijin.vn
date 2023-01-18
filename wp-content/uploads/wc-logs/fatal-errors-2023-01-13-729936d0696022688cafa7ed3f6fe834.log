@@ -1,0 +1,12 @@
+2023-01-13T03:27:07+00:00 CRITICAL syntax error, unexpected ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-hook.php on line 122
+
+2023-01-13T03:27:23+00:00 CRITICAL syntax error, unexpected ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-hook.php on line 122
+
+2023-01-13T03:27:34+00:00 CRITICAL syntax error, unexpected ';' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/includes/theme-hook.php on line 122
+
+2023-01-13T07:21:37+00:00 CRITICAL Object of class WP_Error could not be converted to string in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/archive-product.php on line 136
+
+2023-01-13T09:27:18+00:00 CRITICAL syntax error, unexpected ''tax_query'' (T_CONSTANT_ENCAPSED_STRING), expecting ')' in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/archive-product.php on line 224
+
+2023-01-13T09:50:18+00:00 CRITICAL syntax error, unexpected '}', expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /home/skymap_wp/raijin.howizbiz.com/wp-content/themes/vizeon/woocommerce/archive-product.php on line 233
+
