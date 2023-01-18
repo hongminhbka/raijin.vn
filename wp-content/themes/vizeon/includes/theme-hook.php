@@ -156,7 +156,9 @@ function vizeon_style_breadcrumb(){
     if($description != ''){
       $title = $description;
     }
-    $title = 'Sản phẩm';
+    else{
+      $title = 'Sản phẩm';
+    }    
     $is_show_title_h1 = false;
   }
 
