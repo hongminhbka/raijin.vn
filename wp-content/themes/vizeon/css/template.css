@@ -9211,12 +9211,10 @@ div[class*="col-md-4"] .post-thumbnail iframe {
   margin: 20px 0 25px;
 }
 
-.single-portfolio .portfolio-content .portfolio-information {
-  float: right;
-  margin: 0 0 15px 10px;
+.single-portfolio .portfolio-content .portfolio-information {    
   padding: 20px 30px;
   min-width: 300px;
-  border: 1px solid #dee2e6;
+  border: 1px solid #E9EAEA;
   padding: 30px;
   text-align: left;
 }
