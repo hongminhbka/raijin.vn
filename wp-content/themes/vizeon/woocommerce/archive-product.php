@@ -772,8 +772,11 @@ $woo_display = vizeon_display_modes_value();
                   <?php if(is_product_category('ac-quy-lithium-xe-may')):?>
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
-                        foreach ( $terms as $term ) {
-                          echo '<h2 class="elementor-heading-title elementor-size-default">' . $term->name . '</h2>';
+                        foreach ( $terms as $key => $term ) {
+                          if($key > 0){
+                            echo '<hr class="break-line">';
+                          }
+                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy ' . $term->name . '</p>';
                           echo do_shortcode( '[products category="ac-quy-lithium-xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]' );
                       }  
                     ?>
