@@ -769,16 +769,26 @@ $woo_display = vizeon_display_modes_value();
                   
                   <?php do_action('vizeon_woocommerce_active_filter');  ?>
 
-                  <?php woocommerce_product_loop_start(); ?>
+                  <?php if(is_product_category('ac-quy-lithium-xe-may')):?>
+                    <?php 
+                        $terms = get_terms("pa_phan-khuc");
+                        foreach ( $terms as $term ) {
+                          echo '<h2 class="elementor-heading-title elementor-size-default">' . $term->name . '</h2>';
+                          echo do_shortcode( '[products category="ac-quy-lithium-xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                      }  
+                    ?>
+                  <?php else:?>
+                    <?php woocommerce_product_loop_start(); ?>
 
-                  <?php while (have_posts()) : the_post(); ?>
+                    <?php while (have_posts()) : the_post(); ?>
 
-                    <?php wc_get_template_part('content', 'product'); ?>
+                      <?php wc_get_template_part('content', 'product'); ?>
 
-                  <?php endwhile; // end of the loop. 
-                  ?>
+                    <?php endwhile; // end of the loop. 
+                    ?>
 
-                  <?php woocommerce_product_loop_end(); ?>
+                    <?php woocommerce_product_loop_end(); ?>
+                  <?php endif;?>                  
 
                   <?php
                   /**
