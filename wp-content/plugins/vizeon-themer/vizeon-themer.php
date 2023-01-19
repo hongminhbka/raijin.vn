@@ -32,12 +32,8 @@ class Gavias_Vizeon_Themer{
 
 	function include_post_types(){
       require_once('posttypes/footer.php');
-      require_once('posttypes/header.php');
-		require_once('posttypes/gallery.php');
-		require_once('posttypes/event.php');
-		require_once('posttypes/portfolio.php');
-      require_once('posttypes/team.php');
-      require_once('posttypes/service.php');
+      require_once('posttypes/header.php');				
+		require_once('posttypes/portfolio.php');            
 	}
 
    function register_scripts(){
