@@ -34,7 +34,7 @@ if(!function_exists('gavias_post_type_portfolio')  ){
           'query_var'           => true,
           'can_export'          => true,
           'rewrite'             => array(
-            'slug'  => 'portfolio'
+            'slug'  => 'catalogue'
           ),
           'capability_type'     => 'post'
       );
