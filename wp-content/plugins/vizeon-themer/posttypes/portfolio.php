@@ -19,7 +19,7 @@ if(!function_exists('gavias_post_type_portfolio')  ){
       $args = array(
           'labels'              => $labels,
           'hierarchical'        => true,
-          'description'         => 'List Portfolio',
+          'description'         => 'List Catalogue',
           'supports'            => array( 'title', 'editor', 'author', 'thumbnail','excerpt', 'post-formats'  ), 
           'taxonomies'          => array( 'portfolio_category','post_tag' ),
           'post-formats'        => false,
