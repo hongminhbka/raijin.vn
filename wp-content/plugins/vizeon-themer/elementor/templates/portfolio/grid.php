@@ -28,7 +28,7 @@
       ?>
        <nav class="portfolio-filter">
           <ul class="nav nav-tabs">
-             <li><a class="btn-filter all active" href="javascript:void(0)" data-filter="*"><span><?php echo esc_html__( 'All', 'vizeon-themer' ); ?></span></a></li>
+             <li><a class="btn-filter all active" href="javascript:void(0)" data-filter="*"><span>Tất cả</span></a></li>
              <?php 
              if ( !empty($terms) && !is_wp_error($terms) ){ 
                 foreach ( $terms as $term ) {
