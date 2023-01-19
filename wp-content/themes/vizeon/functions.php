@@ -87,9 +87,9 @@ function vizeon_widgets_init() {
         'after_title' => '</span></h3>',
     ) );
     register_sidebar( array(
-        'name' => esc_html__( 'Portfolio Sidebar', 'vizeon' ),
+        'name' => esc_html__( 'Catalogue Sidebar', 'vizeon' ),
         'id' => 'portfolio_sidebar',
-        'description' => esc_html__( 'Appears in the Portfolio Page section of the site.', 'vizeon' ),
+        'description' => esc_html__( 'Appears in the Catalogue Page section of the site.', 'vizeon' ),
         'before_widget' => '<aside id="%1$s" class="widget clearfix %2$s">',
         'after_widget' => '</aside>',
         'before_title' => '<h3 class="widget-title"><span>',
