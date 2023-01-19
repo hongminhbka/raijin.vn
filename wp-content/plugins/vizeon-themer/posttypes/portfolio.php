@@ -2,18 +2,18 @@
 if(!function_exists('gavias_post_type_portfolio')  ){
     function gavias_post_type_portfolio(){
       $labels = array(
-          'name'               => __( 'Portfolios', "gaviasthemer" ),
-          'singular_name'      => __( 'Portfolio', "gaviasthemer" ),
-          'add_new'            => __( 'Add New Portfolio', "gaviasthemer" ),
-          'add_new_item'       => __( 'Add New Portfolio', "gaviasthemer" ),
-          'edit_item'          => __( 'Edit Portfolio', "gaviasthemer" ),
-          'new_item'           => __( 'New Portfolio', "gaviasthemer" ),
-          'view_item'          => __( 'View Portfolio', "gaviasthemer" ),
-          'search_items'       => __( 'Search Portfolios', "gaviasthemer" ),
-          'not_found'          => __( 'No Portfolios found', "gaviasthemer" ),
-          'not_found_in_trash' => __( 'No Portfolios found in Trash', "gaviasthemer" ),
-          'parent_item_colon'  => __( 'Parent Portfolio:', "gaviasthemer" ),
-          'menu_name'          => __( 'Portfolios', "gaviasthemer" ),
+          'name'               => __( 'Catalogue', "gaviasthemer" ),
+          'singular_name'      => __( 'Catalogue', "gaviasthemer" ),
+          'add_new'            => __( 'Add New Catalogue', "gaviasthemer" ),
+          'add_new_item'       => __( 'Add New Catalogue', "gaviasthemer" ),
+          'edit_item'          => __( 'Edit Catalogue', "gaviasthemer" ),
+          'new_item'           => __( 'New Catalogue', "gaviasthemer" ),
+          'view_item'          => __( 'View Catalogue', "gaviasthemer" ),
+          'search_items'       => __( 'Search Catalogue', "gaviasthemer" ),
+          'not_found'          => __( 'No Catalogue found', "gaviasthemer" ),
+          'not_found_in_trash' => __( 'No Catalogue found in Trash', "gaviasthemer" ),
+          'parent_item_colon'  => __( 'Parent Catalogue:', "gaviasthemer" ),
+          'menu_name'          => __( 'Catalogue', "gaviasthemer" ),
       );
 
       $args = array(
