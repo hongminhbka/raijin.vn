@@ -85,7 +85,7 @@
                       <?php foreach ($informations as $key => $info) { ?>
                         <?php if(isset($info['value']) && !empty($info['value'])){ ?>
                           <?php if($info['label'] == 'PDF') :?>
-                            <a href="<?php echo esc_url($info['value']) ?>" class="elementor-button-link elementor-button" role="button">
+                            <a href="<?php echo esc_url($info['value']) ?>" class="elementor-button-link elementor-button elementor-size-lg" role="button">
                               <span class="elementor-button-content-wrapper">
                                 <span class="elementor-button-text">Xem chi tiết</span>
                               </span>
