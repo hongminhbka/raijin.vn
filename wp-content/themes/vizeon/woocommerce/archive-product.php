@@ -780,6 +780,39 @@ $woo_display = vizeon_display_modes_value();
                           echo do_shortcode( '[products category="ac-quy-lithium-xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]' );
                       }  
                     ?>
+                  <?php elseif(is_product_category('ac-quy-pkl')):?>
+                    <?php 
+                        $terms = get_terms("pa_phan-khuc");
+                        foreach ( $terms as $key => $term ) {
+                          if($key > 0){
+                            echo '<hr class="break-line">';
+                          }
+                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô ' . $term->name . '</p>';
+                          echo do_shortcode( '[products category="ac-quy-pkl" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                      }  
+                    ?>
+                  <?php elseif(is_product_category('ac-quy-o-to')):?>
+                    <?php 
+                        $terms = get_terms("pa_phan-khuc");
+                        foreach ( $terms as $key => $term ) {
+                          if($key > 0){
+                            echo '<hr class="break-line">';
+                          }
+                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
+                          echo do_shortcode( '[products category="ac-quy-o-to" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                      }  
+                    ?>
+                  <?php elseif(is_product_category('ac-quy-lithium-xe-may-dien')):?>
+                    <?php 
+                        $terms = get_terms("pa_phan-khuc");
+                        foreach ( $terms as $key => $term ) {
+                          if($key > 0){
+                            echo '<hr class="break-line">';
+                          }
+                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy điện ' . $term->name . '</p>';
+                          echo do_shortcode( '[products category="ac-quy-lithium-xe-may-dien" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                      }  
+                    ?>
                   <?php else:?>
                     <?php woocommerce_product_loop_start(); ?>
 
