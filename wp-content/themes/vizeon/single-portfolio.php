@@ -84,10 +84,18 @@
                     <ul>
                       <?php foreach ($informations as $key => $info) { ?>
                         <?php if(isset($info['value']) && !empty($info['value'])){ ?>
-                          <li>
-                            <span class="label"><?php echo esc_html($info['label']) ?>: </span>
-                            <span class="value"><?php echo esc_html($info['value']) ?></span>
-                          </li>
+                          <?php if($info['label'] == 'PDF') :?>
+                            <a href="<?php echo esc_url($info['value']) ?>" class="elementor-button-link elementor-button" role="button">
+                              <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-text">Xem chi tiết</span>
+                              </span>
+                            </a>
+                          <?php else :?>
+                            <li>
+                              <span class="label"><?php echo esc_html($info['label']) ?>: </span>
+                              <span class="value"><?php echo esc_html($info['value']) ?></span>
+                            </li>
+                          <?php endif;?>
                         <?php } ?>  
                       <?php } ?>
                     </ul>
