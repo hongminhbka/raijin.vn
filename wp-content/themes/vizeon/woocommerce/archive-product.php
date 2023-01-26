@@ -71,7 +71,7 @@ $woo_display = vizeon_display_modes_value();
               <?php show_products_per_category(); ?>            
             <?php else: ?>
               <!-- hien thi trang danh muc xe may -->
-              <?php if (is_product_category('ac-quy-lithium-xe-may') ): ?>
+              <?php if (is_product_category('xe-may') ): ?>
                 
                 <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
                   <div class="elementor-container elementor-column-gap-default">
@@ -429,7 +429,7 @@ $woo_display = vizeon_display_modes_value();
                     </div>
                   </div>
                 </section>
-              <?php elseif(is_product_category('ac-quy-o-to')) :?>
+              <?php elseif(is_product_category('o-to')) :?>
                 <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
                   <div class="elementor-container elementor-column-gap-default">
                     <div class="elementor-row">
@@ -594,7 +594,7 @@ $woo_display = vizeon_display_modes_value();
                     </div>
                   </div>
                 </section>
-              <?php elseif(is_product_category('ac-quy-lithium-xe-may-dien')) :?>
+              <?php elseif(is_product_category('xe-may-dien')) :?>
                 <section class="elementor-element elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section">
                   <div class="elementor-container elementor-column-gap-default">
                     <div class="elementor-row">
@@ -769,7 +769,7 @@ $woo_display = vizeon_display_modes_value();
                   
                   <?php do_action('vizeon_woocommerce_active_filter');  ?>
 
-                  <?php if(is_product_category('ac-quy-lithium-xe-may')):?>
+                  <?php if(is_product_category('xe-may')):?>
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
@@ -777,7 +777,7 @@ $woo_display = vizeon_display_modes_value();
                             echo '<hr class="break-line">';
                           }
                           echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="ac-quy-lithium-xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                          echo do_shortcode( '[products category="xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]' );
                       }  
                     ?>
                   <?php elseif(is_product_category('ac-quy-pkl')):?>
@@ -791,7 +791,7 @@ $woo_display = vizeon_display_modes_value();
                           echo do_shortcode( '[products category="ac-quy-pkl" attribute="phan-khuc" terms="'. $term->slug .'"]' );
                       }  
                     ?>
-                  <?php elseif(is_product_category('ac-quy-o-to')):?>
+                  <?php elseif(is_product_category('o-to')):?>
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
@@ -799,10 +799,10 @@ $woo_display = vizeon_display_modes_value();
                             echo '<hr class="break-line">';
                           }
                           echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="ac-quy-o-to" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                          echo do_shortcode( '[products category="o-to" attribute="phan-khuc" terms="'. $term->slug .'"]' );
                       }  
                     ?>
-                  <?php elseif(is_product_category('ac-quy-lithium-xe-may-dien')):?>
+                  <?php elseif(is_product_category('xe-may-dien')):?>
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
@@ -810,7 +810,7 @@ $woo_display = vizeon_display_modes_value();
                             echo '<hr class="break-line">';
                           }
                           echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy điện ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="ac-quy-lithium-xe-may-dien" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                          echo do_shortcode( '[products category="xe-may-dien" attribute="phan-khuc" terms="'. $term->slug .'"]' );
                       }  
                     ?>
                   <?php else:?>
