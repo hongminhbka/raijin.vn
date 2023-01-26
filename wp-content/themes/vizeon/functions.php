@@ -564,9 +564,9 @@ function wpm_product_cat_add_details_meta() {
     wp_nonce_field( basename( __FILE__ ), 'wpm_product_cat_details_nonce' );
     ?>
     <div class="form-field">
-        <label for="wpm-product-cat-details"><?php esc_html_e( 'Details', 'wpm' ); ?></label>
+        <label for="wpm-product-cat-details">Content</label>
         <textarea name="wpm-product-cat-details" id="wpm-product-cat-details" rows="5" cols="40"></textarea>
-        <p class="description"><?php esc_html_e( 'Detailed category info to appear below the product list', 'wpm' ); ?></p>
+        <p class="description">Thông tin chi tiết danh mục, hiện bên dưới danh sách sản phẩm</p>
     </div>
     <?php
 }
@@ -589,11 +589,11 @@ function wpm_product_cat_edit_details_meta( $term ) {
     $settings = array( 'textarea_name' => 'wpm-product-cat-details' );
     ?>
     <tr class="form-field">
-        <th scope="row" valign="top"><label for="wpm-product-cat-details"><?php esc_html_e( 'Mô tả', 'wpm' ); ?></label></th>
+        <th scope="row" valign="top"><label for="wpm-product-cat-details">Content</label></th>
         <td>
             <?php wp_nonce_field( basename( __FILE__ ), 'wpm_product_cat_details_nonce' ); ?>
             <?php wp_editor( wpm_sanitize_details( $product_cat_details ), 'product_cat_details', $settings ); ?>
-            <p class="description"><?php esc_html_e( 'Hiển thị phía dưới danh sách sản phẩm trong từng trang danh mục.','wpm' ); ?></p>
+            <p class="description">Thông tin chi tiết danh mục, hiện bên dưới danh sách sản phẩm</p>
         </td>
     </tr>
     <?php
