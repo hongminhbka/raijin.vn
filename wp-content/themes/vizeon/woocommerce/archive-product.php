@@ -792,7 +792,7 @@ $woo_display = vizeon_display_modes_value();
                           $output = do_shortcode($shortcode);
                           if($output != '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy ' . $term->name . '</p>';
-                            echo do_shortcode( $shortcode );
+                            echo $output;
                           }
                       }  
                     ?>
@@ -807,7 +807,7 @@ $woo_display = vizeon_display_modes_value();
                           $output = do_shortcode($shortcode);
                           if($output != '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô ' . $term->name . '</p>';
-                            echo do_shortcode( $shortcode );
+                            echo $output;
                           }
                         }  
                     ?>
@@ -822,7 +822,7 @@ $woo_display = vizeon_display_modes_value();
                           $output = do_shortcode($shortcode);
                           if($output != '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
-                            echo do_shortcode( $shortcode );
+                            echo $output;
                           }
                       }  
                     ?>
@@ -837,7 +837,7 @@ $woo_display = vizeon_display_modes_value();
                           $output = do_shortcode($shortcode);
                           if($output !== '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy điện ' . $term->name . '</p>';
-                            echo do_shortcode( $shortcode );
+                            echo $output;
                           }
                       }  
                     ?>
