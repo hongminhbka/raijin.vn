@@ -523,9 +523,11 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-oto">
-                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
-                                            </select>
+                                            <form method="get" action="/danh-muc/o-to/">
+                                              <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-oto" name="dong-xe">
+                                                <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
+                                              </select>
+                                            </form>
                                           </div>
                                         </div>
                                       </div>
