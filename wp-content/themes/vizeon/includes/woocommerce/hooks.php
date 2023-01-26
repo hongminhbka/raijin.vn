@@ -141,8 +141,8 @@ function vizeon_swap_images(){
       if($attachment_ids && isset($attachment_ids[0])) {
         $output .= '<div class="swap-thumbnail">';
         $output .= '<a href="' . get_the_permalink() . '">';
-        $class = 'image-second';
-        $output .= wp_get_attachment_image($attachment_ids[0],'shop_catalog', false, array('class'=>$class));
+        //$class = 'image-second';
+        //$output .= wp_get_attachment_image($attachment_ids[0],'shop_catalog', false, array('class'=>$class));
       }
 
       $output .= '<span class="attachment-shop_catalog">' . get_the_post_thumbnail( $post->ID,'shop_catalog', array('class'=>'') ) . '</span>';
