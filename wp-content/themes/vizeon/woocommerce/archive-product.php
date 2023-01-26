@@ -790,7 +790,7 @@ $woo_display = vizeon_display_modes_value();
                           }
                           $shortcode = '[products category="xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]';
                           $output = do_shortcode($shortcode);
-                          if($output !== '') {
+                          if($output != '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy ' . $term->name . '</p>';
                             echo do_shortcode( $shortcode );
                           }
@@ -805,7 +805,7 @@ $woo_display = vizeon_display_modes_value();
                           }
                           $shortcode = '[products category="ac-quy-pkl" attribute="phan-khuc" terms="'. $term->slug .'"]';
                           $output = do_shortcode($shortcode);
-                          if($output !== '') {
+                          if($output != '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô ' . $term->name . '</p>';
                             echo do_shortcode( $shortcode );
                           }
@@ -820,7 +820,7 @@ $woo_display = vizeon_display_modes_value();
                           }
                           $shortcode = '[products category="o-to" attribute="phan-khuc" terms="'. $term->slug .'"]';
                           $output = do_shortcode($shortcode);
-                          if($output !== '') {
+                          if($output != '') {
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
                             echo do_shortcode( $shortcode );
                           }
