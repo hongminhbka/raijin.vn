@@ -565,7 +565,7 @@ $woo_display = vizeon_display_modes_value();
                                                           <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
                                                           <?php 
                                                             $attribute_terms = get_terms(array(
-                                                              'taxonomy' => 'pa_dung-tich-o-to',
+                                                              'taxonomy' => 'pa_dung-luong-dien-o-to',
                                                               'hide_empty' => false,
                                                             ));
                                                             
@@ -731,7 +731,7 @@ $woo_display = vizeon_display_modes_value();
                                                           <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
                                                           <?php 
                                                             $attribute_terms = get_terms(array(
-                                                              'taxonomy' => 'pa_dung-tich-xe-may-dien',
+                                                              'taxonomy' => 'pa_dung-luong-dien-xe-dien',
                                                               'hide_empty' => false,
                                                             ));
                                                             
