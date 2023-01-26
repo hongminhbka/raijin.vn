@@ -645,3 +645,10 @@ function wpm_product_cat_display_details_meta() {
         <?php
     }
 }
+
+function themeslug_query_vars( $qvars ) {
+	$qvars[] = 'dong-xe';
+  $qvars[] = 'dung-luong';
+	return $qvars;
+}
+add_filter( 'query_vars', 'themeslug_query_vars' );

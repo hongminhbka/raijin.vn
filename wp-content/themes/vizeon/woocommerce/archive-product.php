@@ -788,8 +788,12 @@ $woo_display = vizeon_display_modes_value();
                           if($key > 0){
                             echo '<hr class="break-line">';
                           }
-                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                          $shortcode = '[products category="xe-may" attribute="phan-khuc" terms="'. $term->slug .'"]';
+                          $output = do_shortcode($shortcode);
+                          if($output !== '') {
+                            echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy ' . $term->name . '</p>';
+                            echo do_shortcode( $shortcode );
+                          }
                       }  
                     ?>
                   <?php elseif(is_product_category('ac-quy-pkl')):?>
@@ -799,9 +803,13 @@ $woo_display = vizeon_display_modes_value();
                           if($key > 0){
                             echo '<hr class="break-line">';
                           }
-                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="ac-quy-pkl" attribute="phan-khuc" terms="'. $term->slug .'"]' );
-                      }  
+                          $shortcode = '[products category="ac-quy-pkl" attribute="phan-khuc" terms="'. $term->slug .'"]';
+                          $output = do_shortcode($shortcode);
+                          if($output !== '') {
+                            echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô ' . $term->name . '</p>';
+                            echo do_shortcode( $shortcode );
+                          }
+                        }  
                     ?>
                   <?php elseif(is_product_category('o-to')):?>
                     <?php 
@@ -810,8 +818,12 @@ $woo_display = vizeon_display_modes_value();
                           if($key > 0){
                             echo '<hr class="break-line">';
                           }
-                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="o-to" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                          $shortcode = '[products category="o-to" attribute="phan-khuc" terms="'. $term->slug .'"]';
+                          $output = do_shortcode($shortcode);
+                          if($output !== '') {
+                            echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
+                            echo do_shortcode( $shortcode );
+                          }
                       }  
                     ?>
                   <?php elseif(is_product_category('xe-may-dien')):?>
@@ -821,8 +833,12 @@ $woo_display = vizeon_display_modes_value();
                           if($key > 0){
                             echo '<hr class="break-line">';
                           }
-                          echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy điện ' . $term->name . '</p>';
-                          echo do_shortcode( '[products category="xe-may-dien" attribute="phan-khuc" terms="'. $term->slug .'"]' );
+                          $shortcode = '[products category="xe-may-dien" attribute="phan-khuc" terms="'. $term->slug .'"]' ;
+                          $output = do_shortcode($shortcode);
+                          if($output !== '') {
+                            echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy điện ' . $term->name . '</p>';
+                            echo do_shortcode( $shortcode );
+                          }
                       }  
                     ?>
                   <?php else:?>
