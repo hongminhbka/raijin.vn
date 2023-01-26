@@ -356,9 +356,11 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-pkl">
-                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
-                                            </select>
+                                            <form method="get" action="<?php echo get_term_link('ac-quy-pkl', 'product_cat' );?>">
+                                              <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-pkl" name="dong-xe" onchange="this.form.submit();">
+                                                <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
+                                              </select>
+                                            </form>
                                           </div>
                                         </div>
                                       </div>
@@ -396,19 +398,21 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <select class="wpcf7-form-control wpcf7-select full-width">
-                                                          <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
-                                                          <?php 
-                                                            $attribute_terms = get_terms(array(
-                                                              'taxonomy' => 'pa_dung-tich-xe-pkl',
-                                                              'hide_empty' => false,
-                                                            ));
-                                                            
-                                                            foreach ( $attribute_terms as $key => $term ){                                                  
-                                                              echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
-                                                            }
-                                                          ?>
-                                                        </select>
+                                                        <form method="get" action="<?php echo get_term_link('ac-quy-pkl', 'product_cat' );?>">
+                                                          <select class="wpcf7-form-control wpcf7-select full-width" name="dung-luong" onchange="this.form.submit();">
+                                                            <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                            <?php 
+                                                              $attribute_terms = get_terms(array(
+                                                                'taxonomy' => 'pa_dung-tich-xe-pkl',
+                                                                'hide_empty' => false,
+                                                              ));
+                                                              
+                                                              foreach ( $attribute_terms as $key => $term ){                                                  
+                                                                echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                              }
+                                                            ?>
+                                                          </select>
+                                                        </form>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -692,9 +696,11 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-may-dien">
-                                              <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
-                                            </select>
+                                            <form method="get" action="<?php echo get_term_link('xe-may-dien', 'product_cat' );?>">
+                                              <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-may-dien" name="dong-xe" onchange="this.form.submit();">
+                                                <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
+                                              </select>
+                                            </form>
                                           </div>
                                         </div>
                                       </div>
@@ -731,19 +737,21 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <select class="wpcf7-form-control wpcf7-select full-width">
-                                                          <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
-                                                          <?php 
-                                                            $attribute_terms = get_terms(array(
-                                                              'taxonomy' => 'pa_dung-luong-dien-xe-dien',
-                                                              'hide_empty' => false,
-                                                            ));
-                                                            
-                                                            foreach ( $attribute_terms as $key => $term ){                                                  
-                                                              echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
-                                                            }
-                                                          ?>
-                                                        </select>
+                                                        <form method="get" action="<?php echo get_term_link('xe-may-dien', 'product_cat' );?>">
+                                                          <select class="wpcf7-form-control wpcf7-select full-width" name="dung-luong" onchange="this.form.submit();">
+                                                            <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                            <?php 
+                                                              $attribute_terms = get_terms(array(
+                                                                'taxonomy' => 'pa_dung-luong-dien-xe-dien',
+                                                                'hide_empty' => false,
+                                                              ));
+                                                              
+                                                              foreach ( $attribute_terms as $key => $term ){                                                  
+                                                                echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                              }
+                                                            ?>
+                                                          </select>
+                                                        </form>
                                                       </div>
                                                     </div>
                                                   </div>
