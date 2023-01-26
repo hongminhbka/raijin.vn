@@ -138,20 +138,20 @@ function vizeon_swap_images(){
   $class = 'image';
   if(has_post_thumbnail()){
       $attachment_ids = $product->get_gallery_image_ids();
-      if($attachment_ids && isset($attachment_ids[1])) {
-        $output .= '<div class="swap-thumbnail">';
-        $output .= '<a href="' . get_the_permalink() . '">';
-        $class = 'image-second';
-        $output .= wp_get_attachment_image($attachment_ids[1],'shop_catalog', false, array('class'=>$class));
-      }
+      // if($attachment_ids && isset($attachment_ids[1])) {
+      //   $output .= '<div class="swap-thumbnail">';
+      //   $output .= '<a href="' . get_the_permalink() . '">';
+      //   $class = 'image-second';
+      //   $output .= wp_get_attachment_image($attachment_ids[1],'shop_catalog', false, array('class'=>$class));
+      // }
 
       $output .= '<span class="attachment-shop_catalog">' . get_the_post_thumbnail( $post->ID,'shop_catalog', array('class'=>'') ) . '</span>';
 
-      if($attachment_ids && isset($attachment_ids[1])) {
-         $output .= '</a>';
-         $output .= '</div>';
+      // if($attachment_ids && isset($attachment_ids[1])) {
+      //    $output .= '</a>';
+      //    $output .= '</div>';
           
-      }
+      // }
   }else{
       $output .= '<img src="'.woocommerce_placeholder_img_src().'" alt="'. $post->title .'" class="'.$class.'" width="'.$_width.'" height="'.$_height.'" />';
   }
