@@ -49,16 +49,6 @@
             <?php } ?> 
           </div>
         <?php endif; ?>
-
-        <?php if (!empty($settings['image_second']['url'])) : ?>
-          <div class="image-second">
-            <?php $image_url_second = $settings['image_second']['url']; ?>
-            <a <?php echo $this->get_render_attribute_string( 'link' ) ?>>
-              <img src="<?php echo esc_url($image_url_second)?>" alt="<?php echo esc_attr($settings['title_text']) ?>" />
-            </a>
-          </div>
-        <?php endif; ?>
-
       </div>
    <?php } ?>  
     
