@@ -80,13 +80,13 @@ global $woocommerce;
 
 <?php if ( sizeof( WC()->cart->get_cart() ) > 0 ) : ?>
 
-	<p class="total"><strong><?php esc_html_e( 'Subtotal', 'vizeon' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
+	<p class="total"><strong><?php esc_html_e( 'Tạm tính', 'vizeon' ); ?>:</strong> <?php echo WC()->cart->get_cart_subtotal(); ?></p>
 
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
 	<p class="buttons clearfix">
-		<a href="<?php echo wc_get_cart_url(); ?>" class="btn btn-theme pull-left btn-sm wc-forward"><?php esc_html_e( 'View Cart', 'vizeon' ); ?></a>
-		<a href="<?php echo wc_get_checkout_url(); ?>" class="btn btn-theme pull-right btn-sm checkout wc-forward"><?php esc_html_e( 'Checkout', 'vizeon' ); ?></a>
+		<a href="<?php echo wc_get_cart_url(); ?>" class="btn btn-theme pull-left btn-sm wc-forward"><?php esc_html_e( 'Giỏ hàng', 'vizeon' ); ?></a>
+		<a href="<?php echo wc_get_checkout_url(); ?>" class="btn btn-theme pull-right btn-sm checkout wc-forward"><?php esc_html_e( 'Thanh toán', 'vizeon' ); ?></a>
 	</p>
 
 <?php endif; ?>
