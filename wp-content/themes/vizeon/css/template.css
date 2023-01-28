@@ -3111,6 +3111,9 @@ header .canvas-menu .fa {
     max-width: 45%;
     margin: 0 auto;
   }
+  .woocommerce .elementor-heading-title{
+    text-align: center;
+  }
 }
 
 .header-mobile .canvas-menu {
@@ -3134,7 +3137,7 @@ header .canvas-menu .fa {
   right: 58px;
   top: 50%;
   z-index: 1;
-  margin-top: -18px;
+  margin-top: -13px;
 }
 
 .header-mobile .mini-cart-header {

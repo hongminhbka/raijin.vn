@@ -3,7 +3,6 @@
 <div class="header-mobile d-xl-none d-lg-none d-md-block d-sm-block d-xs-block">
   <div class="container">
     <div class="row"> 
-     
       <div class="left col-md-3 col-sm-3 col-xs-3">
         <?php get_template_part('templates/parts/canvas-mobile'); ?>
       </div>
@@ -17,13 +16,9 @@
       </div>
 
       <div class="right col-md-3 col-sm-3 col-xs-3">
-        <?php if(vizeon_woocommerce_activated()){ ?>
-          <div class="mini-cart-header">
-            <?php if(vizeon_woocommerce_activated()){ ?>
-              <?php  vizeon_get_cart_contents(); ?>
-            <?php } ?>  
-          </div>
-        <?php } ?>
+        <div class="mini-cart-header">
+          <?php vizeon_get_cart_contents(); ?> 
+        </div>
         <div class="main-search gva-search">
           <a class="control-search"><i class="icon fa fa-search"></i></a>
           <div class="gva-search-content search-content">
