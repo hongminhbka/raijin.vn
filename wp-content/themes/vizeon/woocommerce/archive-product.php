@@ -800,12 +800,12 @@ $woo_display = vizeon_display_modes_value();
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
-                          if($key > 0){
-                            echo '<hr class="break-line">';
-                          }
                           $shortcode = '[products category="ac-quy-pkl" attribute="phan-khuc" terms="'. $term->slug .'"]';
                           $output = do_shortcode($shortcode);
                           if($output != '<div class="woocommerce columns-3 "></div>') {
+                            if($key > 0){
+                              echo '<hr class="break-line">';
+                            }
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô ' . $term->name . '</p>';
                             echo $output;
                           }
@@ -815,12 +815,12 @@ $woo_display = vizeon_display_modes_value();
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
-                          if($key > 0){
-                            echo '<hr class="break-line">';
-                          }
                           $shortcode = '[products category="o-to" attribute="phan-khuc" terms="'. $term->slug .'"]';
                           $output = do_shortcode($shortcode);
                           if($output != '<div class="woocommerce columns-3 "></div>') {
+                            if($key > 0){
+                              echo '<hr class="break-line">';
+                            }
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe ô tô ' . $term->name . '</p>';
                             echo $output;
                           }
@@ -830,12 +830,12 @@ $woo_display = vizeon_display_modes_value();
                     <?php 
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
-                          if($key > 0){
-                            echo '<hr class="break-line">';
-                          }
                           $shortcode = '[products category="xe-may-dien" attribute="phan-khuc" terms="'. $term->slug .'"]' ;
                           $output = do_shortcode($shortcode);
                           if($output != '<div class="woocommerce columns-3 "></div>') {
+                            if($key > 0){
+                              echo '<hr class="break-line">';
+                            }
                             echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe máy điện ' . $term->name . '</p>';
                             echo $output;
                           }
