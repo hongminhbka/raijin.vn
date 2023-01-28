@@ -2110,7 +2110,7 @@ table.variations a.reset_variations {
  * Shopping Cart Page
  */
 table.cart img {
-  width: 80px;
+  min-width: 80px;
 }
 
 /* Checkout page  */
