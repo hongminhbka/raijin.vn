@@ -2361,6 +2361,10 @@ table.cart img {
   margin-bottom: 0;
 }
 
+.woocommerce-cart-form{
+  overflow-x:auto;
+}
+
 .woocommerce-cart-form__contents thead tr th {
   color: #18212e;
   border-bottom: 0;
