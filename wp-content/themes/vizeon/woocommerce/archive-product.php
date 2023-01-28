@@ -269,6 +269,7 @@ $woo_display = vizeon_display_modes_value();
                       <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
                         <div class="elementor-column-wrap elementor-element-populated">
                           <div class="elementor-widget-wrap">
+                          <form method="get" action="<?php echo get_term_link('ac-quy-pkl', 'product_cat' );?>">
                             <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
@@ -301,7 +302,7 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXePKL(this.value)">
+                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXePKL(this.value)" name="hang-xe">
                                               <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
                                               <?php
                                                 $term_id_ac_quy_pkl = 111;
@@ -356,11 +357,9 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <form method="get" action="<?php echo get_term_link('ac-quy-pkl', 'product_cat' );?>">
                                               <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-pkl" name="dong-xe" onchange="this.form.submit();">
                                                 <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                               </select>
-                                            </form>
                                           </div>
                                         </div>
                                       </div>
@@ -398,7 +397,6 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <form method="get" action="<?php echo get_term_link('ac-quy-pkl', 'product_cat' );?>">
                                                           <select class="wpcf7-form-control wpcf7-select full-width" name="dung-luong" onchange="this.form.submit();">
                                                             <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
                                                             <?php 
@@ -412,7 +410,6 @@ $woo_display = vizeon_display_modes_value();
                                                               }
                                                             ?>
                                                           </select>
-                                                        </form>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -427,6 +424,7 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </section>
+                          </form>
                           </div>
                         </div>
                       </div>
@@ -607,6 +605,7 @@ $woo_display = vizeon_display_modes_value();
                       <div class="elementor-element elementor-column elementor-col-100 elementor-top-column">
                         <div class="elementor-column-wrap elementor-element-populated">
                           <div class="elementor-widget-wrap">
+                          <form method="get" action="<?php echo get_term_link('xe-may-dien', 'product_cat' );?>">
                             <section class="elementor-element elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section">
                               <div class="elementor-container elementor-column-gap-default">
                                 <div class="elementor-row">
@@ -639,7 +638,7 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXeMayDien(this.value)">
+                                            <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXeMayDien(this.value)" name="hang-xe">
                                               <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>
                                               <?php
                                                 $term_id = 109;
@@ -694,11 +693,9 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <form method="get" action="<?php echo get_term_link('xe-may-dien', 'product_cat' );?>">
                                               <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-may-dien" name="dong-xe" onchange="this.form.submit();">
                                                 <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                               </select>
-                                            </form>
                                           </div>
                                         </div>
                                       </div>
@@ -735,7 +732,6 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
-                                                        <form method="get" action="<?php echo get_term_link('xe-may-dien', 'product_cat' );?>">
                                                           <select class="wpcf7-form-control wpcf7-select full-width" name="dung-luong" onchange="this.form.submit();">
                                                             <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
                                                             <?php 
@@ -749,7 +745,6 @@ $woo_display = vizeon_display_modes_value();
                                                               }
                                                             ?>
                                                           </select>
-                                                        </form>
                                                       </div>
                                                     </div>
                                                   </div>
@@ -764,6 +759,7 @@ $woo_display = vizeon_display_modes_value();
                                 </div>
                               </div>
                             </section>
+                          </form>
                           </div>
                         </div>
                       </div>
