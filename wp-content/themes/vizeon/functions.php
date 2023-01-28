@@ -647,7 +647,8 @@ function wpm_product_cat_display_details_meta() {
 }
 
 function themeslug_query_vars( $qvars ) {
-	$qvars[] = 'dong-xe';
+	$qvars[] = 'hang-xe';
+  $qvars[] = 'dong-xe';
   $qvars[] = 'dung-luong';
 	return $qvars;
 }

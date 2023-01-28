@@ -339,7 +339,7 @@ $woo_display = vizeon_display_modes_value();
                                                           var i = 0;
                                                           var innerHTML = '<option value="" disabled selected hidden>Chọn dòng xe</option>';
                                                           for (i = 0; i < response.length; i++) {
-                                                              innerHTML += '<option value=" ' + response[i].id + '">' + response[i].name + '</option>';   
+                                                              innerHTML += '<option value="' + response[i].id + '">' + response[i].name + '</option>';   
                                                           }
                                                           document.getElementById("dong-xe-pkl").innerHTML = innerHTML; 
                                                       }
@@ -508,7 +508,7 @@ $woo_display = vizeon_display_modes_value();
                                                           var i = 0;
                                                           var innerHTML = '<option value="" disabled selected hidden>Chọn dòng xe</option>';
                                                           for (i = 0; i < response.length; i++) {
-                                                              innerHTML += '<option value=" ' + response[i].id + '">' + response[i].name + '</option>';   
+                                                              innerHTML += '<option value="' + response[i].id + '">' + response[i].name + '</option>';   
                                                           }
                                                           document.getElementById("dong-xe-oto").innerHTML = innerHTML; 
                                                       }
@@ -675,7 +675,7 @@ $woo_display = vizeon_display_modes_value();
                                                           var i = 0;
                                                           var innerHTML = '<option value="" disabled selected hidden>Chọn dòng xe</option>';
                                                           for (i = 0; i < response.length; i++) {
-                                                              innerHTML += '<option value=" ' + response[i].id + '">' + response[i].name + '</option>';   
+                                                              innerHTML += '<option value="' + response[i].id + '">' + response[i].name + '</option>';   
                                                           }
                                                           document.getElementById("dong-xe-may-dien").innerHTML = innerHTML; 
                                                       }
