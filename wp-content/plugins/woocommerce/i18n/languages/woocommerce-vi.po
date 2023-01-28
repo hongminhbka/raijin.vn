@@ -4839,11 +4839,11 @@ msgid ""
 msgstr ""
 
 #: includes/class-wc-cart.php:203
-msgid "%s has been removed from your cart because it can no longer be purchased. Please contact us if you need assistance."
+msgid "%s đã bị xóa khỏi giỏ hàng của bạn vì không thể mua được nữa. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ."
 msgstr ""
 
 #: includes/class-wc-cart.php:405
-msgid "An item which is no longer available was removed from your cart."
+msgid "Mặt hàng đã bị xóa khỏi giỏ hàng của bạn."
 msgstr ""
 
 #: includes/class-wc-cart.php:436

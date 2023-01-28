@@ -749,7 +749,7 @@ class WC_Cart extends WC_Legacy_Cart {
 
 			if ( ! $product || ! $product->exists() || 'trash' === $product->get_status() ) {
 				$this->set_quantity( $cart_item_key, 0 );
-				$return = new WP_Error( 'invalid', __( 'An item which is no longer available was removed from your cart.', 'woocommerce' ) );
+				$return = new WP_Error( 'invalid', __( 'Mặt hàng đã bị xóa khỏi giỏ hàng của bạn.', 'woocommerce' ) );
 			}
 		}
 

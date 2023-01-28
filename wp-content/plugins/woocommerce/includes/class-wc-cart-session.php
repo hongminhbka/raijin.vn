@@ -131,7 +131,7 @@ final class WC_Cart_Session {
 			} elseif ( ! $product->is_purchasable() ) {
 				$update_cart_session = true;
 				/* translators: %s: product name */
-				$message = sprintf( __( '%s has been removed from your cart because it can no longer be purchased. Please contact us if you need assistance.', 'woocommerce' ), $product->get_name() );
+				$message = sprintf( __( '%s đã bị xóa khỏi giỏ hàng của bạn vì không thể mua được nữa. Vui lòng liên hệ với chúng tôi nếu bạn cần hỗ trợ.', 'woocommerce' ), $product->get_name() );
 				/**
 				 * Filter message about item removed from the cart.
 				 *
