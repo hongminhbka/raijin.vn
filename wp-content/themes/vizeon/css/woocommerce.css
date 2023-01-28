@@ -3028,6 +3028,7 @@ ul.list-sub-category > li > a {
   padding: 0 15px;
   line-height: 38px;
   font-size: 13px;
+  background-color: #C40000;
 }
 
 .mini-cart-header .dropdown.open .minicart-content {
