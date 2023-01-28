@@ -528,11 +528,9 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                            <form method="get" action="<?php echo get_term_link('o-to', 'product_cat' );?>">
                                               <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-oto" name="dong-xe" onchange="this.form.submit();">
                                                 <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
                                               </select>
-                                            </form>
                                           </div>
                                         </div>
                                       </div>
