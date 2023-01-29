@@ -316,7 +316,7 @@ $woo_display = vizeon_display_modes_value();
                                                 $categoriesChildrentOfAcQuyXePKL = get_terms($args_query);
                                                 $hangXeSelected = get_query_var( 'hang-xe', '');
                                                 foreach ( $categoriesChildrent as $key => $term ){ 
-                                                  if($hangXeSelected == $term){
+                                                  if($hangXeSelected == $term->term_id){
                                                     echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
                                                   }
                                                   else{
@@ -409,9 +409,14 @@ $woo_display = vizeon_display_modes_value();
                                                                 'taxonomy' => 'pa_dung-tich-xe-pkl',
                                                                 'hide_empty' => false,
                                                               ));
-                                                              
-                                                              foreach ( $attribute_terms as $key => $term ){                                                  
-                                                                echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                              $dungLuongSelected = get_query_var( 'dung-luong', '');
+                                                              foreach ( $attribute_terms as $key => $term ){
+                                                                if($dungLuongSelected == $term->term_id){
+                                                                  echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
+                                                                } 
+                                                                else{                                                 
+                                                                  echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                                }
                                                               }
                                                             ?>
                                                           </select>
@@ -668,7 +673,7 @@ $woo_display = vizeon_display_modes_value();
                                                 $categoriesChildrent = get_terms($args_query);
                                                 $hangXeSelected = get_query_var( 'hang-xe', '');
                                                 foreach ( $categoriesChildrent as $key => $term ){ 
-                                                  if($hangXeSelected == $term){
+                                                  if($hangXeSelected == $term->term_id){
                                                     echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
                                                   }
                                                   else{
@@ -761,8 +766,14 @@ $woo_display = vizeon_display_modes_value();
                                                                 'hide_empty' => false,
                                                               ));
                                                               
-                                                              foreach ( $attribute_terms as $key => $term ){                                                  
-                                                                echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                              $dungLuongSelected = get_query_var( 'dung-luong', '');
+                                                              foreach ( $attribute_terms as $key => $term ){
+                                                                if($dungLuongSelected == $term->term_id){
+                                                                  echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
+                                                                } 
+                                                                else{                                                 
+                                                                  echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                                }
                                                               }
                                                             ?>
                                                           </select>
