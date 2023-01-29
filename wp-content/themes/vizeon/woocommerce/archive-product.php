@@ -542,8 +542,34 @@ $woo_display = vizeon_display_modes_value();
                                       <div class="elementor-widget-wrap">
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
-                                              <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-oto" name="dong-xe" onchange="this.form.submit();">
-                                                <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
+                                              <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-oto" name="dong-xe" onchange="this.form.submit();"> 
+                                                <?php
+                                                  $hangXeSelected = get_query_var( 'hang-xe', '');
+                                                  $dongXeSelected = get_query_var( 'dong-xe', '');
+                                                  if($dongXeSelected != '' && $hangXeSelected != ''){
+                                                    echo '<option value="" disabled="" hidden="">Chọn dòng xe</option>';
+                                                    $args_query = array(
+                                                      'taxonomy' => 'product_cat', 
+                                                      'hide_empty' => false,                                                 
+                                                      'child_of' => $hangXeSelected,
+                                                      'orderby' => 'order',
+                                                      'parent' => $hangXeSelected                                    
+                                                    );
+                                                    $categoriesChildrent = get_terms($args_query);
+                                                    foreach ( $categoriesChildrent as $key => $term ){ 
+                                                      if($dongXeSelected == $term->term_id){
+                                                        echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
+                                                      }
+                                                      else{
+                                                        echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                      }
+                                                    }
+                                                  }
+                                                  else{
+                                                    echo '<option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>';
+                                                  }
+                                                  
+                                                ?>                                             
                                               </select>
                                           </div>
                                         </div>
