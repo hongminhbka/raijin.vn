@@ -921,13 +921,13 @@ $woo_display = vizeon_display_modes_value();
                         $dungLuongSelected = get_query_var('dung-luong', '');
                         $category = 'o-to';
                         if($hangXeSelected != ''){
-                          $termsHangXe = get_term_by('term_id', $hangXeSelected);
+                          $termsHangXe = get_term_by('term_id', $hangXeSelected, 'product_cat');
                           if($termsHangXe && $termsHangXe->slug){
                             $category = $termsHangXe->slug;
                           }
                         }
                         if($dongXeSelected != ''){
-                          $termsDongXe = get_term_by('term_id', $dongXeSelected);
+                          $termsDongXe = get_term_by('term_id', $dongXeSelected, 'product_cat');
                           if($termsDongXe && $termsDongXe->slug){
                             $category = $termsDongXe->slug;
                           }
