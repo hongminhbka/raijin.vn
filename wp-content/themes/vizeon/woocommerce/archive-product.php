@@ -547,7 +547,7 @@ $woo_display = vizeon_display_modes_value();
                                                   $hangXeSelected = get_query_var( 'hang-xe', '');
                                                   $dongXeSelected = get_query_var( 'dong-xe', '');
                                                   if($dongXeSelected != '' && $hangXeSelected != ''){
-                                                    echo '<option value="" disabled="" hidden="">Chọn dòng xe</option>';
+                                                    echo '<option value="">Chọn dòng xe</option>';
                                                     $args_query = array(
                                                       'taxonomy' => 'product_cat', 
                                                       'hide_empty' => false,                                                 
@@ -566,7 +566,7 @@ $woo_display = vizeon_display_modes_value();
                                                     }
                                                   }
                                                   else{
-                                                    echo '<option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>';
+                                                    echo '<option value="" disabled="" selected="">Chọn dòng xe</option>';
                                                   }
                                                   
                                                 ?>                                             
