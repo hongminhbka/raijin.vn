@@ -916,9 +916,25 @@ $woo_display = vizeon_display_modes_value();
                     ?>
                   <?php elseif(is_product_category('o-to')):?>
                     <?php 
+                        $hangXeSelected = get_query_var('hang-xe', '');
+                        $dongXeSelected = get_query_var('dong-xe', '');
+                        $dungLuongSelected = get_query_var('dung-luong', '');
+                        $category = 'o-to';
+                        if($hangXeSelected != ''){
+                          $termsHangXe = get_the_terms($hangXeSelected, 'product_cat');
+                          if($termsHangXe && $termsHangXe[0] && $termsHangXe[0]->slug){
+                            $category = $termsHangXe[0]->slug;
+                          }
+                        }
+                        if($dongXeSelected != ''){
+                          $termsDongXe = get_the_terms($dongXeSelected, 'product_cat');
+                          if($termsDongXe && $termsDongXe[0] && $termsDongXe[0]->slug){
+                            $category = $termsDongXe[0]->slug;
+                          }
+                        }
                         $terms = get_terms("pa_phan-khuc");
                         foreach ( $terms as $key => $term ) {
-                          $shortcode = '[products category="o-to" attribute="phan-khuc" terms="'. $term->slug .'"]';
+                          $shortcode = '[products category="'. $category .'" attribute="phan-khuc" terms="'. $term->slug .'"]';
                           $output = do_shortcode($shortcode);
                           if($output != '<div class="woocommerce columns-3 "></div>') {
                             if($key > 0){
