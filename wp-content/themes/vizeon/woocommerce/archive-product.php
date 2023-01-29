@@ -491,7 +491,7 @@ $woo_display = vizeon_display_modes_value();
                                                 $hangXeSelected = get_query_var( 'hang-xe', '');
                                                 echo ($hangXeSelected);
                                                 foreach ( $categoriesChildrent as $key => $term ){ 
-                                                  if($hangXeSelected == $term){
+                                                  if($hangXeSelected == $term->term_id){
                                                     echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
                                                   }
                                                   else{
