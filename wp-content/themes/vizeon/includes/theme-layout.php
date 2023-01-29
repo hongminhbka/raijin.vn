@@ -124,28 +124,6 @@ function vizeon_base_layout($template){
               </div>    
             </div>      
 
-            <!-- Left sidebar -->
-            <?php if($left_sidebar_config['active']): ?>
-            <div class="sidebar wp-sidebar sidebar-left <?php echo esc_attr($left_sidebar_config['class']); ?>">
-               <?php do_action( 'vizeon_before_sidebar' ); ?>
-               <div class="sidebar-inner">
-                  <?php dynamic_sidebar($left_sidebar_config['name'] ); ?>
-               </div>
-               <?php do_action( 'vizeon_after_sidebar' ); ?>
-            </div>
-            <?php endif ?>
-
-            <!-- Right Sidebar -->
-            <?php if($right_sidebar_config['active']): ?>
-            <div class="sidebar wp-sidebar sidebar-right <?php echo esc_attr($right_sidebar_config['class']); ?>">
-               <?php do_action( 'vizeon_before_sidebar' ); ?>
-                  <div class="sidebar-inner">
-                     <?php dynamic_sidebar($right_sidebar_config['name'] ); ?>
-                  </div>
-               <?php do_action( 'vizeon_after_sidebar' ); ?>
-            </div>
-         <?php endif ?>
-
         </div> 
         <?php do_action( 'vizeon_after_main_content' ); ?>
       </div>
