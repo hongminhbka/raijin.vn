@@ -921,15 +921,15 @@ $woo_display = vizeon_display_modes_value();
                         $dungLuongSelected = get_query_var('dung-luong', '');
                         $category = 'o-to';
                         if($hangXeSelected != ''){
-                          $termsHangXe = get_the_terms($hangXeSelected, 'product_cat');
-                          if($termsHangXe && $termsHangXe[0] && $termsHangXe[0]->slug){
-                            $category = $termsHangXe[0]->slug;
+                          $termsHangXe = get_term_by('term_id', $hangXeSelected);
+                          if($termsHangXe && $termsHangXe->slug){
+                            $category = $termsHangXe->slug;
                           }
                         }
                         if($dongXeSelected != ''){
-                          $termsDongXe = get_the_terms($dongXeSelected, 'product_cat');
-                          if($termsDongXe && $termsDongXe[0] && $termsDongXe[0]->slug){
-                            $category = $termsDongXe[0]->slug;
+                          $termsDongXe = get_term_by('term_id', $dongXeSelected);
+                          if($termsDongXe && $termsDongXe->slug){
+                            $category = $termsDongXe->slug;
                           }
                         }
                         $terms = get_terms("pa_phan-khuc");
