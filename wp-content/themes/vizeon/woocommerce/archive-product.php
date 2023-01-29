@@ -303,7 +303,7 @@ $woo_display = vizeon_display_modes_value();
                                         <div class="elementor-element elementor-element-da4516b elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
                                             <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXePKL(this.value)" name="hang-xe">
-                                              <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
+                                              <option value="" selected="">Chọn hãng xe</option>                                              
                                               <?php
                                                 $term_id_ac_quy_pkl = 111;
                                                 $args_query = array(
@@ -363,7 +363,32 @@ $woo_display = vizeon_display_modes_value();
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
                                               <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-pkl" name="dong-xe" onchange="this.form.submit();">
-                                                <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
+                                              <?php
+                                                  $hangXeSelected = get_query_var( 'hang-xe', '');
+                                                  $dongXeSelected = get_query_var( 'dong-xe', '');
+                                                  if($dongXeSelected != '' && $hangXeSelected != ''){
+                                                    echo '<option value="">Chọn dòng xe</option>';
+                                                    $args_query = array(
+                                                      'taxonomy' => 'product_cat', 
+                                                      'hide_empty' => false,                                                 
+                                                      'child_of' => $hangXeSelected,
+                                                      'orderby' => 'order',
+                                                      'parent' => $hangXeSelected                                    
+                                                    );
+                                                    $categoriesChildrent = get_terms($args_query);
+                                                    foreach ( $categoriesChildrent as $key => $term ){ 
+                                                      if($dongXeSelected == $term->term_id){
+                                                        echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
+                                                      }
+                                                      else{
+                                                        echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                      }
+                                                    }
+                                                  }
+                                                  else{
+                                                    echo '<option value="" disabled="" selected="">Chọn dòng xe</option>';
+                                                  }
+                                                ?>                                              
                                               </select>
                                           </div>
                                         </div>
@@ -403,7 +428,7 @@ $woo_display = vizeon_display_modes_value();
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
                                                           <select class="wpcf7-form-control wpcf7-select full-width" name="dung-luong" onchange="this.form.submit();">
-                                                            <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                            <option value="" selected="">Chọn dung lượng bình</option>
                                                             <?php 
                                                               $attribute_terms = get_terms(array(
                                                                 'taxonomy' => 'pa_dung-tich-xe-pkl',
@@ -482,7 +507,7 @@ $woo_display = vizeon_display_modes_value();
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
                                             <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXeOTo(this.value)" name="hang-xe">                                             
-                                              <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>                                              
+                                              <option value="" selected="">Chọn hãng xe</option>                                              
                                               <?php
                                                 $term_id = 79;
                                                 $args_query = array(
@@ -686,7 +711,7 @@ $woo_display = vizeon_display_modes_value();
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
                                             <select class="wpcf7-form-control wpcf7-select full-width" onchange="layDanhSachDongXeMayDien(this.value)" name="hang-xe">
-                                              <option value="" disabled="" selected="" hidden="">Chọn hãng xe</option>
+                                              <option value="" selected="">Chọn hãng xe</option>
                                               <?php
                                                 $term_id = 109;
                                                 $args_query = array(
@@ -746,7 +771,33 @@ $woo_display = vizeon_display_modes_value();
                                         <div class="elementor-element elementor-widget elementor-widget-html">
                                           <div class="elementor-widget-container">
                                               <select class="wpcf7-form-control wpcf7-select full-width" id="dong-xe-may-dien" name="dong-xe" onchange="this.form.submit();">
-                                                <option value="" disabled="" selected="" hidden="">Chọn dòng xe</option>                                              
+                                                <?php
+                                                  $hangXeSelected = get_query_var( 'hang-xe', '');
+                                                  $dongXeSelected = get_query_var( 'dong-xe', '');
+                                                  if($dongXeSelected != '' && $hangXeSelected != ''){
+                                                    echo '<option value="">Chọn dòng xe</option>';
+                                                    $args_query = array(
+                                                      'taxonomy' => 'product_cat', 
+                                                      'hide_empty' => false,                                                 
+                                                      'child_of' => $hangXeSelected,
+                                                      'orderby' => 'order',
+                                                      'parent' => $hangXeSelected                                    
+                                                    );
+                                                    $categoriesChildrent = get_terms($args_query);
+                                                    foreach ( $categoriesChildrent as $key => $term ){ 
+                                                      if($dongXeSelected == $term->term_id){
+                                                        echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
+                                                      }
+                                                      else{
+                                                        echo '<option value="'.  $term->term_id .'">'.$term->name.'</option>';
+                                                      }
+                                                    }
+                                                  }
+                                                  else{
+                                                    echo '<option value="" disabled="" selected="">Chọn dòng xe</option>';
+                                                  }
+                                                  
+                                                ?>                                              
                                               </select>
                                           </div>
                                         </div>
@@ -785,7 +836,7 @@ $woo_display = vizeon_display_modes_value();
                                                     <div class="elementor-element elementor-widget elementor-widget-html">
                                                       <div class="elementor-widget-container">
                                                           <select class="wpcf7-form-control wpcf7-select full-width" name="dung-luong" onchange="this.form.submit();">
-                                                            <option value="" disabled="" selected="" hidden="">Chọn dung lượng bình</option>
+                                                            <option value="" selected="">Chọn dung lượng bình</option>
                                                             <?php 
                                                               $attribute_terms = get_terms(array(
                                                                 'taxonomy' => 'pa_dung-luong-dien-xe-dien',
