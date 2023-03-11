@@ -315,7 +315,7 @@ $woo_display = vizeon_display_modes_value();
                                                 );
                                                 $categoriesChildrentOfAcQuyXePKL = get_terms($args_query);
                                                 $hangXeSelected = get_query_var( 'hang-xe', '');
-                                                foreach ( $categoriesChildrent as $key => $term ){ 
+                                                foreach ( $categoriesChildrentOfAcQuyXePKL as $key => $term ){ 
                                                   if($hangXeSelected == $term->term_id){
                                                     echo '<option value="'.  $term->term_id .'" selected>'.$term->name.'</option>';
                                                   }
