@@ -917,7 +917,7 @@ $woo_display = vizeon_display_modes_value();
                             $category = $termsDongXe->slug;
                           }
                         }
-                        $shortcode = '[products category="'. $category .']';
+                        $shortcode = '[products category="'. $category .'"]';
                         $output = do_shortcode($shortcode);
                         if($output != '<div class="woocommerce columns-3 "></div>') {
                           echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô </p>';
