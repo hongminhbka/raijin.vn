@@ -920,9 +920,6 @@ $woo_display = vizeon_display_modes_value();
                         $shortcode = '[products category="'. $category .'terms="'. $term->slug .'"]';
                         $output = do_shortcode($shortcode);
                         if($output != '<div class="woocommerce columns-3 "></div>') {
-                          if($key > 0){
-                            echo '<hr class="break-line">';
-                          }
                           echo '<p class="elementor-heading-title elementor-size-default text-center">Ắc quy Lithium xe mô tô </p>';
                           echo $output;
                         }  
