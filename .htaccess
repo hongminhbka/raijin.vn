@@ -11,3 +11,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www.raijin.vn [NC]
+RewriteRule ^(.*)$ https://raijin.vn/$1 [L,R=301]
