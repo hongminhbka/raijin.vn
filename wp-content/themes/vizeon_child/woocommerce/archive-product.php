@@ -618,9 +618,9 @@ $woo_display = vizeon_display_modes_value();
                                                   <div class="elementor-widget-wrap">
                                                     <div class="elementor-element elementor-widget elementor-widget-heading">
                                                       <div class="elementor-widget-container">
-                                                        <h2 class="elementor-heading-title elementor-size-default">
+                                                        <div class="elementor-heading-title elementor-size-default">
                                                           <span class="ez-toc-section"></span>Tìm ắc quy theo dung tích bình<span class="ez-toc-section-end"></span>
-                                                        </h2>
+                                                        </div>
                                                       </div>
                                                     </div>
                                                   </div>
