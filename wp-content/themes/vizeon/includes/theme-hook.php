@@ -192,6 +192,7 @@ function vizeon_breadcrumb(){
         <div class="container">
           <div class="breadcrumb-container-inner" <?php echo(count($styles_inner) > 0 ? 'style="' . implode(';', $styles_inner) . '"' : ''); ?>>
             <?php vizeon_general_breadcrumbs(); ?>
+            <?php if(!is_category()){ ?>
             <?php if($title && ( $show_page_title || empty($show_page_title) ) ){
               if($show_title_h1) {
                 echo '<h1 class="heading-title">' . esc_html( $title ) . '</h1>';                
@@ -199,7 +200,8 @@ function vizeon_breadcrumb(){
               else{
                 echo '<p class="heading-title">' . esc_html( $title ) . '</p>';
               }                                                                
-            } ?>                      
+            } 
+           }?>                      
           </div>  
         </div>   
       </div>  
