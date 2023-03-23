@@ -49,7 +49,7 @@ readMoreBtn.addEventListener("click", (e) => {
   if (readMoreBtn.innerText === "Xem thêm") {
     readMoreBtn.innerText = "Thu gọn";
   } else {
-    readMoreBtn.innerText = "Xem thêm";
+    readMoreBtn.innerText = "Xem thêm ↓";
   }
 });
 </script>
