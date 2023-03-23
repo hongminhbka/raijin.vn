@@ -183,7 +183,7 @@ function vizeon_breadcrumb(){
     $image_breadcumb_standard = vizeon_get_option('image_breadcumb_standard', 'show-bg');
     $classes[] = $image_breadcumb_standard;
    ?>
-   <?php if(is_singular('post')){ ?>
+   <?php if(!is_singular('post')){ ?>
    <div class="custom-breadcrumb <?php echo implode(' ', $classes); ?>" <?php echo(count($styles) > 0 ? 'style="' . implode(';', $styles) . '"' : ''); ?>>
       <?php if($styles_overlay){ ?>
          <div class="breadcrumb-overlay" style="<?php echo esc_attr($styles_overlay); ?>"></div>
