@@ -13,4 +13,4 @@ global $post;
 
 ?>
 
-123<?php the_content(); ?>
+<?php the_content(); ?>
